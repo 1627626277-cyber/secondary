@@ -1,0 +1,16 @@
+GSM	sample_title	species_geo	platform	tissue	include_mainline
+GSM8329284	YFP1	Mus musculus	GPL30172	Bone marrow	False
+GSM8329285	YFP2	Mus musculus	GPL30172	Bone marrow	False
+GSM8329286	MM1	Mus musculus	GPL30172	Bone marrow	False
+GSM8329287	MM2	Mus musculus	GPL30172	Bone marrow	False
+GSM8329288	MM3	Mus musculus	GPL30172	Bone marrow	False
+GSM8329289	MM4	Mus musculus	GPL30172	Bone marrow	False
+GSM8329290	hHBM1	Homo sapiens	GPL30173	Bone marrow	True
+GSM8329291	hHBM2	Homo sapiens	GPL30173	Bone marrow	True
+GSM8329292	hHBM3	Homo sapiens	GPL30173	Bone marrow	True
+GSM8329293	hMM1	Homo sapiens	GPL30173	Bone marrow	True
+GSM8329294	hMM2	Homo sapiens	GPL30173	Bone marrow	True
+GSM8329295	hMM3	Homo sapiens	GPL30173	Bone marrow	True
+GSM8329296	hMM4	Homo sapiens	GPL30173	Bone marrow	True
+GSM8329297	hMM5	Homo sapiens	GPL30173	Bone marrow	True
+GSM8329298	hMM6	Homo sapiens	GPL30173	Bone marrow	True

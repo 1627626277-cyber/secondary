@@ -1,0 +1,16 @@
+table	file_name	size_mb	sheet	max_row	max_column	first_nonempty_row	status
+Supplementary Table 1	41588_2024_1853_MOESM4_ESM.xlsx	0.675	1A_Patient_features	1144	148	Patient_ID | Visit_ID | Specimen_ID | Biobank | WES_Release | WES_Publication | WES_Mut_Release | WES_Mut_Publication | WES_CNA_Release | WES_CNA_Publication | WGS_Release | WGS_Publication	loaded
+Supplementary Table 1	41588_2024_1853_MOESM4_ESM.xlsx	0.675	1B_Patient_features_dictionary	149	2	FIELD | DESCRIPTION	loaded
+Supplementary Table 2	41588_2024_1853_MOESM5_ESM.xlsx	71.315	2A_Mutations_BM_baseline	1	1	chr	loaded
+Supplementary Table 2	41588_2024_1853_MOESM5_ESM.xlsx	71.315	2B_Mutations_dictionary	1	1	FIELD	loaded
+Supplementary Table 3	41588_2024_1853_MOESM6_ESM.xlsx	8.391	3A_Delly_calls	1	1	Patient_ID	loaded
+Supplementary Table 3	41588_2024_1853_MOESM6_ESM.xlsx	8.391	3B_Delly_dictionary	1	1	FIELD	loaded
+Supplementary Table 4	41588_2024_1853_MOESM7_ESM.xlsx	206.511					large_file_not_loaded
+Supplementary Table 5	41588_2024_1853_MOESM8_ESM.xlsx	490.369					large_file_not_loaded
+Supplementary Table 6	41588_2024_1853_MOESM9_ESM.xlsx	48.08	6A_Loss_of_function	1	1	SAMPLE	loaded
+Supplementary Table 6	41588_2024_1853_MOESM9_ESM.xlsx	48.08	6B_Loss_of_function_dictionary	1	1	FIELD	loaded
+Supplementary Table 6	41588_2024_1853_MOESM9_ESM.xlsx	48.08	6C_Gain_of_function	1	1	SAMPLE	loaded
+Supplementary Table 6	41588_2024_1853_MOESM9_ESM.xlsx	48.08	6D_Gain_of_function_dictionary	1	1	FIELD	loaded
+Supplementary Table 7	41588_2024_1853_MOESM10_ESM.xlsx	0.113	7A_RNA_subtype_predictions	1	1	Patient_ID	loaded
+Supplementary Table 7	41588_2024_1853_MOESM10_ESM.xlsx	0.113	7B_RNA_subtype_dictionary	1	1	FIELD	loaded
+Supplementary Table 7	41588_2024_1853_MOESM10_ESM.xlsx	0.113	7C_Model_coefficients	1	1	ENSG	loaded

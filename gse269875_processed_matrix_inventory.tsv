@@ -1,0 +1,10 @@
+GSM	Title	Group	Matrix_genes	Feature_rows	Matrix_barcodes	Barcode_rows	Nonzero_entries	Position_rows	In_tissue_spots	Matrix_file	Position_file
+GSM8329290	hHBM1	control	18085	18085	2055	2055	660700	4992	2055	geo_processed\GSE269875_RAW\GSM8329290_hHBM1_matrix.mtx.gz	geo_processed\GSE269875_RAW\GSM8329290_hHBM1_tissue_positions.csv.gz
+GSM8329291	hHBM2	control	18085	18085	822	822	505350	4992	822	geo_processed\GSE269875_RAW\GSM8329291_hHBM2_matrix.mtx.gz	geo_processed\GSE269875_RAW\GSM8329291_hHBM2_tissue_positions.csv.gz
+GSM8329292	hHBM3	control	18085	18085	1254	1254	698557	4992	1254	geo_processed\GSE269875_RAW\GSM8329292_hHBM3_matrix.mtx.gz	geo_processed\GSE269875_RAW\GSM8329292_hHBM3_tissue_positions.csv.gz
+GSM8329293	hMM1	MM	18085	18085	373	373	256923	4992	373	geo_processed\GSE269875_RAW\GSM8329293_hMM1_matrix.mtx.gz	geo_processed\GSE269875_RAW\GSM8329293_hMM1_tissue_positions.csv.gz
+GSM8329294	hMM2	MM	18085	18085	876	876	1434363	4992	876	geo_processed\GSE269875_RAW\GSM8329294_hMM2_matrix.mtx.gz	geo_processed\GSE269875_RAW\GSM8329294_hMM2_tissue_positions.csv.gz
+GSM8329295	hMM3	MM	18085	18085	977	977	1952439	4992	977	geo_processed\GSE269875_RAW\GSM8329295_hMM3_matrix.mtx.gz	geo_processed\GSE269875_RAW\GSM8329295_hMM3_tissue_positions.csv.gz
+GSM8329296	hMM4	MM	18085	18085	1126	1126	468593	4992	1126	geo_processed\GSE269875_RAW\GSM8329296_hMM4_matrix.mtx.gz	geo_processed\GSE269875_RAW\GSM8329296_hMM4_tissue_positions_list.csv.gz
+GSM8329297	hMM5	MM	18085	18085	2993	2993	535498	4992	2993	geo_processed\GSE269875_RAW\GSM8329297_hMM5_matrix.mtx.gz	geo_processed\GSE269875_RAW\GSM8329297_hMM5_tissue_positions.csv.gz
+GSM8329298	hMM6	MM	18085	18085	875	875	368620	4992	875	geo_processed\GSE269875_RAW\GSM8329298_hMM6_matrix.mtx.gz	geo_processed\GSE269875_RAW\GSM8329298_hMM6_tissue_positions.csv.gz

@@ -1,0 +1,55 @@
+model_name	score	score_label	covariate	n	events	rho	p_value	status	note	fdr
+OS adjusted for age, sex, ISS, 1q21	plasma_secretory_score_z	Plasma-secretory score	Cp_1q21_Call	660	128	0.32652021831644296	0.00016886156194156036	ok	Schoenfeld residual Spearman correlation with log(event time)	0.003584534752520091
+OS adjusted for age, sex, ISS, 1q21	clinical_subtype_module_score_z	POU2AF1/XBP1/JCHAIN module	Cp_1q21_Call	660	128	0.3251811529440031	0.0001802292061399289	ok	Schoenfeld residual Spearman correlation with log(event time)	0.003584534752520091
+OS adjusted for age, sex, ISS, 1q21	JCHAIN_z	JCHAIN	Cp_1q21_Call	660	128	0.32311819112022283	0.00019914081958444948	ok	Schoenfeld residual Spearman correlation with log(event time)	0.003584534752520091
+OS adjusted for age, sex, ISS, 1q21	XBP1_z	XBP1	Cp_1q21_Call	660	128	0.3161224329244632	0.00027786220094599994	ok	Schoenfeld residual Spearman correlation with log(event time)	0.0037511397127709995
+OS adjusted for age, sex, ISS, 1q21	TXNDC5_z	TXNDC5	Cp_1q21_Call	660	128	0.31047718510432665	0.00036143108582621994	ok	Schoenfeld residual Spearman correlation with log(event time)	0.0038347589919037906
+OS adjusted for age, sex, ISS, 1q21	POU2AF1_z	POU2AF1	Cp_1q21_Call	660	128	0.30688631535558286	0.0004260843324337545	ok	Schoenfeld residual Spearman correlation with log(event time)	0.0038347589919037906
+OS adjusted for age, sex, ISS, 1q21	clinical_subtype_module_score_z	POU2AF1/XBP1/JCHAIN module	iss_stage_num	660	128	0.2394605977755819	0.006482217517926479	ok	Schoenfeld residual Spearman correlation with log(event time)	0.04761192874794755
+OS adjusted for age, sex, ISS, 1q21	JCHAIN_z	JCHAIN	iss_stage_num	660	128	0.23706573428562283	0.007053619073770007	ok	Schoenfeld residual Spearman correlation with log(event time)	0.04761192874794755
+OS adjusted for age, sex, ISS, 1q21	POU2AF1_z	POU2AF1	iss_stage_num	660	128	0.22484534961941605	0.010721709378799845	ok	Schoenfeld residual Spearman correlation with log(event time)	0.060621057929396066
+OS adjusted for age, sex, ISS, 1q21	XBP1_z	XBP1	iss_stage_num	660	128	0.22346622870883037	0.011226121838777048	ok	Schoenfeld residual Spearman correlation with log(event time)	0.060621057929396066
+OS adjusted for age, sex, ISS, 1q21	plasma_secretory_score_z	Plasma-secretory score	iss_stage_num	660	128	0.2143073780142558	0.015135568130218107	ok	Schoenfeld residual Spearman correlation with log(event time)	0.06873638695650519
+OS adjusted for age, sex, ISS, 1q21	TXNDC5_z	TXNDC5	iss_stage_num	660	128	0.21402125334400982	0.015274752657001152	ok	Schoenfeld residual Spearman correlation with log(event time)	0.06873638695650519
+OS adjusted for age, sex, ISS	plasma_secretory_score_z	Plasma-secretory score	male	742	147	-0.18262202522547813	0.02683395121178405	ok	Schoenfeld residual Spearman correlation with log(event time)	0.10778636534451225
+OS adjusted for age, sex, ISS	JCHAIN_z	JCHAIN	iss_stage_num	742	147	0.18133546409453427	0.027944613237466137	ok	Schoenfeld residual Spearman correlation with log(event time)	0.10778636534451225
+OS adjusted for age, sex, ISS	clinical_subtype_module_score_z	POU2AF1/XBP1/JCHAIN module	iss_stage_num	742	147	0.16589124443728548	0.04463371086182916	ok	Schoenfeld residual Spearman correlation with log(event time)	0.16068135910258496
+OS adjusted for age, sex, ISS	clinical_subtype_module_score_z	POU2AF1/XBP1/JCHAIN module	male	742	147	-0.16166388200906198	0.05043861837752578	ok	Schoenfeld residual Spearman correlation with log(event time)	0.17023033702414953
+OS adjusted for age, sex, ISS	POU2AF1_z	POU2AF1	iss_stage_num	742	147	0.14597961045892693	0.07768773369154199	ok	Schoenfeld residual Spearman correlation with log(event time)	0.24677280113783923
+OS adjusted for age, sex, ISS	XBP1_z	XBP1	iss_stage_num	742	147	0.1422488944825245	0.08566826430674597	ok	Schoenfeld residual Spearman correlation with log(event time)	0.2570047929202379
+OS adjusted for age, sex, ISS	XBP1_z	XBP1	male	742	147	-0.12499704848280208	0.13142821966079457	ok	Schoenfeld residual Spearman correlation with log(event time)	0.36925913070423577
+OS adjusted for age, sex, ISS	TXNDC5_z	TXNDC5	male	742	147	-0.12330830760533691	0.1367626410015688	ok	Schoenfeld residual Spearman correlation with log(event time)	0.36925913070423577
+OS adjusted for age, sex, ISS	plasma_secretory_score_z	Plasma-secretory score	iss_stage_num	742	147	0.11795296086810009	0.15477467105278503	ok	Schoenfeld residual Spearman correlation with log(event time)	0.3979920112785901
+OS adjusted for age, sex, ISS, 1q21	POU2AF1_z	POU2AF1	male	660	128	0.10366025508146316	0.24425502832226023	ok	Schoenfeld residual Spearman correlation with log(event time)	0.5894453211571096
+OS adjusted for age, sex, ISS	TXNDC5_z	TXNDC5	iss_stage_num	742	147	0.09445039470182202	0.25515386440273613	ok	Schoenfeld residual Spearman correlation with log(event time)	0.5894453211571096
+OS adjusted for age, sex, ISS, 1q21	XBP1_z	XBP1	score	660	128	-0.0998798283327217	0.2619756982920487	ok	Schoenfeld residual Spearman correlation with log(event time)	0.5894453211571096
+OS adjusted for age, sex, ISS, 1q21	TXNDC5_z	TXNDC5	male	660	128	0.09433257748711692	0.2895334490388094	ok	Schoenfeld residual Spearman correlation with log(event time)	0.6253922499238282
+OS adjusted for age, sex, ISS	POU2AF1_z	POU2AF1	male	742	147	-0.08427837023376498	0.31015124834414576	ok	Schoenfeld residual Spearman correlation with log(event time)	0.6441602850224566
+OS adjusted for age, sex, ISS	JCHAIN_z	JCHAIN	score	742	147	-0.06926071656230534	0.4045208421679448	ok	Schoenfeld residual Spearman correlation with log(event time)	0.7686450983269785
+OS adjusted for age, sex, ISS	JCHAIN_z	JCHAIN	male	742	147	-0.06859990347430091	0.4090296484074336	ok	Schoenfeld residual Spearman correlation with log(event time)	0.7686450983269785
+OS adjusted for age, sex, ISS, 1q21	TXNDC5_z	TXNDC5	score	660	128	-0.07151645207907581	0.42243326243761825	ok	Schoenfeld residual Spearman correlation with log(event time)	0.7686450983269785
+OS adjusted for age, sex, ISS	XBP1_z	XBP1	score	742	147	-0.06600414438771814	0.4270250546260992	ok	Schoenfeld residual Spearman correlation with log(event time)	0.7686450983269785
+OS adjusted for age, sex, ISS	TXNDC5_z	TXNDC5	score	742	147	-0.06105883931053177	0.4625434751545764	ok	Schoenfeld residual Spearman correlation with log(event time)	0.7776637714644579
+OS adjusted for age, sex, ISS, 1q21	XBP1_z	XBP1	male	660	128	0.06398615154673772	0.47303175070830306	ok	Schoenfeld residual Spearman correlation with log(event time)	0.7776637714644579
+OS adjusted for age, sex, ISS, 1q21	plasma_secretory_score_z	Plasma-secretory score	score	660	128	-0.06366809728600101	0.4752389714505021	ok	Schoenfeld residual Spearman correlation with log(event time)	0.7776637714644579
+OS adjusted for age, sex, ISS, 1q21	plasma_secretory_score_z	Plasma-secretory score	male	660	128	0.061016173220685144	0.493858235533434	ok	Schoenfeld residual Spearman correlation with log(event time)	0.7843630799648658
+OS adjusted for age, sex, ISS, 1q21	clinical_subtype_module_score_z	POU2AF1/XBP1/JCHAIN module	score	660	128	-0.05845779685647522	0.5121797504574185	ok	Schoenfeld residual Spearman correlation with log(event time)	0.7888886745421292
+OS adjusted for age, sex, ISS	clinical_subtype_module_score_z	POU2AF1/XBP1/JCHAIN module	score	742	147	-0.052724734650277286	0.5259257830280861	ok	Schoenfeld residual Spearman correlation with log(event time)	0.7888886745421292
+OS adjusted for age, sex, ISS, 1q21	clinical_subtype_module_score_z	POU2AF1/XBP1/JCHAIN module	age_z	660	128	0.04979971388022863	0.5766812093687734	ok	Schoenfeld residual Spearman correlation with log(event time)	0.790986832164775
+OS adjusted for age, sex, ISS, 1q21	POU2AF1_z	POU2AF1	score	660	128	-0.047170243207667294	0.5969930050449102	ok	Schoenfeld residual Spearman correlation with log(event time)	0.790986832164775
+OS adjusted for age, sex, ISS, 1q21	plasma_secretory_score_z	Plasma-secretory score	age_z	660	128	0.04715593705602115	0.5971043899010321	ok	Schoenfeld residual Spearman correlation with log(event time)	0.790986832164775
+OS adjusted for age, sex, ISS, 1q21	POU2AF1_z	POU2AF1	age_z	660	128	0.046185979974412567	0.6046779565728011	ok	Schoenfeld residual Spearman correlation with log(event time)	0.790986832164775
+OS adjusted for age, sex, ISS, 1q21	JCHAIN_z	JCHAIN	age_z	660	128	0.045296137342022376	0.6116631783790049	ok	Schoenfeld residual Spearman correlation with log(event time)	0.790986832164775
+OS adjusted for age, sex, ISS, 1q21	XBP1_z	XBP1	age_z	660	128	0.044412017170290655	0.6186382140382176	ok	Schoenfeld residual Spearman correlation with log(event time)	0.790986832164775
+OS adjusted for age, sex, ISS, 1q21	TXNDC5_z	TXNDC5	age_z	660	128	0.04299856938765159	0.6298598848719504	ok	Schoenfeld residual Spearman correlation with log(event time)	0.790986832164775
+OS adjusted for age, sex, ISS	plasma_secretory_score_z	Plasma-secretory score	score	742	147	-0.034456573687149175	0.6786394487465519	ok	Schoenfeld residual Spearman correlation with log(event time)	0.7981360129662399
+OS adjusted for age, sex, ISS	POU2AF1_z	POU2AF1	score	742	147	-0.034356458649299336	0.6795217017004886	ok	Schoenfeld residual Spearman correlation with log(event time)	0.7981360129662399
+OS adjusted for age, sex, ISS, 1q21	clinical_subtype_module_score_z	POU2AF1/XBP1/JCHAIN module	male	660	128	0.036818575240505344	0.6798936406749452	ok	Schoenfeld residual Spearman correlation with log(event time)	0.7981360129662399
+OS adjusted for age, sex, ISS, 1q21	JCHAIN_z	JCHAIN	male	660	128	-0.016572364609341538	0.8527048396409744	ok	Schoenfeld residual Spearman correlation with log(event time)	0.9774584572010597
+OS adjusted for age, sex, ISS, 1q21	JCHAIN_z	JCHAIN	score	660	128	-0.014738197425857953	0.8688519619564975	ok	Schoenfeld residual Spearman correlation with log(event time)	0.9774584572010597
+OS adjusted for age, sex, ISS	JCHAIN_z	JCHAIN	age_z	742	147	-0.0035965855106809947	0.965514875301617	ok	Schoenfeld residual Spearman correlation with log(event time)	0.996793207637963
+OS adjusted for age, sex, ISS	TXNDC5_z	TXNDC5	age_z	742	147	-0.003284906619261686	0.9685017348783762	ok	Schoenfeld residual Spearman correlation with log(event time)	0.996793207637963
+OS adjusted for age, sex, ISS	clinical_subtype_module_score_z	POU2AF1/XBP1/JCHAIN module	age_z	742	147	0.002640770243661781	0.9746759171866617	ok	Schoenfeld residual Spearman correlation with log(event time)	0.996793207637963
+OS adjusted for age, sex, ISS	plasma_secretory_score_z	Plasma-secretory score	age_z	742	147	0.00213641712845599	0.97951131456422	ok	Schoenfeld residual Spearman correlation with log(event time)	0.996793207637963
+OS adjusted for age, sex, ISS	POU2AF1_z	POU2AF1	age_z	742	147	-0.0020268572757146572	0.9805618050860315	ok	Schoenfeld residual Spearman correlation with log(event time)	0.996793207637963
+OS adjusted for age, sex, ISS	XBP1_z	XBP1	age_z	742	147	0.00033434644715889505	0.996793207637963	ok	Schoenfeld residual Spearman correlation with log(event time)	0.996793207637963

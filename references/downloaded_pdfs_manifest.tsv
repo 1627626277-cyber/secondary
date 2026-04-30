@@ -1,0 +1,18 @@
+key	pmid	pmcid	pdf_path	bytes	status
+skerget_ng2024	39160255	PMC11387199	D:\二区\references\pdf\skerget_ng2024_PMC11387199.pdf	8180376	exists
+yip_blood_2025_spatial	40643106	PMC12824660	D:\二区\references\pdf\yip_blood_2025_spatial_PMC12824660.pdf	9340365	exists
+pdia4_scrna_gse271107	41121130	PMC12538736	D:\二区\references\pdf\pdia4_scrna_gse271107_PMC12538736.pdf	11257321	exists
+rustad_natcomm_2019	31444325	PMC6707220	D:\二区\references\pdf\rustad_natcomm_2019_PMC6707220.pdf	2200210	exists
+palumbo_riss_2015	26240224	PMC4846284	D:\二区\references\pdf\palumbo_riss_2015_PMC4846284.pdf	269087	exists
+rajkumar_imwg_2014	25439696			0	no_pmcid
+mcshane_remark_2005	16106022			0	no_pmcid
+wolf_scanpy_2018	29409532	PMC5802054	D:\二区\references\pdf\wolf_scanpy_2018_PMC5802054.pdf	1095492	exists
+chapman_nature_2011	21430775	PMC3560292		57	pdf_not_available_from_europepmc
+maqc_ii_2010	20676074	PMC3315840		57	pdf_not_available_from_europepmc
+shi_plosone_2009_maqc	20011240	PMC2789385	D:\二区\references\pdf\shi_plosone_2009_maqc_PMC2789385.pdf	1824008	exists
+rajkumar_2022_update	35560063	PMC9387011		57	pdf_not_available_from_europepmc
+greipp_iss_2005	15809451			0	no_pmcid
+zhan_blood_2006_molecular_classification	16728703	PMC1895543		52	pdf_not_available_from_europepmc
+hanamura_blood_2006_1q21	16705089	PMC1895503		52	pdf_not_available_from_europepmc
+barrett_geo_2013	23193258	PMC3531084	D:\二区\references\pdf\barrett_geo_2013_PMC3531084.pdf	3319250	exists
+gdc_uniform_analysis_2021	33619257	PMC7900240	D:\二区\references\pdf\gdc_uniform_analysis_2021_PMC7900240.pdf	2238483	exists

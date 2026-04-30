@@ -1,0 +1,93 @@
+gene	probe	gene_title	gene_id
+LYZ	1555745_a_at	lysozyme	4069
+POSTN	1555777_at	periostin	10631
+POSTN	1555778_a_at	periostin	10631
+CD79A	1555779_a_at	CD79a molecule	973
+COL1A1	1556499_s_at	collagen type I alpha 1 chain	1277
+FN1	1558199_at	fibronectin 1	2335
+FCN1	1560034_a_at	ficolin 1	2219
+POU2AF1	1569675_at	POU class 2 associating factor 1	5450
+SPARC	200665_s_at	secreted protein acidic and cysteine rich	6678
+XBP1	200670_at	X-box binding protein 1	7494
+SDC1	201286_at	syndecan 1	6382
+SDC1	201287_s_at	syndecan 1	6382
+LUM	201744_s_at	lumican	4060
+COL3A1	201852_x_at	collagen type III alpha 1 chain	1281
+DCN	201893_x_at	decorin	1634
+COL1A1	202310_s_at	collagen type I alpha 1 chain	1277
+COL1A1	202311_s_at	collagen type I alpha 1 chain	1277
+COL1A1	202312_s_at	collagen type I alpha 1 chain	1277
+COL1A2	202403_s_at	collagen type I alpha 2 chain	1278
+COL1A2	202404_s_at	collagen type I alpha 2 chain	1278
+CXCL8	202859_x_at	C-X-C motif chemokine ligand 8	3576
+CTSS	202901_x_at	cathepsin S	1520
+CTSS	202902_s_at	cathepsin S	1520
+S100A8	202917_s_at	S100 calcium binding protein A8	6279
+S100A9	203535_at	S100 calcium binding protein A9	6280
+CXCL12	203666_at	C-X-C motif chemokine ligand 12	6387
+VCAM1	203868_s_at	vascular cell adhesion molecule 1	7412
+FCGR3A	204006_s_at	Fc fragment of IgG receptor IIIb///Fc fragment of IgG receptor IIIa	2215///2214
+TYROBP	204122_at	TYRO protein tyrosine kinase binding protein	7305
+PIM2	204269_at	Pim-2 proto-oncogene, serine/threonine kinase	11040
+IRF4	204562_at	interferon regulatory factor 4	3662
+CD79A	205049_s_at	CD79a molecule	973
+IL1B	205067_at	interleukin 1 beta	3553
+FCN1	205237_at	ficolin 1	2219
+POU2AF1	205267_at	POU class 2 associating factor 1	5450
+TNFRSF17	206641_at	TNF receptor superfamily member 17	608
+DCN	209335_at	decorin	1634
+CXCL12	209687_at	C-X-C motif chemokine ligand 12	6387
+FN1	210495_x_at	fibronectin 1	2335
+LST1	210629_x_at	leukocyte specific transcript 1	7940
+POSTN	210809_s_at	periostin	10631
+COL3A1	211161_s_at	collagen type III alpha 1 chain	1281
+CXCL8	211506_s_at	C-X-C motif chemokine ligand 8	3576
+LST1	211581_x_at	leukocyte specific transcript 1	7940
+LST1	211582_x_at	leukocyte specific transcript 1	7940
+FN1	211719_x_at	fibronectin 1	2335
+DCN	211813_x_at	decorin	1634
+DCN	211896_s_at	decorin	1634
+FN1	212464_s_at	fibronectin 1	2335
+JCHAIN	212592_at	joining chain of multimeric IgA and IgM	3512
+SPARC	212667_at	secreted protein acidic and cysteine rich	6678
+LYZ	213975_s_at	lysozyme	4069
+LST1	214181_x_at	leukocyte specific transcript 1	7940
+S100A8	214370_at	S100 calcium binding protein A8	6279
+LST1	214574_x_at	leukocyte specific transcript 1	7940
+FN1	214701_s_at	fibronectin 1	2335
+FN1	214702_at	fibronectin 1	2335
+POSTN	214981_at	periostin	10631
+COL3A1	215076_s_at	collagen type III alpha 1 chain	1281
+COL3A1	215077_at	collagen type III alpha 1 chain	1281
+LST1	215633_x_at	leukocyte specific transcript 1	7940
+FN1	216442_x_at	fibronectin 1	2335
+IRF4	216986_s_at	interferon regulatory factor 4	3662
+IRF4	216987_at	interferon regulatory factor 4	3662
+PRDM1	217192_s_at	PR/SET domain 1	639
+COL1A1	217430_x_at	collagen type I alpha 1 chain	1277
+UBE2J1	217823_s_at	ubiquitin conjugating enzyme E2 J1	51465
+UBE2J1	217824_at	ubiquitin conjugating enzyme E2 J1	51465
+UBE2J1	217825_s_at	ubiquitin conjugating enzyme E2 J1	51465
+UBE2J1	217826_s_at	ubiquitin conjugating enzyme E2 J1	51465
+SLAMF7	219159_s_at	SLAM family member 7	57823
+ITM2C	221004_s_at	integral membrane protein 2C	81618
+TXNDC5	221253_s_at	BLOC1S5-TXNDC5 readthrough (NMD candidate)///thioredoxin domain containing 5	100526836///81567
+MZB1	221286_s_at	marginal zone B and B1 cell specific protein	51237
+UBE2J1	222435_s_at	ubiquitin conjugating enzyme E2 J1	51465
+SLAMF7	222838_at	SLAM family member 7	57823
+SEC11C	223299_at	SEC11 homolog C, signal peptidase complex subunit	90701
+MZB1	223565_at	marginal zone B and B1 cell specific protein	51237
+UBE2J1	228924_s_at	ubiquitin conjugating enzyme E2 J1	51465
+PRDM1	228964_at	PR/SET domain 1	639
+COL1A2	229218_at	collagen type I alpha 2 chain	1278
+LUM	229554_at	lumican	4060
+COL3A1	232458_at	collagen type III alpha 1 chain	1281
+CTSS	232617_at	cathepsin S	1520
+SLAMF7	234306_s_at	SLAM family member 7	57823
+PRDM1	235668_at	PR/SET domain 1	639
+SEC11C	235676_at	SEC11 homolog C, signal peptidase complex subunit	90701
+DCN	239786_at	decorin	1634
+DCN	240556_at	decorin	1634
+XBP1	242021_at	X-box binding protein 1	7494
+DCN	242605_at	decorin	1634
+IL1B	39402_at	interleukin 1 beta	3553

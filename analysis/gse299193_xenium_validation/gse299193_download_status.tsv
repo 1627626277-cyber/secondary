@@ -1,0 +1,2 @@
+dataset	raw_url	raw_tar	expected_bytes	current_bytes	current_gib	remaining_gib	percent_complete	is_complete_size
+GSE299193	https://ftp.ncbi.nlm.nih.gov/geo/series/GSE299nnn/GSE299193/suppl/GSE299193_RAW.tar	external_spatial\GSE299193\raw\GSE299193_RAW.tar	82255360000	82255360000	76.606	0.0	100.0	True

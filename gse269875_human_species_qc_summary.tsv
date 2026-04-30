@@ -1,0 +1,10 @@
+GSM	Title	Role	SRX	SRR	Sampled_transcript_reads	Human_hit_pct	Mouse_hit_pct	Human_only_pct	Mouse_only_pct	Human_only_mouse_only_ratio	Query_handling	Decision
+GSM8329290	hHBM1	human_control_mainline	SRX24927512	SRR29414117;SRR29414118	2000000	96.74	17.45	79.29	0.01	12686.61	read 4 transcript read	pass_human_sampled_magicblast
+GSM8329291	hHBM2	human_control_mainline	SRX24927513	SRR29414115;SRR29414116	2000000	82.06	15.54	66.85	0.32	207.47	read 4 transcript read	pass_human_sampled_magicblast
+GSM8329292	hHBM3	human_control_mainline	SRX24927514	SRR29414113;SRR29414114	2000000	85.99	16.11	70.24	0.37	192.31	read 4 transcript read	pass_human_sampled_magicblast
+GSM8329293	hMM1	human_mm_mainline	SRX24927515	SRR29414112	1000000	37.07	6.99	30.18	0.10	311.17	read 4 transcript read	pass_human_sampled_magicblast
+GSM8329294	hMM2	human_mm_mainline	SRX24927516	SRR29414110;SRR29414111	2000000	13.08	2.30	10.80	0.02	451.09	read 4 length 90 bp; trimmed to first 50 bp	pass_human_sampled_magicblast
+GSM8329295	hMM3	human_mm_mainline	SRX24927517	SRR29414109	1000000	67.63	12.80	54.84	0.01	6451.46	read 4 transcript read	pass_human_sampled_magicblast
+GSM8329296	hMM4	human_mm_mainline	SRX24927518	SRR29414108	1000000	13.52	2.20	11.33	0.01	878.35	read 4 transcript read	pass_human_sampled_magicblast
+GSM8329297	hMM5	human_mm_mainline	SRX24927519	SRR29414106;SRR29414107	2000000	90.38	14.64	75.77	0.02	3678.04	read 4 length 90 bp; trimmed to first 50 bp	pass_human_sampled_magicblast
+GSM8329298	hMM6	human_mm_mainline	SRX24927520	SRR29414105	1000000	25.71	4.54	21.20	0.02	1009.36	read 4 transcript read	pass_human_sampled_magicblast
