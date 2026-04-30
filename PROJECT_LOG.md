@@ -2333,12 +2333,14 @@ Repository action taken:
 - Kept current branch as `main`.
 - Tightened `.gitignore` to exclude compressed intermediate result tables and run logs from version control.
 - Created `reports\planning\GITHUB_REPOSITORY_SETUP_STATUS_2026-05-01.md`.
+- Configured local git author information from the connected GitHub profile.
+- Created initial local commit `93910dd` with message `Initial manuscript project snapshot`.
 
 Current interpretation:
 
 - GitHub is connected, but Codex cannot create the remote repository through the currently available connector tools.
 - The practical next step is either manual creation of an empty GitHub repository under `1627626277-cyber`, or installation/authentication of GitHub CLI.
-- Until a remote exists, the project can still be versioned locally.
+- Until a remote exists, the project is versioned locally on branch `main`.
 
 Manuscript stage:
 

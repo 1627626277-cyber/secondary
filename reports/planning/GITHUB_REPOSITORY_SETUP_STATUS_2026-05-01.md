@@ -9,6 +9,7 @@ The local project folder `D:\二区` has been initialized as a git repository.
 - Local repository: `D:\二区\.git`
 - Current branch: `main`
 - Local git binary: `D:\二区\tools\PortableGit\cmd\git.exe`
+- Initial local commit: `93910dd` (`Initial manuscript project snapshot`)
 - GitHub app login detected: `1627626277-cyber`
 - GitHub account email detected: `1627626277@qq.com`
 - GitHub app installation detected for the user account.
@@ -37,6 +38,33 @@ Therefore, a remote GitHub repository has not yet been created from Codex.
 - run logs
 
 This keeps the repository suitable for scripts, reports, manuscript files, compact result tables, and figure assets.
+
+## Local Commit Status
+
+An initial local manuscript-project snapshot has been committed.
+
+Commit:
+
+- `93910dd Initial manuscript project snapshot`
+
+The commit includes:
+
+- project logs and report index
+- analysis scripts
+- compact result tables
+- manuscript drafts
+- figure files
+- validation and review reports
+- reference-library metadata
+
+The commit excludes:
+
+- raw external datasets
+- reference genomes
+- local toolchains
+- downloaded full-text PDFs
+- SRA/FASTQ/BAM/H5 matrix containers
+- compressed intermediate tables and run logs
 
 ## Required User-Side Action To Push To GitHub
 
