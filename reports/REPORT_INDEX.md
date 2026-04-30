@@ -75,3 +75,9 @@ Date: 2026-04-29
 - `../references/REFERENCE_LIBRARY.tsv`: formal reference library with PMID, PMCID, DOI, URL, PDF status, and use reason.
 - `../references/REFERENCES_VANCOUVER_NUMBERED_DRAFT.md`: numbered Vancouver-style reference draft for the manuscript.
 - `../references/downloaded_pdfs_manifest.tsv`: open PDF download manifest.
+
+## Submission Package
+
+- `../submission/bmc_medical_genomics_2026-05-01/SUBMISSION_PACKAGE_INDEX.md`: active BMC Medical Genomics submission-package index.
+- `../submission/bmc_medical_genomics_2026-05-01/MANUSCRIPT_BMC_MEDICAL_GENOMICS_SUBMISSION_DRAFT.docx`: editable submission manuscript draft generated from the current title page and target manuscript.
+- `../submission/bmc_medical_genomics_2026-05-01/COVER_LETTER_DRAFT.docx`: editable cover-letter draft.

@@ -46,6 +46,8 @@ sra_cache/
 fastq/
 downloads/
 run_logs/
+submission/**/qa_render_*/
+submission/**/_generated_*.md
 
 # Raw external data caches
 external_spatial/

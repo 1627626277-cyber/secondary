@@ -2384,3 +2384,43 @@ Remaining before actual submission:
 - Cross-check in-text citation numbering against the final reference list.
 - Prepare cover letter.
 - Upload through the selected journal portal after final quality control.
+
+### 2026-05-01 Submission-Package Preparation Started
+
+User created a GitHub repository intended as `二区`.
+
+GitHub status:
+
+- GitHub connector detected the new repository as `1627626277-cyber/-`.
+- The repository display URL is `https://github.com/1627626277-cyber/-`.
+- The local repository remote was set to `https://github.com/1627626277-cyber/-.git`.
+- Local `git push` did not complete because command-line GitHub authentication is not available through the connected GitHub app session.
+- This means GitHub is connected at the app level, but local push still requires GitHub CLI authentication or a command-line credential/token.
+
+Submission-package work completed:
+
+- Created `submission\bmc_medical_genomics_2026-05-01`.
+- Created submission index, title-page draft, declarations draft, cover-letter draft, data/code availability draft, and editorial QC checklist.
+- Added BMC-style Declarations to `reports\manuscript\MANUSCRIPT_BMC_MEDICAL_GENOMICS_TARGET_DRAFT.md`.
+- Converted the abstract to the BMC Research Article structured format: Background, Methods, Results, Conclusions.
+- Reordered main-text sections to the BMC-compatible sequence: Background, Methods, Results, Discussion, Conclusions.
+- Added first-pass in-text numbered citations to the manuscript.
+- Completed stage-1 citation coverage audit: all 26 references are now cited at least once in the manuscript body.
+- Created `submission\bmc_medical_genomics_2026-05-01\CITATION_AUDIT_STAGE1.md`.
+- Added reproducible formatting script `scripts\24_prepare_bmc_submission_package.py`.
+- Generated editable DOCX manuscript:
+  - `submission\bmc_medical_genomics_2026-05-01\MANUSCRIPT_BMC_MEDICAL_GENOMICS_SUBMISSION_DRAFT.docx`
+- Generated editable DOCX cover letter:
+  - `submission\bmc_medical_genomics_2026-05-01\COVER_LETTER_DRAFT.docx`
+- Render-checked the DOCX files with the artifact-tool workflow.
+
+Formatting status:
+
+- Main manuscript DOCX uses one-inch margins, double spacing, page numbering, and Word line-numbering metadata.
+- Page numbering rendered correctly.
+- Line numbering should be confirmed in Word/WPS before upload because the artifact renderer did not visibly display line numbers.
+
+Current submission stage:
+
+- The project is now in active pre-submission preparation.
+- It is not yet ready for journal upload until author information, declarations, GitHub/code URL, citation-number check, figure/supplement decision, and final portal metadata are completed.
