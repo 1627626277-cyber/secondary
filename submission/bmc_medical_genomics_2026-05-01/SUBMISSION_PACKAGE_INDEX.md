@@ -32,6 +32,15 @@ Cover letter DOCX:
 
 - `D:\二区\submission\bmc_medical_genomics_2026-05-01\COVER_LETTER_DRAFT.docx`
 
+Integrated reading-layout manuscript:
+
+- `D:\二区\submission\bmc_medical_genomics_2026-05-01\MANUSCRIPT_CELLS_STYLE_READING_VERSION.docx`
+- `D:\二区\submission\bmc_medical_genomics_2026-05-01\MANUSCRIPT_CELLS_STYLE_READING_VERSION.pdf`
+
+Note:
+
+- The reading-layout manuscript embeds Fig. 1-6, Table 1, figure legends, declarations, and references in one continuous file for author review. It is not intended to replace the editable BMC submission DOCX unless the target journal specifically allows or requests a combined manuscript file.
+
 Figure legends:
 
 - `D:\二区\reports\manuscript\FIGURE_LEGENDS_DRAFT.md`
@@ -78,6 +87,9 @@ Current figure/table decision:
 - `TABLE1_CROSS_COHORT_EVIDENCE_DRAFT.docx`
 - `SUPPLEMENTARY_METHODS_REPRODUCIBILITY_DRAFT.md`
 - `SUPPLEMENTARY_METHODS_REPRODUCIBILITY_DRAFT.docx`
+- `MANUSCRIPT_CELLS_STYLE_READING_VERSION.docx`
+- `MANUSCRIPT_CELLS_STYLE_READING_VERSION.pdf`
+- `MANUSCRIPT_CELLS_STYLE_READING_VERSION_SOURCE.md`
 - `MANUSCRIPT_BMC_MEDICAL_GENOMICS_SUBMISSION_DRAFT_HARDENED_2026-05-01.docx`
 - `COVER_LETTER_DRAFT_HARDENED_2026-05-01.docx`
 
@@ -85,7 +97,13 @@ Current figure/table decision:
 
 - `D:\二区\scripts\24_prepare_bmc_submission_package.py`
 
+Additional reading-layout script:
+
+- `D:\二区\scripts\27_build_cells_style_reading_version.py`
+
 This script regenerates the manuscript DOCX and cover-letter DOCX from the current Markdown sources. The main manuscript DOCX is configured with one-inch margins, double spacing, page numbering, and Word line-numbering metadata.
+
+The reading-layout script regenerates the integrated author-review DOCX and source Markdown from the current manuscript, Table 1, figure legends, and manuscript figures.
 
 ## GitHub Status
 

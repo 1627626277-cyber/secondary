@@ -2618,3 +2618,25 @@ Current conclusion:
 - Figure upload-format confirmation is resolved for the current Fig. 1-6 package.
 - Suggested/opposed reviewer handling is understood and is not a blocking item.
 - Corresponding author details remain intentionally pending and are now the main manuscript-upload blocker.
+
+### 2026-05-01 Integrated Reading-Layout Manuscript
+
+Completed:
+
+- Generated an integrated reading-layout manuscript to make the project visually comparable to a published-style article PDF.
+- Embedded the title page, structured abstract, main text, Table 1, Fig. 1-6, figure legends, declarations, and references into one continuous DOCX.
+- Exported the integrated DOCX to PDF using local Microsoft Word.
+- Render-checked the DOCX with the artifact-tool document workflow; the current reading version renders as 11 pages.
+- Reordered the reading-layout Results display so Fig. 1-6 appear in numeric order for author review. This reading-layout order is for visual inspection and does not replace the formal submission DOCX unless adopted later.
+
+Files created:
+
+- `scripts\27_build_cells_style_reading_version.py`
+- `submission\bmc_medical_genomics_2026-05-01\MANUSCRIPT_CELLS_STYLE_READING_VERSION.docx`
+- `submission\bmc_medical_genomics_2026-05-01\MANUSCRIPT_CELLS_STYLE_READING_VERSION.pdf`
+- `submission\bmc_medical_genomics_2026-05-01\MANUSCRIPT_CELLS_STYLE_READING_VERSION_SOURCE.md`
+
+Current conclusion:
+
+- The author-review reading version is now available.
+- The formal BMC submission package remains separate: editable manuscript DOCX, figure files, Table 1, Supplementary Methods, cover letter, and portal metadata.
