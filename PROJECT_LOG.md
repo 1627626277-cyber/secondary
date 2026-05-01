@@ -2477,3 +2477,10 @@ Important external cleanup:
 - The ORCID screenshot shows an employment entry as `Fo Guang Shan: Kaohsiung City, TW` with `master (GDUPT)`.
 - This should not be used as the manuscript affiliation.
 - If this was entered by mistake, it should be corrected directly on ORCID before final submission.
+
+GitHub push status:
+
+- Local commit `4de5be0` was created for the ORCID and final citation-preparation update.
+- `git push -u origin main` timed out.
+- A non-interactive connectivity check failed with `Failed to connect to github.com port 443`.
+- Full local repository push remains pending because the local Git command cannot currently reach GitHub over HTTPS from this environment.
