@@ -8,11 +8,11 @@ Current target journal: BMC Medical Genomics.
 
 ## Status
 
-The local project repository is maintained at `D:\二区` and contains the active scripts, compact result tables, manuscript files, figure outputs, validation reports, and submission-preparation documents.
-
-Local command-line `git push` has not yet completed from the Windows workstation because local GitHub authentication/network resolution still needs to be completed. The repository URL is now used in the submission package as the intended code-availability URL:
+The project repository has been pushed to GitHub and is publicly available at:
 
 https://github.com/1627626277-cyber/secondary
+
+The local working copy is maintained at `D:\二区` and contains the active scripts, compact result tables, manuscript files, figure outputs, validation reports, and submission-preparation documents.
 
 ## Public datasets used
 

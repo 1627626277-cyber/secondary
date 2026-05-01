@@ -2596,3 +2596,25 @@ Remaining blockers:
 - Public GitHub/code availability is still unresolved because command-line push has timed out.
 - Corresponding author details remain intentionally pending.
 - Final journal portal metadata and final figure upload format still need portal-side confirmation.
+
+### 2026-05-01 GitHub Push And Portal Requirement Confirmation
+
+Completed:
+
+- Confirmed the GitHub remote repository: `https://github.com/1627626277-cyber/secondary`.
+- Merged the remote starter files into the local project history using unrelated-history merge, because the remote repository already contained an initial README/code-availability note.
+- Successfully pushed the full local project repository to GitHub.
+- Updated README, code availability, submission package index, editorial QC checklist, and manuscript code-availability wording from planned availability to public availability.
+- Confirmed BMC Medical Genomics official figure guidance: PDF/PNG and other common figure formats are accepted, legends belong in the manuscript rather than in the graphics, and each figure file should remain below 10 MB.
+- Confirmed BMC supporting-information guidance: suggested reviewers are optional; if used, institutional emails or identifiers such as ORCID/Scopus should be provided where possible. Opposed reviewers can be entered if needed.
+
+Report created:
+
+- `reports\manuscript\PORTAL_REQUIREMENTS_CONFIRMATION_2026-05-01.md`
+
+Current conclusion:
+
+- GitHub/code availability is resolved.
+- Figure upload-format confirmation is resolved for the current Fig. 1-6 package.
+- Suggested/opposed reviewer handling is understood and is not a blocking item.
+- Corresponding author details remain intentionally pending and are now the main manuscript-upload blocker.

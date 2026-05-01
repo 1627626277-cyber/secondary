@@ -100,15 +100,12 @@ Remote detected by GitHub connector:
 Important note:
 
 - The target repository is `1627626277-cyber/secondary`.
-- GitHub connector confirmed the repository and created/updated repository-side availability files.
-- Full local `git push` still needs working command-line GitHub network/authentication.
+- The local project repository was pushed successfully on 2026-05-01 after merging the remote starter files.
 
-## Not Yet Ready For Upload
+## Remaining Before Upload
 
-The package is not ready for journal upload until these are completed:
+The package is close to journal upload. Remaining items:
 
 1. Add the detailed postal correspondence address if the journal portal requires it.
-2. Complete full local repository push or provide a stable archive mirror.
-3. Confirm line numbers in Word/WPS before upload.
-4. Confirm final figure resolution and journal upload format.
-5. Complete DOI/URL live-link verification before upload.
+2. Finalize the corresponding author name, email, and postal correspondence address.
+3. Enter final portal metadata during the live submission session.

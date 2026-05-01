@@ -47,7 +47,7 @@ Date started: 2026-05-01
 - [x] Supplementary Methods/reproducibility DOCX generated
 - [x] Keep Fig. 6 as a main figure
 - [x] Keep cross-cohort evidence table as main Table 1
-- [ ] Confirm final figure resolution and journal upload format
+- [x] Confirm final figure resolution and journal upload format
 
 ## References
 
@@ -65,14 +65,14 @@ Date started: 2026-05-01
 - [x] Initial project snapshot committed
 - [x] Large raw data excluded from version control
 - [x] GitHub repository detected by connector
-- [ ] Local project pushed to GitHub
+- [x] Local project pushed to GitHub
 - [x] Final code availability URL inserted into manuscript draft
 
 ## Submission Portal Items
 
 - [x] Cover letter finalized as a first-pass draft
-- [ ] Suggested reviewers considered
-- [ ] Opposed reviewers considered if needed
+- [x] Suggested reviewers considered; optional according to BMC supporting-information guidance
+- [x] Opposed reviewers considered; none identified at this stage
 - [x] Funding statement confirmed
 - [x] Competing interests statement confirmed
 - [x] Author contribution statement completed for single-author draft

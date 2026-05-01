@@ -27,6 +27,12 @@ Public molecular annotation:
 
 - Skerget et al. Nature Genetics 2024 public supplementary tables
 
+## Public Code Repository
+
+Analysis scripts, compact result tables, manuscript figures, and validation reports are publicly available at:
+
+- https://github.com/1627626277-cyber/secondary
+
 ## Local Reproducibility Assets
 
 Scripts:
@@ -47,19 +53,15 @@ Numeric integrity reports:
 
 ## GitHub Repository Status
 
-Local repository:
+Local working copy:
 
 - `D:\二区`
 
-Detected GitHub remote:
+Public GitHub repository:
 
 - `https://github.com/1627626277-cyber/secondary`
 
-Current blocker:
+Current status:
 
-- Local git push requires GitHub command-line authentication or working GitHub network access. The connected GitHub app can see the repository but does not automatically authenticate local `git push`.
-
-Required before journal upload:
-
-- Push the local repository to GitHub, or provide an alternative persistent code archive.
-- Confirm that the repository contains the final scripts, compact results, figure outputs, and validation reports.
+- The local repository was pushed to GitHub on 2026-05-01.
+- The repository contains the final scripts, compact results, figure outputs, validation reports, and submission-preparation materials available at the time of this draft.

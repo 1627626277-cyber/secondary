@@ -134,7 +134,7 @@ The manuscript affiliation should remain:
 Current readiness estimate:
 
 - Scientific evidence package: high for a public-data Q2 bioinformatics manuscript.
-- Journal-upload package: close, but not complete.
-- Main remaining risks: full code repository push/archive, final figure upload formatting, corresponding-author metadata, and portal metadata.
+- Journal-upload package: close, but not complete only because corresponding-author and live portal metadata remain pending.
+- GitHub/code availability, figure upload-format confirmation, DOI/URL link audit, line-number confirmation, and DOCX render checks are complete.
 
-The project is in manuscript-finalization and submission-preparation. It is not yet ready for one-click journal upload.
+The project is in manuscript-finalization and submission-preparation. It is not yet ready for one-click journal upload because the corresponding-author metadata still needs to be finalized.

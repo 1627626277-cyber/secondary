@@ -6,11 +6,11 @@ This repository is reserved for the code and compact reproducibility materials f
 
 Current target journal: BMC Medical Genomics.
 
-The active local project repository is maintained at `D:\二区` and includes analysis scripts, compact result tables, manuscript files, figure outputs, validation reports, and submission-preparation documents.
-
-Local command-line `git push` has not yet completed from the Windows workstation. The repository URL is the intended code-availability URL for the submission package:
+The project repository has been pushed to GitHub and is publicly available at:
 
 https://github.com/1627626277-cyber/secondary
+
+The active local working copy is maintained at `D:\二区` and includes analysis scripts, compact result tables, manuscript files, figure outputs, validation reports, and submission-preparation documents.
 
 ## Public datasets
 
