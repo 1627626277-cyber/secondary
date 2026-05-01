@@ -30,11 +30,11 @@ multiple myeloma; spatial transcriptomics; Xenium; single-cell RNA-seq; CoMMpass
 
 ## Background
 
-Multiple myeloma is a plasma-cell malignancy of the bone marrow. Its clinical course varies widely across patients. Genomic profiling has linked this heterogeneity to recurrent copy-number events, structural alterations, and expression subtypes [1,4-6,9,12-15]. These bulk profiles are clinically informative. They also lose spatial context.
+Multiple myeloma is a plasma-cell malignancy of the bone marrow. Its clinical course varies widely across patients. Genomic profiling has linked this heterogeneity to recurrent copy-number events, structural alterations, and expression subtypes [1-9]. These bulk profiles are clinically informative. They also lose spatial context.
 
-The bone marrow niche is not uniform. Malignant plasma cells coexist with immune, stromal, endothelial, and hematopoietic compartments. Spatial organization may shape local transcriptional states. It may also influence disease progression. Spatial and single-cell technologies can resolve this context [2,3]. However, most public spatial datasets remain small and clinically sparse.
+The bone marrow niche is not uniform. Malignant plasma cells coexist with immune, stromal, endothelial, and hematopoietic compartments. Spatial organization may shape local transcriptional states. It may also influence disease progression. Spatial and single-cell technologies can resolve this context [10,11]. However, most public spatial datasets remain small and clinically sparse.
 
-A defensible translational analysis must therefore connect several evidence layers. Spatial data can identify a tissue-level program. Single-cell data can localize the program. Bulk clinical cohorts can test outcome and risk associations. Molecular annotation can then place the program within known myeloma biology [7].
+A defensible translational analysis must therefore connect several evidence layers. Spatial data can identify a tissue-level program. Single-cell data can localize the program. Bulk clinical cohorts can test outcome and risk associations. Molecular annotation can then place the program within known myeloma biology [12].
 
 We applied this strategy to public multiple myeloma datasets. The initial spatial discovery analysis identified a plasma-secretory program enriched in myeloma bone marrow. This program included canonical plasma-cell and secretory pathway genes. Such biology is expected in myeloma, so a single-gene biomarker claim would be weak. We therefore framed the project around a broader plasma-secretory subtype axis.
 
@@ -46,7 +46,7 @@ Within this framework, TXNDC5 serves as a localization candidate. It links the s
 
 This was a retrospective public-data integrative analysis. The workflow used six evidence layers.
 
-The layers were spatial discovery, second spatial validation, single-cell localization, external bulk validation, CoMMpass/GDC validation, and NG2024 annotation [1-3,16-23].
+The layers were spatial discovery, second spatial validation, single-cell localization, external bulk validation, CoMMpass/GDC validation, and NG2024 annotation [1,10,11,13-20].
 
 The primary biological construct was a plasma-secretory bone marrow program. The clinical module contained POU2AF1, XBP1, and JCHAIN.
 
@@ -54,11 +54,11 @@ TXNDC5 was evaluated as a spatial and single-cell localization candidate. It was
 
 All analyses used public data or open processed resources. No private MMRF clinical table was used for completed claims.
 
-Analyses were run with Python 3.13.9. Key packages were pandas 2.3.3, numpy 2.3.5, scipy 1.16.3, matplotlib 3.10.6, scanpy 1.12, seaborn 0.13.2, statsmodels 0.14.5, and h5py 3.15.1 [8,26].
+Analyses were run with Python 3.13.9. Key packages were pandas 2.3.3, numpy 2.3.5, scipy 1.16.3, matplotlib 3.10.6, scanpy 1.12, seaborn 0.13.2, statsmodels 0.14.5, and h5py 3.15.1 [21,22].
 
 ### Spatial discovery
 
-GSE269875 human bone marrow spatial matrices were used for discovery [18]. Processed matrices were checked with `scripts/08_processed_spatial_matrix_qc.py`.
+GSE269875 human bone marrow spatial matrices were used for discovery [15]. Processed matrices were checked with `scripts/08_processed_spatial_matrix_qc.py`.
 
 Preliminary clustering and marker summaries were generated with `scripts/09_preliminary_spatial_clustering.py`.
 
@@ -72,7 +72,7 @@ Spatial discovery outputs were stored in `analysis/spatial_candidate_signatures`
 
 ### Xenium validation
 
-GSE299193 raw Xenium files were downloaded from GEO [2,19]. The raw tar file matched the expected byte size.
+GSE299193 raw Xenium files were downloaded from GEO [10,16]. The raw tar file matched the expected byte size.
 
 Validation used `scripts/18_gse299193_xenium_validation.py`. The script avoided full extraction of large image and transcript files.
 
@@ -90,7 +90,7 @@ Outputs were stored in `analysis/gse299193_xenium_validation`.
 
 ### Single-cell localization
 
-GSE271107 single-cell RNA-seq data were used for localization [3,20]. The workflow used `scripts/11_gse271107_scrna_validation.py`.
+GSE271107 single-cell RNA-seq data were used for localization [11,17]. The workflow used `scripts/11_gse271107_scrna_validation.py`.
 
 Cells were summarized by marker-inferred broad cell categories. Candidate genes and module scores were compared across compartments.
 
@@ -100,7 +100,7 @@ Single-cell outputs were stored in `analysis/scrna_gse271107_validation`.
 
 ### Bulk validation
 
-GSE24080 and GSE2658 were used as external bulk expression cohorts [10,11,21,22]. Initial analyses used `scripts/12_bulk_clinical_validation.py`.
+GSE24080 and GSE2658 were used as external bulk expression cohorts [18,19,23,24]. Initial analyses used `scripts/12_bulk_clinical_validation.py`.
 
 The clinical subtype refinement used `scripts/13_plasma_secretory_subtype_refinement.py`. That step centered POU2AF1, XBP1, and JCHAIN.
 
@@ -114,7 +114,7 @@ Bulk outputs were stored in `analysis/bulk_clinical_validation` and `analysis/pl
 
 ### CoMMpass/GDC validation
 
-MMRF-COMMPASS/GDC RNA-seq validation used `scripts/14_commppass_gdc_validation.py` [17,23].
+MMRF-COMMPASS/GDC RNA-seq validation used `scripts/14_commppass_gdc_validation.py` [14,20].
 
 RNA-seq files were filtered to baseline visit-1 bone marrow CD138+ samples. The final validation table contained 762 samples.
 
@@ -156,11 +156,11 @@ Mann-Whitney tests compared continuous scores between binary groups. Spearman co
 
 Kruskal-Wallis tests compared scores across RNA-subtype categories. Fisher exact tests assessed median-split binary score summaries.
 
-Survival analyses used log-rank tests and Cox proportional hazards models. Cox models reported hazard ratios per one-standard-deviation score [24].
+Survival analyses used log-rank tests and Cox proportional hazards models. Cox models reported hazard ratios per one-standard-deviation score [25].
 
 Logistic models reported odds ratios per one-standard-deviation score. Linear models reported beta coefficients for continuous subtype probabilities.
 
-Multiple testing was controlled using Benjamini-Hochberg FDR. FDR correction was applied within each analysis family [25].
+Multiple testing was controlled using Benjamini-Hochberg FDR. FDR correction was applied within each analysis family [26].
 
 Analysis families were defined by cohort and endpoint class. Complete-case analysis was used for models requiring covariates.
 
@@ -182,7 +182,7 @@ Numeric traceability was checked in `reports/review/STAGE2_NUMERIC_INTEGRITY_CHE
 
 ### Spatial transcriptomics identified a plasma-secretory program in myeloma bone marrow
 
-We first analyzed GSE269875 human bone marrow spatial transcriptomics data [18]. Sample-level module scores were calculated for curated cell-state programs. These included plasma-secretory, myeloid-inflammatory, T/NK cytotoxic, stromal, endothelial, erythroid, and cycling programs.
+We first analyzed GSE269875 human bone marrow spatial transcriptomics data [15]. Sample-level module scores were calculated for curated cell-state programs. These included plasma-secretory, myeloid-inflammatory, T/NK cytotoxic, stromal, endothelial, erythroid, and cycling programs.
 
 The plasma-secretory program showed the strongest myeloma enrichment. Myeloma samples had higher scores than control samples. The median difference was 0.709. The Cohen's d was 3.129. The Mann-Whitney p value was 0.0256 (Fig. 2).
 
@@ -190,7 +190,7 @@ Gene-level ranking prioritized canonical plasma-cell and secretory markers. Thes
 
 ### GSE299193 reproduced the spatial signal at program level
 
-We next tested whether the spatial signal generalized to an independent platform. GSE299193 Xenium data included 22 human bone marrow samples [2,19]. The cohort contained Ctrl, MGUS, SM, MM, and relapsed MM groups.
+We next tested whether the spatial signal generalized to an independent platform. GSE299193 Xenium data included 22 human bone marrow samples [10,16]. The cohort contained Ctrl, MGUS, SM, MM, and relapsed MM groups.
 
 The plasma-secretory score was higher in active MM/RM samples than Ctrl/MGUS/SM samples. The median difference was 0.766. The Mann-Whitney p value was 0.000182. The FDR was 0.000575 (Fig. 6).
 
@@ -200,7 +200,7 @@ The Xenium feature matrices contained MZB1, TNFRSF17, SLAMF7, IRF4, PIM2, POU2AF
 
 ### Single-cell data localized the axis to plasma-cell compartments
 
-We then analyzed GSE271107 single-cell RNA-seq data [3,20]. Cells were summarized by marker-inferred cell categories. Plasma cells showed the strongest plasma-secretory score among broad cell types (Fig. 3).
+We then analyzed GSE271107 single-cell RNA-seq data [11,17]. Cells were summarized by marker-inferred cell categories. Plasma cells showed the strongest plasma-secretory score among broad cell types (Fig. 3).
 
 TXNDC5 was consistently expressed in marker-inferred plasma cells. The mean log-normalized expression was 2.196. The detection fraction was 94.86 percent across summarized plasma-cell observations.
 
@@ -208,7 +208,7 @@ These findings support TXNDC5 as a localization candidate. They do not support p
 
 ### External bulk cohorts supported a clinical subtype module
 
-We evaluated independent bulk cohorts to test clinical relevance. GSE2658 and GSE24080 provided expression data with available clinical or cytogenetic annotations [10,11,21,22].
+We evaluated independent bulk cohorts to test clinical relevance. GSE2658 and GSE24080 provided expression data with available clinical or cytogenetic annotations [18,19,23,24].
 
 In GSE2658, the POU2AF1/XBP1/JCHAIN module was associated with 1q21 amplification. The FDR was 1.65e-05. In GSE24080, XBP1 was associated with 24-month overall survival death. The FDR was 0.0362 (Fig. 4).
 
@@ -216,7 +216,7 @@ These results shifted the clinical framing. The stronger clinical construct is t
 
 ### CoMMpass/GDC linked the axis to survival and ISS
 
-We next tested the axis in 762 baseline MMRF-COMMPASS/GDC CD138+ RNA-seq samples [17,23]. The plasma-secretory score was associated with overall survival event. The event-versus-nonevent median difference was 0.346. The FDR was 9.31e-06 (Fig. 5).
+We next tested the axis in 762 baseline MMRF-COMMPASS/GDC CD138+ RNA-seq samples [14,20]. The plasma-secretory score was associated with overall survival event. The event-versus-nonevent median difference was 0.346. The FDR was 9.31e-06 (Fig. 5).
 
 The same score was associated with ISS ordinal stage. The Spearman rho was 0.132. The p value was 0.000316. The FDR was 0.0019.
 
@@ -274,19 +274,19 @@ The datasets supporting the conclusions of this article are available in public 
 
 ### Code availability
 
-Analysis scripts, compact result tables, manuscript figures, and validation reports are organized in the project repository. The local repository is versioned at `D:\??`; the public or private GitHub repository record should be finalized before formal journal upload.
+Analysis scripts, compact result tables, manuscript figures, and validation reports are organized in the project repository at `https://github.com/1627626277-cyber/secondary`. The repository should be populated and checked before formal journal upload.
 
 ### Competing interests
 
-The author(s) declare that they have no competing interests. [Author confirmation required before submission.]
+The author declares that there are no competing interests.
 
 ### Funding
 
-No specific funding was received for this work. [Author confirmation required before submission.]
+No specific funding was received for this work.
 
 ### Authors' contributions
 
-[To be completed after the final author list and author order are confirmed.]
+Z.J. conceived the study, designed the analysis strategy, curated public datasets, interpreted the results, prepared the manuscript, and approved the submitted version. This statement should be revised if additional authors are added before submission.
 
 ### Acknowledgements
 
@@ -295,28 +295,28 @@ The author(s) acknowledge the investigators and participants associated with the
 ## References
 
 1. Skerget S, Penaherrera D, Chari A, Jagannath S, Siegel DS, Vij R, et al. Comprehensive molecular profiling of multiple myeloma identifies refined copy number and expression subtypes. Nat Genet. 2024;56(9):1878-1889. doi:10.1038/s41588-024-01853-0.
-2. Yip RKH, Er J, Qin L, Nguyen QH, Motyer A, Rimes JS, et al. Profiling the spatial architecture of multiple myeloma in human bone marrow trephine biopsy specimens with spatial transcriptomics. Blood. 2025;146(15):1837-1849. doi:10.1182/blood.2025028896.
-3. Yu W, Zhan J, Wang Y, Cao X, Yu A, Rao Y, et al. Single-cell transcriptomics identifies PDIA4 as a marker of progression and therapeutic vulnerability in multiple myeloma. J Transl Med. 2025;23(1):1136. doi:10.1186/s12967-025-07098-7.
-4. Maura F, Bolli N, Angelopoulos N, Dawson KJ, Leongamornlert D, Martincorena I, et al. Genomic landscape and chronological reconstruction of driver events in multiple myeloma. Nat Commun. 2019;10(1):3835. doi:10.1038/s41467-019-11680-1.
-5. Palumbo A, Avet-Loiseau H, Oliva S, Lokhorst HM, Goldschmidt H, Rosinol L, et al. Revised International Staging System for Multiple Myeloma: A Report From International Myeloma Working Group. J Clin Oncol. 2015;33(26):2863-2869. doi:10.1200/JCO.2015.61.2267.
-6. Rajkumar SV, Dimopoulos MA, Palumbo A, Blade J, Merlini G, Mateos MV, et al. International Myeloma Working Group updated criteria for the diagnosis of multiple myeloma. Lancet Oncol. 2014;15(12):e538-e548. doi:10.1016/S1470-2045(14)70442-5.
-7. McShane LM, Altman DG, Sauerbrei W, Taube SE, Gion M, Clark GM, et al. Reporting recommendations for tumor marker prognostic studies (REMARK). J Natl Cancer Inst. 2005;97(16):1180-1184. doi:10.1093/jnci/dji237.
-8. Wolf FA, Angerer P, Theis FJ. SCANPY: large-scale single-cell gene expression data analysis. Genome Biol. 2018;19(1):15. doi:10.1186/s13059-017-1382-0.
-9. Chapman MA, Lawrence MS, Keats JJ, Cibulskis K, Sougnez C, Schinzel AC, et al. Initial genome sequencing and analysis of multiple myeloma. Nature. 2011;471(7339):467-472. doi:10.1038/nature09837.
-10. Shi L, Campbell G, Jones WD, Campagne F, Wen Z, Walker SJ, et al. The MicroArray Quality Control (MAQC)-II study of common practices for the development and validation of microarray-based predictive models. Nat Biotechnol. 2010;28(8):827-838. doi:10.1038/nbt.1665.
-11. Liu Q, Sung AH, Chen Z, Liu J, Huang X, Deng Y. Feature selection and classification of MAQC-II breast cancer and multiple myeloma microarray gene expression data. PLoS One. 2009;4(12):e8250. doi:10.1371/journal.pone.0008250.
-12. Rajkumar SV. Multiple myeloma: 2022 update on diagnosis, risk stratification, and management. Am J Hematol. 2022;97(8):1086-1107. doi:10.1002/ajh.26590.
-13. Greipp PR, San Miguel J, Durie BG, Crowley JJ, Barlogie B, Blade J, et al. International staging system for multiple myeloma. J Clin Oncol. 2005;23(15):3412-3420. doi:10.1200/JCO.2005.04.242.
-14. Zhan F, Huang Y, Colla S, Stewart JP, Hanamura I, Gupta S, et al. The molecular classification of multiple myeloma. Blood. 2006;108(6):2020-2028. doi:10.1182/blood-2005-11-013458.
-15. Hanamura I, Stewart JP, Huang Y, Zhan F, Santra M, Sawyer JR, et al. Frequent gain of chromosome band 1q21 in plasma-cell dyscrasias detected by fluorescence in situ hybridization: incidence increases from MGUS to relapsed myeloma and is related to prognosis and disease progression following tandem stem-cell transplantation. Blood. 2006;108(5):1724-1732. doi:10.1182/blood-2006-03-009910.
-16. Barrett T, Wilhite SE, Ledoux P, Evangelista C, Kim IF, Tomashevsky M, et al. NCBI GEO: archive for functional genomics data sets - update. Nucleic Acids Res. 2013;41(Database issue):D991-D995. doi:10.1093/nar/gks1193.
-17. Zhang Z, Hernandez K, Savage J, Li S, Miller D, Agrawal S, et al. Uniform genomic data analysis in the NCI Genomic Data Commons. Nat Commun. 2021;12(1):1226. doi:10.1038/s41467-021-21254-9.
-18. National Center for Biotechnology Information. GEO Series GSE269875: Spatial transcriptomics unveils novel potential disease mechanisms associated with the microenvironment in multiple myeloma. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE269875. Accessed 1 May 2026.
-19. National Center for Biotechnology Information. GEO Series GSE299193: Profiling the spatial architecture of multiple myeloma in human bone marrow trephines with spatial transcriptomics. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE299193. Accessed 1 May 2026.
-20. National Center for Biotechnology Information. GEO Series GSE271107: Single-cell RNA sequencing of bone marrow aspirate samples from multiple myeloma and its precursor conditions. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE271107. Accessed 1 May 2026.
-21. National Center for Biotechnology Information. GEO Series GSE24080: MAQC-II Project: Multiple myeloma data set. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE24080. Accessed 1 May 2026.
-22. National Center for Biotechnology Information. GEO Series GSE2658: Gene expression profiles of multiple myeloma. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE2658. Accessed 1 May 2026.
-23. National Cancer Institute Genomic Data Commons. Multiple Myeloma Research Foundation CoMMpass Study. https://gdc.cancer.gov/about-gdc/contributed-genomic-data-cancer-research/foundation-medicine/multiple-myeloma-research-foundation-mmrf. Accessed 1 May 2026.
-24. Cox DR. Regression models and life-tables. J R Stat Soc Series B Stat Methodol. 1972;34:187-220.
-25. Benjamini Y, Hochberg Y. Controlling the false discovery rate: a practical and powerful approach to multiple testing. J R Stat Soc Series B Stat Methodol. 1995;57:289-300. doi:10.1111/j.2517-6161.1995.tb02031.x.
-26. Seabold S, Perktold J. Statsmodels: econometric and statistical modeling with Python. Proceedings of the 9th Python in Science Conference. 2010;92-96. https://www.statsmodels.org/. Accessed 1 May 2026.
+2. Maura F, Bolli N, Angelopoulos N, Dawson KJ, Leongamornlert D, Martincorena I, et al. Genomic landscape and chronological reconstruction of driver events in multiple myeloma. Nat Commun. 2019;10(1):3835. doi:10.1038/s41467-019-11680-1.
+3. Palumbo A, Avet-Loiseau H, Oliva S, Lokhorst HM, Goldschmidt H, Rosinol L, et al. Revised International Staging System for Multiple Myeloma: A Report From International Myeloma Working Group. J Clin Oncol. 2015;33(26):2863-2869. doi:10.1200/JCO.2015.61.2267.
+4. Rajkumar SV, Dimopoulos MA, Palumbo A, Blade J, Merlini G, Mateos MV, et al. International Myeloma Working Group updated criteria for the diagnosis of multiple myeloma. Lancet Oncol. 2014;15(12):e538-e548. doi:10.1016/S1470-2045(14)70442-5.
+5. Chapman MA, Lawrence MS, Keats JJ, Cibulskis K, Sougnez C, Schinzel AC, et al. Initial genome sequencing and analysis of multiple myeloma. Nature. 2011;471(7339):467-472. doi:10.1038/nature09837.
+6. Rajkumar SV. Multiple myeloma: 2022 update on diagnosis, risk stratification, and management. Am J Hematol. 2022;97(8):1086-1107. doi:10.1002/ajh.26590.
+7. Greipp PR, San Miguel J, Durie BG, Crowley JJ, Barlogie B, Blade J, et al. International staging system for multiple myeloma. J Clin Oncol. 2005;23(15):3412-3420. doi:10.1200/JCO.2005.04.242.
+8. Zhan F, Huang Y, Colla S, Stewart JP, Hanamura I, Gupta S, et al. The molecular classification of multiple myeloma. Blood. 2006;108(6):2020-2028. doi:10.1182/blood-2005-11-013458.
+9. Hanamura I, Stewart JP, Huang Y, Zhan F, Santra M, Sawyer JR, et al. Frequent gain of chromosome band 1q21 in plasma-cell dyscrasias detected by fluorescence in situ hybridization: incidence increases from MGUS to relapsed myeloma and is related to prognosis and disease progression following tandem stem-cell transplantation. Blood. 2006;108(5):1724-1732. doi:10.1182/blood-2006-03-009910.
+10. Yip RKH, Er J, Qin L, Nguyen QH, Motyer A, Rimes JS, et al. Profiling the spatial architecture of multiple myeloma in human bone marrow trephine biopsy specimens with spatial transcriptomics. Blood. 2025;146(15):1837-1849. doi:10.1182/blood.2025028896.
+11. Yu W, Zhan J, Wang Y, Cao X, Yu A, Rao Y, et al. Single-cell transcriptomics identifies PDIA4 as a marker of progression and therapeutic vulnerability in multiple myeloma. J Transl Med. 2025;23(1):1136. doi:10.1186/s12967-025-07098-7.
+12. McShane LM, Altman DG, Sauerbrei W, Taube SE, Gion M, Clark GM, et al. Reporting recommendations for tumor marker prognostic studies (REMARK). J Natl Cancer Inst. 2005;97(16):1180-1184. doi:10.1093/jnci/dji237.
+13. Barrett T, Wilhite SE, Ledoux P, Evangelista C, Kim IF, Tomashevsky M, et al. NCBI GEO: archive for functional genomics data sets - update. Nucleic Acids Res. 2013;41(Database issue):D991-D995. doi:10.1093/nar/gks1193.
+14. Zhang Z, Hernandez K, Savage J, Li S, Miller D, Agrawal S, et al. Uniform genomic data analysis in the NCI Genomic Data Commons. Nat Commun. 2021;12(1):1226. doi:10.1038/s41467-021-21254-9.
+15. National Center for Biotechnology Information. GEO Series GSE269875: Spatial transcriptomics unveils novel potential disease mechanisms associated with the microenvironment in multiple myeloma. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE269875. Accessed 1 May 2026.
+16. National Center for Biotechnology Information. GEO Series GSE299193: Profiling the spatial architecture of multiple myeloma in human bone marrow trephines with spatial transcriptomics. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE299193. Accessed 1 May 2026.
+17. National Center for Biotechnology Information. GEO Series GSE271107: Single-cell RNA sequencing of bone marrow aspirate samples from multiple myeloma and its precursor conditions. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE271107. Accessed 1 May 2026.
+18. National Center for Biotechnology Information. GEO Series GSE24080: MAQC-II Project: Multiple myeloma data set. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE24080. Accessed 1 May 2026.
+19. National Center for Biotechnology Information. GEO Series GSE2658: Gene expression profiles of multiple myeloma. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE2658. Accessed 1 May 2026.
+20. National Cancer Institute Genomic Data Commons. Multiple Myeloma Research Foundation CoMMpass Study. https://gdc.cancer.gov/about-gdc/contributed-genomic-data-cancer-research/foundation-medicine/multiple-myeloma-research-foundation-mmrf. Accessed 1 May 2026.
+21. Wolf FA, Angerer P, Theis FJ. SCANPY: large-scale single-cell gene expression data analysis. Genome Biol. 2018;19(1):15. doi:10.1186/s13059-017-1382-0.
+22. Seabold S, Perktold J. Statsmodels: econometric and statistical modeling with Python. Proceedings of the 9th Python in Science Conference. 2010;92-96. https://www.statsmodels.org/. Accessed 1 May 2026.
+23. Shi L, Campbell G, Jones WD, Campagne F, Wen Z, Walker SJ, et al. The MicroArray Quality Control (MAQC)-II study of common practices for the development and validation of microarray-based predictive models. Nat Biotechnol. 2010;28(8):827-838. doi:10.1038/nbt.1665.
+24. Liu Q, Sung AH, Chen Z, Liu J, Huang X, Deng Y. Feature selection and classification of MAQC-II breast cancer and multiple myeloma microarray gene expression data. PLoS One. 2009;4(12):e8250. doi:10.1371/journal.pone.0008250.
+25. Cox DR. Regression models and life-tables. J R Stat Soc Series B Stat Methodol. 1972;34:187-220.
+26. Benjamini Y, Hochberg Y. Controlling the false discovery rate: a practical and powerful approach to multiple testing. J R Stat Soc Series B Stat Methodol. 1995;57:289-300. doi:10.1111/j.2517-6161.1995.tb02031.x.

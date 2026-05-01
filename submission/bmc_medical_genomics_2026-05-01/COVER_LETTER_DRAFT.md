@@ -6,14 +6,14 @@ This manuscript presents an integrative public-data analysis of multiple myeloma
 
 The work is framed as a reproducible and clinically associated transcriptional program rather than as a completed clinical biomarker. The manuscript explicitly states that R-ISS, PFS, treatment-response validation, and wet-lab validation were not completed in the current public-data route. We believe this transparent scope is well aligned with the journal's interest in genomic and transcriptomic analyses of disease biology.
 
-All analyzed datasets are publicly available or open-access processed resources. The analysis scripts, compact result tables, figure outputs, and validation reports are organized in a version-controlled project repository, with repository access information to be finalized before submission.
+All analyzed datasets are publicly available or open-access processed resources. The analysis scripts, compact result tables, figure outputs, and validation reports are organized in a version-controlled project repository at https://github.com/1627626277-cyber/secondary. The full local project push should be checked before journal upload.
 
-This manuscript has not been published and is not under consideration elsewhere. All authors have approved the manuscript for submission. [Author confirmation required.]
+This manuscript has not been published and is not under consideration elsewhere. The author confirms responsibility for the submitted work. [Final author confirmation required before upload.]
 
 Sincerely,
 
-[Corresponding author name]
+Zhuang Jiang
 
-[Institution]
+Guangdong University of Petrochemical Technology (GDUPT)
 
-[Email]
+[Corresponding author email to be confirmed]

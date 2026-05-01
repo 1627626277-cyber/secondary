@@ -20,21 +20,21 @@ Current local repository:
 
 - `D:\二区`
 
-Detected remote repository:
+GitHub repository:
 
-- `https://github.com/1627626277-cyber/-.git`
+- `https://github.com/1627626277-cyber/secondary`
 
 ## Competing Interests
 
-The author(s) declare that they have no competing interests. [Author confirmation required.]
+The author declares that there are no competing interests.
 
 ## Funding
 
-No specific funding was received for this work. [Author confirmation required.]
+No specific funding was received for this work.
 
 ## Authors' Contributions
 
-[To be completed after final author list is confirmed.]
+Z.J. conceived the study, designed the analysis strategy, curated public datasets, interpreted the results, prepared the manuscript, and approved the submitted version. This statement should be revised if additional authors are added before submission.
 
 ## Acknowledgements
 

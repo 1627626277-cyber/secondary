@@ -2387,15 +2387,16 @@ Remaining before actual submission:
 
 ### 2026-05-01 Submission-Package Preparation Started
 
-User created a GitHub repository intended as `二区`.
+User created a GitHub repository intended as `二区`, then reported that the repository name was changed to `secondary`.
 
 GitHub status:
 
-- GitHub connector detected the new repository as `1627626277-cyber/-`.
-- The repository display URL is `https://github.com/1627626277-cyber/-`.
-- The local repository remote was set to `https://github.com/1627626277-cyber/-.git`.
-- Local `git push` did not complete because command-line GitHub authentication is not available through the connected GitHub app session.
-- This means GitHub is connected at the app level, but local push still requires GitHub CLI authentication or a command-line credential/token.
+- GitHub connector detected the updated target repository as `1627626277-cyber/secondary`.
+- The repository display URL is `https://github.com/1627626277-cyber/secondary`.
+- The local repository remote was updated to `https://github.com/1627626277-cyber/secondary.git`.
+- Local non-interactive `git push` did not complete; the latest attempt failed with `Could not resolve host: github.com`.
+- Through the GitHub connector, `README.md` was updated and `CODE_AVAILABILITY.md` was created in `1627626277-cyber/secondary`.
+- This establishes the final intended code-availability URL, but full local repository push remains incomplete.
 
 Submission-package work completed:
 
@@ -2406,6 +2407,7 @@ Submission-package work completed:
 - Reordered main-text sections to the BMC-compatible sequence: Background, Methods, Results, Discussion, Conclusions.
 - Added first-pass in-text numbered citations to the manuscript.
 - Completed stage-1 citation coverage audit: all 26 references are now cited at least once in the manuscript body.
+- Reordered the manuscript reference list and in-text citation numbers according to Vancouver first-appearance order.
 - Created `submission\bmc_medical_genomics_2026-05-01\CITATION_AUDIT_STAGE1.md`.
 - Added reproducible formatting script `scripts\24_prepare_bmc_submission_package.py`.
 - Generated editable DOCX manuscript:
@@ -2420,7 +2422,23 @@ Formatting status:
 - Page numbering rendered correctly.
 - Line numbering should be confirmed in Word/WPS before upload because the artifact renderer did not visibly display line numbers.
 
+Author and declaration status:
+
+- Author English name set as `Zhuang Jiang`.
+- Chinese name source: `蒋壮`.
+- Affiliation set as `Guangdong University of Petrochemical Technology (GDUPT), Maoming, Guangdong, China`.
+- ORCID status recorded as not registered at this stage.
+- Corresponding author email and detailed address remain to be confirmed.
+- Funding statement set to no specific funding.
+- Competing interests statement set to no competing interests.
+- Single-author contribution draft added as `Z.J. conceived the study, designed the analysis strategy, curated public datasets, interpreted the results, prepared the manuscript, and approved the submitted version.`
+
+Figure and table decision:
+
+- Keep Fig. 6 as a main figure because it addresses the second-spatial-validation weakness.
+- Keep the cross-cohort evidence table as main Table 1 because it summarizes the public-data evidence chain and claim boundaries.
+
 Current submission stage:
 
 - The project is now in active pre-submission preparation.
-- It is not yet ready for journal upload until author information, declarations, GitHub/code URL, citation-number check, figure/supplement decision, and final portal metadata are completed.
+- It is not yet ready for journal upload until corresponding-author details, Word/WPS line-number confirmation, complete GitHub push, final citation claim-placement check, and final portal metadata are completed.

@@ -75,12 +75,13 @@ Local git repository:
 
 Remote detected by GitHub connector:
 
-- `https://github.com/1627626277-cyber/-.git`
+- `https://github.com/1627626277-cyber/secondary`
 
 Important note:
 
-- The repository that the user intended to name `二区` appears in GitHub metadata as `-`.
-- Local `git push` currently requires command-line GitHub authentication and did not complete automatically through the GitHub app connection.
+- The user reported that the target repository is now named `secondary`.
+- GitHub connector confirmed `1627626277-cyber/secondary`.
+- Local `git push` currently requires command-line GitHub authentication and does not complete automatically through the GitHub app connection.
 
 ## Not Yet Ready For Upload
 
@@ -88,8 +89,8 @@ The package is not ready for journal upload until these are completed:
 
 1. Confirm author names, affiliations, corresponding author, and ORCID identifiers.
 2. Confirm competing interests and funding statements.
-3. Cross-check all citation numbers after final edits.
-4. Finalize main versus supplementary figures.
+3. Final claim-placement check for all citation numbers after final edits.
+4. Keep Fig. 6 as a main figure and Table 1 as the main cross-cohort evidence table unless journal formatting forces supplementary placement.
 5. Resolve GitHub/code-availability wording.
 6. Replace all author-information placeholders.
 7. Confirm line numbers in Word/WPS before upload.

@@ -85,12 +85,13 @@ References:
 
 ## Remaining Required Before Upload
 
-1. Convert manuscript to the journal-required upload format, likely DOCX.
+1. Convert manuscript to the journal-required upload format.
+   - Status: complete; DOCX generated in `submission\bmc_medical_genomics_2026-05-01`.
 2. Finalize title page:
-   - author names
-   - affiliations
-   - corresponding author
-   - ORCID identifiers if available
+   - author name: Zhuang Jiang
+   - affiliation: Guangdong University of Petrochemical Technology (GDUPT), Maoming, Guangdong, China
+   - corresponding author email and detailed address still required
+   - ORCID not registered at this stage
 3. Finalize declarations:
    - ethics approval and consent to participate
    - consent for publication
@@ -99,9 +100,14 @@ References:
    - funding
    - author contributions
    - acknowledgements
-4. Cross-check all in-text citation numbers against the final reference list.
-5. Decide main versus supplementary figures/tables.
+   - Status: draft complete; author must confirm before upload.
+4. Final claim-placement citation check.
+   - Coverage and Vancouver first-appearance ordering are complete.
+5. Main versus supplementary figures/tables:
+   - Keep Fig. 6 as a main figure.
+   - Keep the cross-cohort evidence table as main Table 1.
 6. Prepare cover letter.
+   - Status: DOCX draft generated.
 7. Perform final reproducibility audit from scripts to manuscript claims.
 
 ## Practical Submission Readiness

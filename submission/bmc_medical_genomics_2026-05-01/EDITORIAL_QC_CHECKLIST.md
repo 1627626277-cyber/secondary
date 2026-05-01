@@ -24,10 +24,10 @@ Date started: 2026-05-01
 - [x] References
 - [x] Declarations draft
 - [x] Main-text order aligned to Background, Methods, Results, Discussion, Conclusions
-- [ ] Author list
-- [ ] Affiliations
+- [x] Author list
+- [x] Affiliations
 - [ ] Corresponding author
-- [ ] ORCID identifiers
+- [x] ORCID status recorded
 - [x] Editable DOCX manuscript generated
 - [x] Cover letter DOCX generated
 - [x] DOCX render check completed
@@ -42,8 +42,8 @@ Date started: 2026-05-01
 - [x] Fig. 5 generated
 - [x] Fig. 6 generated
 - [x] Cross-cohort evidence table generated
-- [ ] Decide whether Fig. 6 is main or supplementary
-- [ ] Decide whether cross-cohort evidence table is main or supplementary
+- [x] Keep Fig. 6 as a main figure
+- [x] Keep cross-cohort evidence table as main Table 1
 - [ ] Confirm final figure resolution and journal upload format
 
 ## References
@@ -52,7 +52,8 @@ Date started: 2026-05-01
 - [x] Reference library TSV prepared
 - [x] Open-access PDF manifest prepared
 - [x] Stage-1 in-text citation coverage audit completed
-- [ ] Final in-text citation order and claim-placement check after last manuscript edit
+- [x] Vancouver first-appearance reference order applied
+- [ ] Final claim-placement check after last manuscript edit
 - [ ] DOI/URL final verification before upload
 
 ## Repository And Reproducibility
@@ -62,7 +63,7 @@ Date started: 2026-05-01
 - [x] Large raw data excluded from version control
 - [x] GitHub repository detected by connector
 - [ ] Local project pushed to GitHub
-- [ ] Final code availability URL inserted into manuscript
+- [x] Final code availability URL inserted into manuscript draft
 
 ## Submission Portal Items
 

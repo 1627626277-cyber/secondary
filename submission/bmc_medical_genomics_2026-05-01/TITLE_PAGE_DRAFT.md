@@ -8,23 +8,23 @@ Plasma-secretory spatial program in multiple myeloma
 
 ## Authors
 
-[Author 1 full name]1*
+Zhuang Jiang^1^
 
 ## Affiliations
 
-1. [Department, Institution, City, Country]
+1. Guangdong University of Petrochemical Technology (GDUPT), Maoming, Guangdong, China
 
 ## Corresponding Author
 
-[Corresponding author full name]
+[Corresponding author to be confirmed]
 
-Email: [email]
+Email: [to be confirmed]
 
-Address: [institutional address]
+Address: Guangdong University of Petrochemical Technology (GDUPT), Maoming, Guangdong, China. [Detailed address to be confirmed]
 
 ## ORCID
 
-[Author ORCID identifiers, if available]
+Not registered at this stage.
 
 ## Word Count
 
@@ -43,7 +43,7 @@ Planned main figures:
 
 Planned table:
 
-- Cross-cohort evidence table
+- Table 1: cross-cohort evidence table
 
 ## Keywords
 

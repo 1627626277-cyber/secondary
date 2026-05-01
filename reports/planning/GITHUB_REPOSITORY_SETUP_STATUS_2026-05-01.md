@@ -16,13 +16,25 @@ The local project folder `D:\二区` has been initialized as a git repository.
 
 ## GitHub Remote Status
 
-The GitHub connector is authenticated, but it currently exposes repository listing, file, branch, PR, and issue operations only. It does not expose a create-new-repository operation in this Codex session.
+The GitHub connector is authenticated, but it currently exposes repository listing, file, branch, PR, and issue operations only. It did not expose a create-new-repository operation in this Codex session.
 
-Repository listing returned zero accessible repositories:
+Repository listing later confirmed the user-created repository:
 
-- Accessible repositories: none
+- `1627626277-cyber/secondary`
+- URL: `https://github.com/1627626277-cyber/secondary`
 
-Therefore, a remote GitHub repository has not yet been created from Codex.
+The local git remote has been set to:
+
+- `https://github.com/1627626277-cyber/secondary.git`
+
+Local command-line `git push` has not completed yet. The latest non-interactive attempt failed with `Could not resolve host: github.com`.
+
+Connector-side repository initialization:
+
+- `README.md` updated through the GitHub connector.
+- `CODE_AVAILABILITY.md` created through the GitHub connector.
+
+This establishes the intended code-availability URL, but it does not replace the full local repository push.
 
 ## Repository Hygiene
 
@@ -68,19 +80,10 @@ The commit excludes:
 
 ## Required User-Side Action To Push To GitHub
 
-Because the connector cannot create a new repository, one of the following is required before Codex can push the project online:
-
-1. Create an empty GitHub repository manually under `1627626277-cyber`.
-   - Recommended repository name: `mm-plasma-secretory-spatial-q2`
-   - Visibility: private until manuscript submission
-   - Do not initialize with README, `.gitignore`, or license, because the local repository already contains project files.
-
-2. Or install and authenticate GitHub CLI (`gh`) so Codex can create the remote repository from the command line.
-
-After an empty remote exists, the local repository can be connected with:
+After command-line GitHub authentication and network resolution are working, the local repository can be pushed with:
 
 ```powershell
-& 'D:\二区\tools\PortableGit\cmd\git.exe' remote add origin https://github.com/1627626277-cyber/mm-plasma-secretory-spatial-q2.git
+& 'D:\二区\tools\PortableGit\cmd\git.exe' remote set-url origin https://github.com/1627626277-cyber/secondary.git
 & 'D:\二区\tools\PortableGit\cmd\git.exe' push -u origin main
 ```
 

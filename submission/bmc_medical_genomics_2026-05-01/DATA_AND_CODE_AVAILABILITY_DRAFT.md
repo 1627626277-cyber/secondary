@@ -53,7 +53,7 @@ Local repository:
 
 Detected GitHub remote:
 
-- `https://github.com/1627626277-cyber/-.git`
+- `https://github.com/1627626277-cyber/secondary`
 
 Current blocker:
 
