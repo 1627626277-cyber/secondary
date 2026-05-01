@@ -2442,7 +2442,7 @@ Figure and table decision:
 Current submission stage:
 
 - The project is now in active pre-submission preparation.
-- It is not yet ready for journal upload until corresponding-author details, Word/WPS line-number confirmation, complete GitHub push, final citation claim-placement check, and final portal metadata are completed.
+- It is not yet ready for journal upload until the detailed postal address if required, Word/WPS line-number confirmation, complete GitHub push or archive, DOI/URL live-link verification, final figure upload checks, and final portal metadata are completed.
 
 ### 2026-05-01 ORCID And Author Metadata Correction
 
