@@ -2425,10 +2425,11 @@ Formatting status:
 Author and declaration status:
 
 - Author English name set as `Zhuang Jiang`.
-- Chinese name source: `蒋壮`.
+- Chinese name confirmed by user; manuscript English form set as `Zhuang Jiang`.
 - Affiliation set as `Guangdong University of Petrochemical Technology (GDUPT), Maoming, Guangdong, China`.
-- ORCID status recorded as not registered at this stage.
-- Corresponding author email and detailed address remain to be confirmed.
+- ORCID updated to `https://orcid.org/0009-0007-4388-5901`.
+- Corresponding author email updated to `1627626277@qq.com`.
+- Detailed postal correspondence address remains to be confirmed only if required by the journal portal.
 - Funding statement set to no specific funding.
 - Competing interests statement set to no competing interests.
 - Single-author contribution draft added as `Z.J. conceived the study, designed the analysis strategy, curated public datasets, interpreted the results, prepared the manuscript, and approved the submitted version.`
@@ -2442,3 +2443,37 @@ Current submission stage:
 
 - The project is now in active pre-submission preparation.
 - It is not yet ready for journal upload until corresponding-author details, Word/WPS line-number confirmation, complete GitHub push, final citation claim-placement check, and final portal metadata are completed.
+
+### 2026-05-01 ORCID And Author Metadata Correction
+
+User provided an ORCID screenshot for the author profile.
+
+Confirmed author metadata:
+
+- Manuscript name: `Zhuang Jiang`.
+- Chinese name confirmed by user; manuscript English form: `Zhuang Jiang`.
+- ORCID iD: `0009-0007-4388-5901`.
+- ORCID URL: `https://orcid.org/0009-0007-4388-5901`.
+- Corresponding author email: `1627626277@qq.com`.
+- Manuscript affiliation remains `Guangdong University of Petrochemical Technology (GDUPT), Maoming, Guangdong, China`.
+
+Corrections made:
+
+- Updated title page author metadata.
+- Updated cover-letter signature email.
+- Updated editorial QC checklist.
+- Updated submission-preparation checklist.
+- Added `submission\bmc_medical_genomics_2026-05-01\AUTHOR_AND_ORCID_STATUS.md`.
+- Corrected garbled project path text in the submission-package support files.
+- Removed unintended Pandoc-generated oversized title blocks from the manuscript and cover-letter DOCX generation.
+- Regenerated and render-checked the DOCX package after ORCID insertion.
+- Added approximate manuscript word count excluding references: 2,819.
+- Synchronized `references\REFERENCES_VANCOUVER_NUMBERED_DRAFT.md` to the final manuscript reference order.
+- Added `submission\bmc_medical_genomics_2026-05-01\CITATION_AUDIT_STAGE2_FINAL.md`.
+- Final numeric citation coverage and high-level claim-placement screen passed; DOI/URL live-link verification remains before upload.
+
+Important external cleanup:
+
+- The ORCID screenshot shows an employment entry as `Fo Guang Shan: Kaohsiung City, TW` with `master (GDUPT)`.
+- This should not be used as the manuscript affiliation.
+- If this was entered by mistake, it should be corrected directly on ORCID before final submission.

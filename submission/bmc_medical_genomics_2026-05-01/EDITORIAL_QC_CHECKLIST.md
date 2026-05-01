@@ -26,8 +26,9 @@ Date started: 2026-05-01
 - [x] Main-text order aligned to Background, Methods, Results, Discussion, Conclusions
 - [x] Author list
 - [x] Affiliations
-- [ ] Corresponding author
-- [x] ORCID status recorded
+- [x] Corresponding author name and email
+- [ ] Detailed correspondence address
+- [x] ORCID iD inserted
 - [x] Editable DOCX manuscript generated
 - [x] Cover letter DOCX generated
 - [x] DOCX render check completed
@@ -53,7 +54,7 @@ Date started: 2026-05-01
 - [x] Open-access PDF manifest prepared
 - [x] Stage-1 in-text citation coverage audit completed
 - [x] Vancouver first-appearance reference order applied
-- [ ] Final claim-placement check after last manuscript edit
+- [x] Final numeric coverage and claim-placement screen after author metadata edits
 - [ ] DOI/URL final verification before upload
 
 ## Repository And Reproducibility
@@ -67,11 +68,11 @@ Date started: 2026-05-01
 
 ## Submission Portal Items
 
-- [ ] Cover letter finalized
+- [x] Cover letter finalized as a first-pass draft
 - [ ] Suggested reviewers considered
 - [ ] Opposed reviewers considered if needed
-- [ ] Funding statement confirmed
-- [ ] Competing interests statement confirmed
-- [ ] Author contribution statement completed
-- [ ] Data availability statement finalized with repository URL
+- [x] Funding statement confirmed
+- [x] Competing interests statement confirmed
+- [x] Author contribution statement completed for single-author draft
+- [x] Data availability statement finalized with repository URL
 - [x] Manuscript converted to editable submission format

@@ -89,9 +89,11 @@ References:
    - Status: complete; DOCX generated in `submission\bmc_medical_genomics_2026-05-01`.
 2. Finalize title page:
    - author name: Zhuang Jiang
+   - Chinese name source: 蒋壮
    - affiliation: Guangdong University of Petrochemical Technology (GDUPT), Maoming, Guangdong, China
-   - corresponding author email and detailed address still required
-   - ORCID not registered at this stage
+   - corresponding author email: 1627626277@qq.com
+   - detailed correspondence address still required if the journal portal asks for postal address
+   - ORCID: https://orcid.org/0009-0007-4388-5901
 3. Finalize declarations:
    - ethics approval and consent to participate
    - consent for publication
@@ -100,9 +102,9 @@ References:
    - funding
    - author contributions
    - acknowledgements
-   - Status: draft complete; author must confirm before upload.
+   - Status: draft complete for the current single-author version. Revise if additional authors, funding, or institutional requirements are added before upload.
 4. Final claim-placement citation check.
-   - Coverage and Vancouver first-appearance ordering are complete.
+   - Coverage, Vancouver first-appearance ordering, formal reference-draft synchronization, and high-level claim-placement screen are complete.
 5. Main versus supplementary figures/tables:
    - Keep Fig. 6 as a main figure.
    - Keep the cross-cohort evidence table as main Table 1.
@@ -110,12 +112,20 @@ References:
    - Status: DOCX draft generated.
 7. Perform final reproducibility audit from scripts to manuscript claims.
 
+## ORCID Profile Issue To Fix Outside The Manuscript
+
+The ORCID screenshot shows an employment entry for "Fo Guang Shan: Kaohsiung City, TW" with "master (GDUPT)". This appears inconsistent with the manuscript affiliation and should be corrected in ORCID if it was entered by mistake.
+
+The manuscript affiliation should remain:
+
+- Guangdong University of Petrochemical Technology (GDUPT), Maoming, Guangdong, China
+
 ## Practical Submission Readiness
 
 Current readiness estimate:
 
 - Scientific evidence package: high for a public-data Q2 bioinformatics manuscript.
-- Journal-upload package: not complete.
-- Main remaining risk: wording discipline, citation consistency, and final submission formatting.
+- Journal-upload package: close, but not complete.
+- Main remaining risks: full code repository push/archive, DOI/URL live-link verification, figure upload formatting, Word/WPS line-number confirmation, and portal metadata.
 
-The project is ready to move from analysis-building into manuscript-finalization and submission-preparation. It is not yet ready for one-click journal upload.
+The project is in manuscript-finalization and submission-preparation. It is not yet ready for one-click journal upload.

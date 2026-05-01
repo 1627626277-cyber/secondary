@@ -22,13 +22,11 @@ MAIN_DOCX = SUBMISSION_DIR / "MANUSCRIPT_BMC_MEDICAL_GENOMICS_SUBMISSION_DRAFT.d
 COVER_DOCX = SUBMISSION_DIR / "COVER_LETTER_DRAFT.docx"
 
 
-def run_pandoc(inputs: list[Path], output: Path, title: str) -> None:
+def run_pandoc(inputs: list[Path], output: Path) -> None:
     cmd = [
         "pandoc",
         *[str(path) for path in inputs],
         "--standalone",
-        "--metadata",
-        f"title={title}",
         "-o",
         str(output),
     ]
@@ -128,12 +126,8 @@ def main() -> None:
     SUBMISSION_DIR.mkdir(parents=True, exist_ok=True)
     submission_body = write_submission_body()
 
-    run_pandoc(
-        [TITLE_PAGE_MD, submission_body],
-        MAIN_DOCX,
-        "Spatial validation and clinical association of a plasma-secretory bone marrow program in multiple myeloma",
-    )
-    run_pandoc([COVER_LETTER_MD], COVER_DOCX, "Cover Letter")
+    run_pandoc([TITLE_PAGE_MD, submission_body], MAIN_DOCX)
+    run_pandoc([COVER_LETTER_MD], COVER_DOCX)
 
     format_main_manuscript(MAIN_DOCX)
     format_cover_letter(COVER_DOCX)

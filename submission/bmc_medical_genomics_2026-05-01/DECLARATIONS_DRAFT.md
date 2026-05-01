@@ -14,7 +14,7 @@ The datasets supporting the conclusions of this article are available in public 
 
 ## Code Availability
 
-Analysis scripts, compact result tables, manuscript figures, and validation reports are organized in the project repository. The GitHub repository should be finalized before journal upload.
+Analysis scripts, compact result tables, manuscript figures, and validation reports are organized in a local reproducibility package and will be made publicly available before formal journal upload.
 
 Current local repository:
 

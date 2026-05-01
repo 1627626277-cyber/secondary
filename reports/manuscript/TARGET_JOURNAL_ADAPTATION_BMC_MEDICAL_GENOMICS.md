@@ -105,15 +105,15 @@ Availability of data and materials:
 
 Competing interests:
 
-- Must be completed by the author before submission.
+- Current single-author statement: the author declares no competing interests.
 
 Funding:
 
-- Must be completed by the author before submission.
+- Current statement: no specific funding was received for this work.
 
 Authors' contributions:
 
-- Must be completed after the final author list is fixed.
+- Current single-author statement: Z.J. conceived the study, designed the analysis strategy, curated public datasets, interpreted the results, prepared the manuscript, and approved the submitted version. Revise if additional authors are added.
 
 ## Next Target-Specific Work
 

@@ -47,10 +47,10 @@ Current planned main figures:
 - Fig. 5: CoMMpass/GDC clinical validation
 - Fig. 6: GSE299193 Xenium spatial validation
 
-Decision still required:
+Current figure/table decision:
 
-- whether Fig. 6 remains a main figure or moves to supplementary material
-- whether the cross-cohort evidence table is a main table or supplementary table
+- Fig. 6 remains a main figure because it directly addresses the second-spatial-validation weakness.
+- The cross-cohort evidence table remains main Table 1 because it summarizes the evidence chain and claim boundaries.
 
 ## Submission Draft Components In This Folder
 
@@ -58,8 +58,10 @@ Decision still required:
 - `DECLARATIONS_DRAFT.md`
 - `COVER_LETTER_DRAFT.md`
 - `DATA_AND_CODE_AVAILABILITY_DRAFT.md`
+- `AUTHOR_AND_ORCID_STATUS.md`
 - `EDITORIAL_QC_CHECKLIST.md`
 - `CITATION_AUDIT_STAGE1.md`
+- `CITATION_AUDIT_STAGE2_FINAL.md`
 
 ## Reproducible Submission Formatting Script
 
@@ -79,18 +81,16 @@ Remote detected by GitHub connector:
 
 Important note:
 
-- The user reported that the target repository is now named `secondary`.
-- GitHub connector confirmed `1627626277-cyber/secondary`.
-- Local `git push` currently requires command-line GitHub authentication and does not complete automatically through the GitHub app connection.
+- The target repository is `1627626277-cyber/secondary`.
+- GitHub connector confirmed the repository and created/updated repository-side availability files.
+- Full local `git push` still needs working command-line GitHub network/authentication.
 
 ## Not Yet Ready For Upload
 
 The package is not ready for journal upload until these are completed:
 
-1. Confirm author names, affiliations, corresponding author, and ORCID identifiers.
-2. Confirm competing interests and funding statements.
-3. Final claim-placement check for all citation numbers after final edits.
-4. Keep Fig. 6 as a main figure and Table 1 as the main cross-cohort evidence table unless journal formatting forces supplementary placement.
-5. Resolve GitHub/code-availability wording.
-6. Replace all author-information placeholders.
-7. Confirm line numbers in Word/WPS before upload.
+1. Add the detailed postal correspondence address if the journal portal requires it.
+2. Complete full local repository push or provide a stable archive mirror.
+3. Confirm line numbers in Word/WPS before upload.
+4. Confirm final figure resolution and journal upload format.
+5. Complete DOI/URL live-link verification before upload.

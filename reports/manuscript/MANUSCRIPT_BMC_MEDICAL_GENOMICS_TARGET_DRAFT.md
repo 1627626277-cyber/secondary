@@ -274,7 +274,7 @@ The datasets supporting the conclusions of this article are available in public 
 
 ### Code availability
 
-Analysis scripts, compact result tables, manuscript figures, and validation reports are organized in the project repository at `https://github.com/1627626277-cyber/secondary`. The repository should be populated and checked before formal journal upload.
+Analysis scripts, compact result tables, manuscript figures, and validation reports are organized in a local reproducibility package and will be made publicly available before formal journal upload at `https://github.com/1627626277-cyber/secondary`.
 
 ### Competing interests
 

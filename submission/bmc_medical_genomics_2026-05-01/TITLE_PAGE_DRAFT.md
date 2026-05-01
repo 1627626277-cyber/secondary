@@ -8,7 +8,7 @@ Plasma-secretory spatial program in multiple myeloma
 
 ## Authors
 
-Zhuang Jiang^1^
+Zhuang Jiang
 
 ## Affiliations
 
@@ -16,23 +16,23 @@ Zhuang Jiang^1^
 
 ## Corresponding Author
 
-[Corresponding author to be confirmed]
+Zhuang Jiang
 
-Email: [to be confirmed]
+Email: 1627626277@qq.com
 
 Address: Guangdong University of Petrochemical Technology (GDUPT), Maoming, Guangdong, China. [Detailed address to be confirmed]
 
 ## ORCID
 
-Not registered at this stage.
+Zhuang Jiang: https://orcid.org/0009-0007-4388-5901
 
 ## Word Count
 
-To be calculated after final formatting.
+Approximate manuscript word count excluding references: 2,819.
 
 ## Figures And Tables
 
-Planned main figures:
+Main figures:
 
 - Fig. 1: study design and evidence chain
 - Fig. 2: spatial discovery in GSE269875
@@ -41,7 +41,7 @@ Planned main figures:
 - Fig. 5: CoMMpass/GDC clinical validation
 - Fig. 6: GSE299193 Xenium validation
 
-Planned table:
+Main table:
 
 - Table 1: cross-cohort evidence table
 

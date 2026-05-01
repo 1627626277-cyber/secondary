@@ -57,9 +57,9 @@ Detected GitHub remote:
 
 Current blocker:
 
-- Local git push requires GitHub command-line authentication. The connected GitHub app can see the repository but does not automatically authenticate local `git push`.
+- Local git push requires GitHub command-line authentication or working GitHub network access. The connected GitHub app can see the repository but does not automatically authenticate local `git push`.
 
 Required before journal upload:
 
 - Push the local repository to GitHub, or provide an alternative persistent code archive.
-- Update the manuscript Code availability statement with the final repository URL.
+- Confirm that the repository contains the final scripts, compact results, figure outputs, and validation reports.
