@@ -96,7 +96,7 @@ Submission hardening files:
    - Status: complete; DOCX generated in `submission\bmc_medical_genomics_2026-05-01`.
 2. Finalize title page:
    - author name: Zhuang Jiang
-   - Chinese name source: ??
+   - Chinese name source: confirmed by user as 蒋壮
    - affiliation/address: Guangdong University of Petrochemical Technology (GDUPT), 139 Guandu 2nd Road, Maoming 525000, Guangdong, China
    - corresponding author details: to be finalized before submission
    - ORCID: https://orcid.org/0009-0007-4388-5901

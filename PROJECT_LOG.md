@@ -2640,3 +2640,48 @@ Current conclusion:
 
 - The author-review reading version is now available.
 - The formal BMC submission package remains separate: editable manuscript DOCX, figure files, Table 1, Supplementary Methods, cover letter, and portal metadata.
+
+### 2026-05-01 Remaining Omissions And Required Cleanup
+
+This section summarizes the remaining unresolved items after the integrated reading-layout manuscript was generated.
+
+Items already corrected in this pass:
+
+- Updated `DECLARATIONS_DRAFT.md` so code availability now states that the GitHub repository is already public, rather than planned for future release.
+- Updated the submission-preparation checklist so the Chinese name source is recorded as user-confirmed: 蒋壮.
+
+Must resolve before formal journal submission:
+
+1. Corresponding author metadata remains incomplete.
+   - Decide whether Zhuang Jiang is also the corresponding author.
+   - Add the final corresponding-author email.
+   - Add the final postal correspondence address if the portal requires a detailed address.
+2. Title-page placeholders remain by design until corresponding-author details are final.
+   - Current placeholders: `[To be finalized before submission]`, email placeholder, and address placeholder.
+   - These must be removed before clicking final submit.
+3. ORCID profile cleanup remains external to the manuscript.
+   - The screenshot showed a likely incorrect "Fo Guang Shan" entry.
+   - Correct this in ORCID if it was entered by mistake, because the manuscript affiliation is GDUPT.
+4. Final portal metadata still requires human entry.
+   - Article type, title, abstract, keywords, author details, affiliation, ORCID, ethics, consent, funding, competing interests, author contributions, data/code availability, APC/open-access choices, and license confirmations must be entered in the live submission system.
+5. Suggested reviewers are not yet named.
+   - BMC guidance treats reviewer suggestions as optional, but if the portal requests them, prepare 3-5 independent researchers with institutional emails or ORCID/Scopus identifiers.
+   - No opposed reviewers are currently identified.
+6. Final figure-upload packaging still needs portal-side execution.
+   - Use separate Fig. 1-6 files from `analysis\manuscript_figures`, preferably PDF when accepted by the portal, with PNG as fallback.
+   - The integrated reading PDF is for author review and should not replace separate figure upload unless the journal portal explicitly allows a combined manuscript file.
+7. Final author approval is still needed.
+   - The user should review `MANUSCRIPT_CELLS_STYLE_READING_VERSION.pdf` for narrative flow and figure readability.
+   - After any text change, regenerate the formal DOCX and reading-layout PDF and re-run visual QA.
+
+Scientific limitations to keep, not to "fix" by overclaiming:
+
+- R-ISS, PFS, and treatment-response validation remain unavailable in the public clinical slice.
+- GSE299193 supports program-level spatial validation but does not directly validate TXNDC5, JCHAIN, or SDC1 because those genes are absent from the extracted Xenium matrices.
+- No wet-lab validation is available.
+- The analysis remains retrospective and public-data based; it should not be described as a prospective classifier or clinical biomarker assay.
+
+Current conclusion:
+
+- The project is scientifically and technically close to submission preparation completion.
+- The remaining blockers are administrative/portal metadata and final author approval, not the core data-analysis workflow.

@@ -10,7 +10,7 @@ Author name for manuscript:
 
 Chinese name source:
 
-- 蒋壮
+- 蒋壮, confirmed by user.
 
 Affiliation for manuscript:
 

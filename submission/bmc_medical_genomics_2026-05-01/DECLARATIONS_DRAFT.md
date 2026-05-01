@@ -14,15 +14,13 @@ The datasets supporting the conclusions of this article are available in public 
 
 ## Code Availability
 
-Analysis scripts, compact result tables, manuscript figures, and validation reports are organized in a local reproducibility package and will be made publicly available before formal journal upload.
-
-Current local repository:
-
-- `D:\二区`
-
-GitHub repository:
+Analysis scripts, compact result tables, manuscript figures, and validation reports are publicly available at:
 
 - `https://github.com/1627626277-cyber/secondary`
+
+Local working copy:
+
+- `D:\二区`
 
 ## Competing Interests
 
