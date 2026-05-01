@@ -2702,3 +2702,23 @@ Current conclusion:
 
 - The live portal still requires manual entry, but the text to copy is now centralized in one file.
 - Corresponding-author email and final APC/license choices remain intentionally unresolved.
+
+### 2026-05-01 Portal Metadata User Decisions
+
+User decisions applied:
+
+- Author remains Zhuang Jiang.
+- Funding is entered as no specific funding.
+- Competing interests remain none.
+- Author contribution was not entered as "none" because journals require a contribution statement for listed authors. It was converted to a single-author contribution statement: Z.J. conceived, performed, interpreted, wrote, revised, and approved the study.
+- APC remains unresolved because it is a payment/open-access choice, not a scientific metadata field. Official BMC Medical Genomics guidance checked on 2026-05-01 states that an APC applies if accepted; the current listed APC is GBP 2490 / USD 3290 / EUR 2890, subject to tax, and the actual APC is determined from the acceptance date.
+
+Files updated:
+
+- `submission\bmc_medical_genomics_2026-05-01\PORTAL_METADATA_COPY_PASTE.md`
+- `submission\bmc_medical_genomics_2026-05-01\DECLARATIONS_DRAFT.md`
+- `reports\manuscript\MANUSCRIPT_BMC_MEDICAL_GENOMICS_TARGET_DRAFT.md`
+
+Current conclusion:
+
+- Portal text is now filled as far as it can be without live portal login, corresponding-author email, and APC/payment decision.

@@ -32,7 +32,7 @@ No specific funding was received for this work.
 
 ## Authors' Contributions
 
-Z.J. conceived the study, designed the analysis strategy, curated public datasets, interpreted the results, prepared the manuscript, and approved the submitted version. This statement should be revised if additional authors are added before submission.
+Z.J. is the sole author. Z.J. conceived the study, designed and performed the analysis, curated the public datasets, generated the figures, interpreted the results, wrote and revised the manuscript, and approved the final version. This statement should be revised if additional authors are added before submission.
 
 ## Acknowledgements
 

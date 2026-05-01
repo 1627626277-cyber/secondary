@@ -187,7 +187,7 @@ No specific funding was received for this work.
 Authors' contributions:
 
 ```text
-Z.J. conceived the study, designed the analysis strategy, curated public datasets, interpreted the results, prepared the manuscript, and approved the submitted version.
+Z.J. is the sole author. Z.J. conceived the study, designed and performed the analysis, curated the public datasets, generated the figures, interpreted the results, wrote and revised the manuscript, and approved the final version.
 ```
 
 Acknowledgements:
@@ -280,13 +280,19 @@ None identified at this stage.
 
 Status: must be completed by the submitting author in the live portal.
 
-Use these decisions unless institutional requirements differ:
+Official BMC Medical Genomics fee page checked on 2026-05-01:
 
 ```text
-Funding: no specific funding.
-Competing interests: none.
-Institutional payment agreement/APC waiver/discount: check manually in the portal.
-License: select the journal default open-access license unless the portal or institution requires another option.
+The journal is fully open access. An APC applies only if the article is accepted for publication. The current APC shown by BMC Medical Genomics is GBP 2490 / USD 3290 / EUR 2890, subject to VAT or local taxes where applicable. The journal page also says the APC is determined from the date the article is accepted.
+```
+
+Portal entry guidance:
+
+```text
+Funding source for the research: No specific funding.
+APC payment source: Unknown / to be confirmed by author.
+Institutional agreement, waiver, or discount: check manually in the portal before final submission.
+License: choose the default journal open-access license unless the portal or institution requires another option.
 ```
 
 Do not finalize payment/license choices without user confirmation.
