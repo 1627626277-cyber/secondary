@@ -14,7 +14,7 @@ Chinese name source:
 
 Affiliation for manuscript:
 
-- Guangdong University of Petrochemical Technology (GDUPT), Maoming, Guangdong, China
+- Guangdong University of Petrochemical Technology (GDUPT), 139 Guandu 2nd Road, Maoming 525000, Guangdong, China
 
 Corresponding author email:
 

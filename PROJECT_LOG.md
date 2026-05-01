@@ -2484,3 +2484,25 @@ GitHub push status:
 - `git push -u origin main` timed out.
 - A non-interactive connectivity check failed with `Failed to connect to github.com port 443`.
 - Full local repository push remains pending because the local Git command cannot currently reach GitHub over HTTPS from this environment.
+
+### 2026-05-01 Pre-Writing Planning And Journal Requirement Check
+
+The project entered academic-pipeline Stage 2 writing planning for BMC Medical Genomics.
+
+Official requirement conclusions:
+
+- BMC Medical Genomics Research article title page requires full author names, institutional addresses, and corresponding-author indication.
+- Therefore the address placeholder should not remain in the manuscript.
+- The GDUPT Guandu campus official address was used for the manuscript title page: `Guangdong University of Petrochemical Technology (GDUPT), 139 Guandu 2nd Road, Maoming 525000, Guangdong, China`.
+- BMC requires editable manuscript files, double-line spacing, line and page numbering, structured abstract, declarations, public data availability, and figure/table upload checks.
+
+Planning file created:
+
+- `reports\manuscript\PRE_WRITING_PLAN_BMC_MEDICAL_GENOMICS_2026-05-01.md`
+
+Next writing focus:
+
+- Results-first rewrite linked to Fig. 1-6 and Table 1.
+- Methods tightening for reproducibility.
+- Discussion limitation discipline.
+- Final figure/table packaging and reviewer-style critique before final integrity verification.

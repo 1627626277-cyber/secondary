@@ -12,7 +12,7 @@ Zhuang Jiang
 
 ## Affiliations
 
-1. Guangdong University of Petrochemical Technology (GDUPT), Maoming, Guangdong, China
+1. Guangdong University of Petrochemical Technology (GDUPT), 139 Guandu 2nd Road, Maoming 525000, Guangdong, China
 
 ## Corresponding Author
 
@@ -20,7 +20,7 @@ Zhuang Jiang
 
 Email: 1627626277@qq.com
 
-Address: Guangdong University of Petrochemical Technology (GDUPT), Maoming, Guangdong, China. [Detailed address to be confirmed]
+Address: Guangdong University of Petrochemical Technology (GDUPT), 139 Guandu 2nd Road, Maoming 525000, Guangdong, China
 
 ## ORCID
 

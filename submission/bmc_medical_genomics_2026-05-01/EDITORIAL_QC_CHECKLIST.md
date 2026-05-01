@@ -27,7 +27,7 @@ Date started: 2026-05-01
 - [x] Author list
 - [x] Affiliations
 - [x] Corresponding author name and email
-- [ ] Detailed correspondence address
+- [x] Institutional/correspondence address added
 - [x] ORCID iD inserted
 - [x] Editable DOCX manuscript generated
 - [x] Cover letter DOCX generated
