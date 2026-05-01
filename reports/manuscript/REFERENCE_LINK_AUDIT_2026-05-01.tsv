@@ -1,0 +1,27 @@
+reference	link_type	target	status	http_status	final_url	note
+1	doi	https://doi.org/10.1038/s41588-024-01853-0	ok	200	https://www.nature.com/articles/s41588-024-01853-0?error=cookies_not_supported&code=f86fc9db-a440-4ec0-8ac6-f895685d68e3	
+2	doi	https://doi.org/10.1038/s41467-019-11680-1	ok	200	https://www.nature.com/articles/s41467-019-11680-1?error=cookies_not_supported&code=6d1fe16b-bca7-42d1-b20d-40aac34a75bf	
+3	doi	https://doi.org/10.1200/JCO.2015.61.2267	access_limited	403	https://ascopubs.org/doi/10.1200/JCO.2015.61.2267	HTTPError
+4	doi	https://doi.org/10.1016/S1470-2045(14)70442-5	ok	200	https://linkinghub.elsevier.com/retrieve/pii/S1470204514704425	
+5	doi	https://doi.org/10.1038/nature09837	ok	200	https://www.nature.com/articles/nature09837?error=cookies_not_supported&code=1a80eaa6-82fa-4103-a939-d7ce574fe5c7	
+6	doi	https://doi.org/10.1002/ajh.26590	access_limited	403	https://onlinelibrary.wiley.com/doi/10.1002/ajh.26590	HTTPError
+7	doi	https://doi.org/10.1200/JCO.2005.04.242	access_limited	403	https://ascopubs.org/doi/10.1200/JCO.2005.04.242	HTTPError
+8	doi	https://doi.org/10.1182/blood-2005-11-013458	access_limited	403	https://ashpublications.org/blood/article/108/6/2020/22665/The-molecular-classification-of-multiple-myeloma	HTTPError
+9	doi	https://doi.org/10.1182/blood-2006-03-009910	access_limited	403	https://ashpublications.org/blood/article/108/5/1724/132631/Frequent-gain-of-chromosome-band-1q21-in	HTTPError
+10	doi	https://doi.org/10.1182/blood.2025028896	access_limited	403	https://ashpublications.org/blood/article/146/15/1837/546149/Profiling-the-spatial-architecture-of-multiple	HTTPError
+11	doi	https://doi.org/10.1186/s12967-025-07098-7	ok	200	https://link.springer.com/article/10.1186/s12967-025-07098-7?error=cookies_not_supported&code=32ff04c9-262f-4fc0-8c4f-4a56d92e813d	
+12	doi	https://doi.org/10.1093/jnci/dji237	access_limited	403	https://academic.oup.com/jnci/article/97/16/1180/2521325/Reporting-Recommendations-for-Tumor-Marker	HTTPError
+13	doi	https://doi.org/10.1093/nar/gks1193	access_limited	403	https://academic.oup.com/nar/article/41/D1/D991/1067995/NCBI-GEO-archive-for-functional-genomics-data	HTTPError
+14	doi	https://doi.org/10.1038/s41467-021-21254-9	ok	200	https://www.nature.com/articles/s41467-021-21254-9?error=cookies_not_supported&code=8b012211-fe0f-4761-a161-5331c3cd4eb3	
+15	url	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE269875	browser_verified		https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE269875	Python urllib reported TLS EOF, but the page opened successfully in browser verification on 2026-05-01.
+16	url	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE299193	browser_verified		https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE299193	Python urllib reported TLS EOF, but the page opened successfully in browser verification on 2026-05-01.
+17	url	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE271107	browser_verified		https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE271107	Python urllib reported TLS EOF, but the page opened successfully in browser verification on 2026-05-01.
+18	url	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE24080	browser_verified		https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE24080	Python urllib reported TLS EOF, but the page opened successfully in browser verification on 2026-05-01.
+19	url	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE2658	browser_verified		https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE2658	Python urllib reported TLS EOF, but the page opened successfully in browser verification on 2026-05-01.
+20	url	https://gdc.cancer.gov/about-gdc/contributed-genomic-data-cancer-research/foundation-medicine/multiple-myeloma-research-foundation-mmrf	browser_verified		https://gdc.cancer.gov/about-gdc/contributed-genomic-data-cancer-research/foundation-medicine/multiple-myeloma-research-foundation-mmrf	Python urllib reported TLS EOF, but the page opened successfully in browser verification on 2026-05-01.
+21	doi	https://doi.org/10.1186/s13059-017-1382-0	ok	200	https://link.springer.com/article/10.1186/s13059-017-1382-0?error=cookies_not_supported&code=e00d8df4-33b2-467e-bad8-f5dfa22fbae1	
+22	url	https://www.statsmodels.org/	ok	200	https://www.statsmodels.org/	
+23	doi	https://doi.org/10.1038/nbt.1665	ok	200	https://www.nature.com/articles/nbt.1665?error=cookies_not_supported&code=3b8967ea-9c24-4ea0-a25a-8c129cd4d785	
+24	doi	https://doi.org/10.1371/journal.pone.0008250	ok	200	https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0008250	
+25	none		not_applicable			No DOI or URL present in reference entry.
+26	doi	https://doi.org/10.1111/j.2517-6161.1995.tb02031.x	access_limited	403	https://academic.oup.com/jrsssb/article/57/1/289/7035855	HTTPError

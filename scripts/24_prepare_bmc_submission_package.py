@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import subprocess
 import re
+import os
 from pathlib import Path
 
 from docx import Document
@@ -18,8 +19,10 @@ TITLE_PAGE_MD = SUBMISSION_DIR / "TITLE_PAGE_DRAFT.md"
 COVER_LETTER_MD = SUBMISSION_DIR / "COVER_LETTER_DRAFT.md"
 SUBMISSION_BODY_MD = SUBMISSION_DIR / "_generated_submission_manuscript_body.md"
 
-MAIN_DOCX = SUBMISSION_DIR / "MANUSCRIPT_BMC_MEDICAL_GENOMICS_SUBMISSION_DRAFT.docx"
-COVER_DOCX = SUBMISSION_DIR / "COVER_LETTER_DRAFT.docx"
+OUTPUT_SUFFIX = os.environ.get("SUBMISSION_DOCX_SUFFIX", "")
+
+MAIN_DOCX = SUBMISSION_DIR / f"MANUSCRIPT_BMC_MEDICAL_GENOMICS_SUBMISSION_DRAFT{OUTPUT_SUFFIX}.docx"
+COVER_DOCX = SUBMISSION_DIR / f"COVER_LETTER_DRAFT{OUTPUT_SUFFIX}.docx"
 
 
 def run_pandoc(inputs: list[Path], output: Path) -> None:

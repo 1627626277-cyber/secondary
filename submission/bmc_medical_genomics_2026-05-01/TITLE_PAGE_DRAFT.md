@@ -28,7 +28,7 @@ Zhuang Jiang: https://orcid.org/0009-0007-4388-5901
 
 ## Word Count
 
-Approximate manuscript word count excluding references: 3,033.
+Approximate manuscript word count excluding references: 3,390.
 
 ## Figures And Tables
 

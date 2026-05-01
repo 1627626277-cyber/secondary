@@ -20,6 +20,14 @@ Editable submission DOCX:
 
 - `D:\二区\submission\bmc_medical_genomics_2026-05-01\MANUSCRIPT_BMC_MEDICAL_GENOMICS_SUBMISSION_DRAFT.docx`
 
+Current hardened manuscript DOCX:
+
+- `D:\二区\submission\bmc_medical_genomics_2026-05-01\MANUSCRIPT_BMC_MEDICAL_GENOMICS_SUBMISSION_DRAFT_HARDENED_2026-05-01.docx`
+
+Note:
+
+- The base manuscript DOCX was initially locked by Word/WPS during the hardening pass. A hardened copy was generated first and then successfully copied back to the base manuscript DOCX name.
+
 Cover letter DOCX:
 
 - `D:\二区\submission\bmc_medical_genomics_2026-05-01\COVER_LETTER_DRAFT.docx`
@@ -67,6 +75,11 @@ Current figure/table decision:
 - `CITATION_AUDIT_STAGE1.md`
 - `CITATION_AUDIT_STAGE2_FINAL.md`
 - `TABLE1_CROSS_COHORT_EVIDENCE_DRAFT.md`
+- `TABLE1_CROSS_COHORT_EVIDENCE_DRAFT.docx`
+- `SUPPLEMENTARY_METHODS_REPRODUCIBILITY_DRAFT.md`
+- `SUPPLEMENTARY_METHODS_REPRODUCIBILITY_DRAFT.docx`
+- `MANUSCRIPT_BMC_MEDICAL_GENOMICS_SUBMISSION_DRAFT_HARDENED_2026-05-01.docx`
+- `COVER_LETTER_DRAFT_HARDENED_2026-05-01.docx`
 
 ## Reproducible Submission Formatting Script
 

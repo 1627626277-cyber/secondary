@@ -83,13 +83,20 @@ References:
 - `references\REFERENCES_VANCOUVER_NUMBERED_DRAFT.md`
 - `references\downloaded_pdfs_manifest.tsv`
 
+Submission hardening files:
+
+- `submission\bmc_medical_genomics_2026-05-01\TABLE1_CROSS_COHORT_EVIDENCE_DRAFT.docx`
+- `submission\bmc_medical_genomics_2026-05-01\SUPPLEMENTARY_METHODS_REPRODUCIBILITY_DRAFT.docx`
+- `reports\manuscript\FIGURE_LEGEND_AUDIT_2026-05-01.md`
+- `reports\manuscript\REFERENCE_LINK_AUDIT_2026-05-01.md`
+
 ## Remaining Required Before Upload
 
 1. Convert manuscript to the journal-required upload format.
    - Status: complete; DOCX generated in `submission\bmc_medical_genomics_2026-05-01`.
 2. Finalize title page:
    - author name: Zhuang Jiang
-   - Chinese name source: 蒋壮
+   - Chinese name source: ??
    - affiliation/address: Guangdong University of Petrochemical Technology (GDUPT), 139 Guandu 2nd Road, Maoming 525000, Guangdong, China
    - corresponding author details: to be finalized before submission
    - ORCID: https://orcid.org/0009-0007-4388-5901
@@ -107,9 +114,12 @@ References:
 5. Main versus supplementary figures/tables:
    - Keep Fig. 6 as a main figure.
    - Keep the cross-cohort evidence table as main Table 1.
+   - Table 1 now has a separate editable DOCX file.
+   - Supplementary Methods/reproducibility appendix now has Markdown and DOCX drafts.
 6. Prepare cover letter.
    - Status: DOCX draft generated.
 7. Perform final reproducibility audit from scripts to manuscript claims.
+   - Status: Stage 2.5 integrity verification, figure-legend audit, and DOI/URL live-link audit completed.
 
 ## ORCID Profile Issue To Fix Outside The Manuscript
 
@@ -125,6 +135,6 @@ Current readiness estimate:
 
 - Scientific evidence package: high for a public-data Q2 bioinformatics manuscript.
 - Journal-upload package: close, but not complete.
-- Main remaining risks: full code repository push/archive, DOI/URL live-link verification, figure upload formatting, Word/WPS line-number confirmation, and portal metadata.
+- Main remaining risks: full code repository push/archive, final figure upload formatting, corresponding-author metadata, and portal metadata.
 
 The project is in manuscript-finalization and submission-preparation. It is not yet ready for one-click journal upload.

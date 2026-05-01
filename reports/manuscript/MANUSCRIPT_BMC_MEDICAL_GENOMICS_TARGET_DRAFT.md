@@ -44,7 +44,7 @@ Within this framework, TXNDC5 serves as a localization candidate. It links the s
 
 ### Study design
 
-This was a retrospective public-data integrative analysis. The workflow used six evidence layers.
+This was a retrospective public-data integrative analysis. The workflow used six evidence layers and was designed as a claim-bounded evidence chain rather than as a de novo clinical biomarker study.
 
 The layers were spatial discovery, second spatial validation, single-cell localization, external bulk validation, CoMMpass/GDC validation, and NG2024 annotation [1,10,11,13-20].
 
@@ -55,6 +55,16 @@ TXNDC5 was evaluated as a spatial and single-cell localization candidate. It was
 All analyses used public data or open processed resources. No private MMRF clinical table was used for completed claims.
 
 Analyses were run with Python 3.13.9. Key packages were pandas 2.3.3, numpy 2.3.5, scipy 1.16.3, matplotlib 3.10.6, scanpy 1.12, seaborn 0.13.2, statsmodels 0.14.5, and h5py 3.15.1 [21,22].
+
+### Score construction and missing-data rules
+
+Expression values were analyzed in the normalized scale available for each public dataset or after log transformation where count-like values were provided. Within each cohort, gene-level values used for module scoring were standardized before score construction.
+
+Module scores were calculated as the mean of available standardized genes. Genes absent from a platform were not imputed. A module was scored only when at least one prespecified gene was present, and platform coverage was reported when absent genes affected interpretation.
+
+For spatial and Xenium datasets, spot-level or cell-level gene values were summarized to sample-level scores before group comparisons. For single-cell data, candidate genes and module scores were summarized by marker-inferred cell category and sample-aware strata where available.
+
+Missing clinical, cytogenetic, subtype, or covariate fields were handled by endpoint-specific complete-case analysis. Denominators therefore differ across analyses and are reported with each result when they affect interpretation.
 
 ### Spatial discovery
 
@@ -162,9 +172,11 @@ Logistic models reported odds ratios per one-standard-deviation score. Linear mo
 
 Multiple testing was controlled using Benjamini-Hochberg FDR. FDR correction was applied within each analysis family [26].
 
-Analysis families were defined by cohort and endpoint class. Complete-case analysis was used for models requiring covariates.
+Analysis families were defined by cohort and endpoint class. Separate FDR families were used for spatial discovery, Xenium validation, single-cell localization, external bulk associations, CoMMpass/GDC clinical associations, NG2024 molecular annotations, and adjusted model families.
 
 The adjusted OS model used samples with complete age, sex, ISS, 1q21, OS time, and OS event fields.
+
+The primary adjusted Cox model tested OS as a retrospective association endpoint. It was not trained, tuned, or validated as a prospective risk-prediction model.
 
 Schoenfeld residual screening did not detect an FDR-significant PH violation for the primary score terms. The 1q21 covariate showed time-related residual structure.
 
@@ -177,6 +189,8 @@ Manuscript figures were generated with `scripts/15_build_manuscript_figures.py`.
 The cross-cohort evidence table was generated with the same script. It links each evidence layer to a primary statistic.
 
 Numeric traceability was checked in `reports/review/STAGE2_NUMERIC_INTEGRITY_CHECK_2026-04-30.md`.
+
+A supplementary reproducibility appendix lists accession-level inputs, main scripts, output directories, and figure-panel traceability.
 
 ## Results
 

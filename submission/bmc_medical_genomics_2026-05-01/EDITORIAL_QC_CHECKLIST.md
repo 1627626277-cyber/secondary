@@ -32,7 +32,7 @@ Date started: 2026-05-01
 - [x] Editable DOCX manuscript generated
 - [x] Cover letter DOCX generated
 - [x] DOCX render check completed
-- [ ] Confirm Word/WPS line-number display before upload
+- [x] Confirm Word/WPS line-number display before upload
 
 ## Figure And Table Package
 
@@ -43,6 +43,8 @@ Date started: 2026-05-01
 - [x] Fig. 5 generated
 - [x] Fig. 6 generated
 - [x] Cross-cohort evidence table generated
+- [x] Table 1 editable DOCX generated
+- [x] Supplementary Methods/reproducibility DOCX generated
 - [x] Keep Fig. 6 as a main figure
 - [x] Keep cross-cohort evidence table as main Table 1
 - [ ] Confirm final figure resolution and journal upload format
@@ -55,7 +57,7 @@ Date started: 2026-05-01
 - [x] Stage-1 in-text citation coverage audit completed
 - [x] Vancouver first-appearance reference order applied
 - [x] Final numeric coverage and claim-placement screen after author metadata edits
-- [ ] DOI/URL final verification before upload
+- [x] DOI/URL final verification before upload
 
 ## Repository And Reproducibility
 

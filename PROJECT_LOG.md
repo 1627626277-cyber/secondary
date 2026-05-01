@@ -2561,3 +2561,38 @@ Main blockers before upload:
 - Complete DOI/URL live-link verification.
 - Finalize corresponding author and author contributions.
 - Complete public GitHub/code availability.
+
+### 2026-05-01 Pre-Submission Hardening: Table, Methods, Figure, And Link Checks
+
+Completed:
+
+- Expanded the main Methods section with score construction, missing-data, complete-case, FDR-family, and Cox-model boundary rules.
+- Added a Supplementary Methods/reproducibility appendix in Markdown and DOCX form.
+- Converted Table 1 into a separate editable DOCX file and render-checked it.
+- Render-checked the Supplementary Methods DOCX.
+- Completed a figure-legend/file audit for Fig. 1-6.
+- Completed a DOI/URL live-link audit. No reference target remains marked as failed; six NCBI/GDC URLs required browser verification because Python urllib produced local TLS errors.
+- Updated the title-page word count estimate to 3,390 words excluding references.
+- Updated checklist status after the user confirmed Word/WPS line numbers and page numbers display correctly.
+- Regenerated a hardened manuscript DOCX with suffix `_HARDENED_2026-05-01` because the base DOCX was initially open in Word/WPS.
+- Successfully copied the hardened DOCX back to the base manuscript DOCX filename after the lock cleared.
+- Render-checked the hardened manuscript DOCX; current render: 22 pages.
+
+Files created:
+
+- `scripts\25_prepare_submission_table_and_supplement.py`
+- `scripts\26_reference_link_audit.py`
+- `submission\bmc_medical_genomics_2026-05-01\TABLE1_CROSS_COHORT_EVIDENCE_DRAFT.docx`
+- `submission\bmc_medical_genomics_2026-05-01\SUPPLEMENTARY_METHODS_REPRODUCIBILITY_DRAFT.md`
+- `submission\bmc_medical_genomics_2026-05-01\SUPPLEMENTARY_METHODS_REPRODUCIBILITY_DRAFT.docx`
+- `submission\bmc_medical_genomics_2026-05-01\MANUSCRIPT_BMC_MEDICAL_GENOMICS_SUBMISSION_DRAFT_HARDENED_2026-05-01.docx`
+- `submission\bmc_medical_genomics_2026-05-01\COVER_LETTER_DRAFT_HARDENED_2026-05-01.docx`
+- `reports\manuscript\FIGURE_LEGEND_AUDIT_2026-05-01.md`
+- `reports\manuscript\REFERENCE_LINK_AUDIT_2026-05-01.md`
+- `reports\manuscript\REFERENCE_LINK_AUDIT_2026-05-01.tsv`
+
+Remaining blockers:
+
+- Public GitHub/code availability is still unresolved because command-line push has timed out.
+- Corresponding author details remain intentionally pending.
+- Final journal portal metadata and final figure upload format still need portal-side confirmation.
