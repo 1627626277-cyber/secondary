@@ -2685,3 +2685,20 @@ Current conclusion:
 
 - The project is scientifically and technically close to submission preparation completion.
 - The remaining blockers are administrative/portal metadata and final author approval, not the core data-analysis workflow.
+
+### 2026-05-01 Portal Metadata Copy-Paste Sheet
+
+Completed:
+
+- Created a dedicated portal metadata sheet for live submission form entry.
+- The sheet centralizes article type, title, running title, structured abstract, keywords, author information, affiliation, ORCID, declarations, data/code availability, file-upload plan, reviewer handling, APC/license cautions, and final pre-submit checks.
+- This answers where the formal portal metadata should be kept: it is stored inside the BMC submission package folder rather than scattered across manuscript files.
+
+File created:
+
+- `submission\bmc_medical_genomics_2026-05-01\PORTAL_METADATA_COPY_PASTE.md`
+
+Current conclusion:
+
+- The live portal still requires manual entry, but the text to copy is now centralized in one file.
+- Corresponding-author email and final APC/license choices remain intentionally unresolved.
