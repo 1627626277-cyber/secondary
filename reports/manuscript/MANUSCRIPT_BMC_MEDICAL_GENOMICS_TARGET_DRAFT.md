@@ -180,65 +180,51 @@ Numeric traceability was checked in `reports/review/STAGE2_NUMERIC_INTEGRITY_CHE
 
 ## Results
 
-### Spatial transcriptomics identified a plasma-secretory program in myeloma bone marrow
+### Cross-cohort design defined a bounded evidence chain
 
-We first analyzed GSE269875 human bone marrow spatial transcriptomics data [15]. Sample-level module scores were calculated for curated cell-state programs. These included plasma-secretory, myeloid-inflammatory, T/NK cytotoxic, stromal, endothelial, erythroid, and cycling programs.
+The study was organized as a sequential evidence chain rather than as a single-cohort biomarker screen (Fig. 1). Spatial discovery was performed in GSE269875, independent spatial reproducibility was tested in GSE299193 Xenium data, single-cell localization was assessed in GSE271107, external bulk support was evaluated in GSE24080 and GSE2658, and clinical and molecular-risk associations were tested in MMRF-COMMPASS/GDC and public NG2024 CoMMpass annotations.
 
-The plasma-secretory program showed the strongest myeloma enrichment. Myeloma samples had higher scores than control samples. The median difference was 0.709. The Cohen's d was 3.129. The Mann-Whitney p value was 0.0256 (Fig. 2).
+Table 1 summarizes the evidence levels and the claim boundary assigned to each dataset. The complete editable Table 1 is provided in the submission package rather than embedded in the running text to preserve manuscript readability. The analysis supports a spatially reproducible and clinically associated plasma-secretory program. It does not establish a prospective clinical classifier, a treatment-selection marker, or completed R-ISS, PFS, or treatment-response validation.
 
-Gene-level ranking prioritized canonical plasma-cell and secretory markers. These included XBP1, TXNDC5, POU2AF1, SDC1, MZB1, and JCHAIN. This result established a spatial discovery signal. It did not establish a standalone clinical biomarker.
+### Spatial transcriptomics identified the plasma-secretory program (Fig. 2)
 
-### GSE299193 reproduced the spatial signal at program level
+In GSE269875, sample-level module scoring showed that the plasma-secretory program was the most enriched curated program in myeloma bone marrow spatial samples. Myeloma samples had higher plasma-secretory scores than control bone marrow samples, with a median difference of 0.709, Cohen's d of 3.129, and Mann-Whitney p=0.0256 (Fig. 2A,B).
 
-We next tested whether the spatial signal generalized to an independent platform. GSE299193 Xenium data included 22 human bone marrow samples [10,16]. The cohort contained Ctrl, MGUS, SM, MM, and relapsed MM groups.
+The spatial candidate ranking also prioritized plasma-cell and secretory-pathway genes, including XBP1, TXNDC5, POU2AF1, SDC1, MZB1, and JCHAIN (Fig. 2C). This result defined the discovery axis used in later analyses. It was not interpreted as evidence that any single gene is a standalone clinical biomarker.
 
-The plasma-secretory score was higher in active MM/RM samples than Ctrl/MGUS/SM samples. The median difference was 0.766. The Mann-Whitney p value was 0.000182. The FDR was 0.000575 (Fig. 6).
+### Independent Xenium data reproduced the program-level spatial signal (Fig. 6)
 
-A panel-covered POU2AF1/XBP1 module showed a similar pattern. The median difference was 1.068. The p value was 0.000287. The FDR was 0.000575.
+The spatial discovery signal was then tested in GSE299193, an independent Xenium dataset containing 22 human bone marrow samples from Ctrl, MGUS, SM, MM, and relapsed MM groups. Active MM/RM samples showed higher plasma-secretory scores than Ctrl/MGUS/SM samples, with a median difference of 0.766, Mann-Whitney p=0.000182, and FDR=0.000575 (Fig. 6, left).
 
-The Xenium feature matrices contained MZB1, TNFRSF17, SLAMF7, IRF4, PIM2, POU2AF1, and XBP1. They did not contain TXNDC5, JCHAIN, or SDC1. GSE299193 therefore validates the program-level spatial signal. It does not directly validate those absent genes.
+A Xenium panel-covered POU2AF1/XBP1 module showed a concordant active-disease pattern, with median difference 1.068, p=0.000287, and FDR=0.000575 (Fig. 6, middle). The extracted Xenium matrices contained MZB1, TNFRSF17, SLAMF7, IRF4, PIM2, POU2AF1, and XBP1, but not TXNDC5, JCHAIN, or SDC1 (Fig. 6, right). GSE299193 therefore strengthens the spatial reproducibility claim at program level, while not directly validating the absent genes.
 
-### Single-cell data localized the axis to plasma-cell compartments
+### Single-cell data localized the axis to plasma-cell compartments (Fig. 3)
 
-We then analyzed GSE271107 single-cell RNA-seq data [11,17]. Cells were summarized by marker-inferred cell categories. Plasma cells showed the strongest plasma-secretory score among broad cell types (Fig. 3).
+GSE271107 single-cell RNA-seq data were used to localize the spatial program across marker-inferred cell categories. Plasma-cell compartments showed the strongest plasma-secretory program score among broad cell groups (Fig. 3B).
 
-TXNDC5 was consistently expressed in marker-inferred plasma cells. The mean log-normalized expression was 2.196. The detection fraction was 94.86 percent across summarized plasma-cell observations.
+TXNDC5 was consistently expressed in marker-inferred plasma cells, with mean log-normalized expression 2.196 and detection fraction 94.86% across summarized plasma-cell observations (Fig. 3A). This supports TXNDC5 as a spatial and single-cell localization candidate within the plasma-secretory axis. It does not support presenting TXNDC5 as a standalone prognostic biomarker.
 
-These findings support TXNDC5 as a localization candidate. They do not support presenting TXNDC5 as a standalone prognostic biomarker.
+### External bulk cohorts supported a clinical subtype module (Fig. 4)
 
-### External bulk cohorts supported a clinical subtype module
+External GEO bulk cohorts were used to test whether the spatially identified axis connected to clinical or cytogenetic annotations outside the spatial datasets. In GSE2658, the POU2AF1/XBP1/JCHAIN module was associated with FISH 1q21 amplification (FDR=1.65e-05). In GSE24080, XBP1 was associated with 24-month overall survival death (FDR=0.0362; Fig. 4).
 
-We evaluated independent bulk cohorts to test clinical relevance. GSE2658 and GSE24080 provided expression data with available clinical or cytogenetic annotations [18,19,23,24].
+These findings supported the use of a broader clinical subtype module rather than a TXNDC5-only interpretation. Because the GSE2658 module effect direction was not identical to the CoMMpass direction, this result is described as external association support rather than uniform directional replication across all platforms.
 
-In GSE2658, the POU2AF1/XBP1/JCHAIN module was associated with 1q21 amplification. The FDR was 1.65e-05. In GSE24080, XBP1 was associated with 24-month overall survival death. The FDR was 0.0362 (Fig. 4).
+### CoMMpass/GDC linked the axis to OS, ISS, and molecular risk (Fig. 5)
 
-These results shifted the clinical framing. The stronger clinical construct is the broader plasma-secretory axis. TXNDC5 remains a localization candidate within that axis.
+The axis was next evaluated in 762 baseline MMRF-COMMPASS/GDC bone marrow CD138+ RNA-seq samples. The plasma-secretory score was associated with overall survival event, with event-versus-nonevent median difference 0.346 and FDR=9.31e-06 (Fig. 5A,B). Median-split survival analysis also supported an OS association, with log-rank p=0.00668 and FDR=0.0401 (Fig. 5C).
 
-### CoMMpass/GDC linked the axis to survival and ISS
+The same score showed an ordinal association with ISS stage (Spearman rho=0.132, p=0.000316, FDR=0.0019). These analyses link the axis to retrospective clinical risk features, but they do not test R-ISS, PFS, or treatment response.
 
-We next tested the axis in 762 baseline MMRF-COMMPASS/GDC CD138+ RNA-seq samples [14,20]. The plasma-secretory score was associated with overall survival event. The event-versus-nonevent median difference was 0.346. The FDR was 9.31e-06 (Fig. 5).
+Public NG2024 CoMMpass molecular annotations further placed the axis in a known molecular-risk context. Local baseline CoMMpass samples matched public Supplementary Table 1 for 762 of 762 patients, and 707 complete cases were available for RNA-subtype probability analyses. The plasma-secretory score correlated with PR RNA-subtype probability (Spearman rho=0.340, FDR=5.43e-19) and was higher in samples with 1q21 gain or amplification (median difference 0.268, FDR=1.24e-05; Fig. 5E,F).
 
-The same score was associated with ISS ordinal stage. The Spearman rho was 0.132. The p value was 0.000316. The FDR was 0.0019.
+Gene-level NG2024 analyses were consistent with the candidate framing. TXNDC5 expression was associated with 1q21 gain or amplification (median difference 0.231, FDR=0.00843), and POU2AF1 was associated with 17p13 deletion (median difference 0.337, FDR=0.00533). These observations provide molecular annotation support for the axis, not a completed clinical assay.
 
-Median-split survival analysis also supported the association. Patients with higher plasma-secretory score had worse overall survival. The log-rank p value was 0.00668. The FDR was 0.0401.
+### Adjusted models supported covariate-adjusted OS association (Fig. 5D)
 
-### Public NG2024 annotations connected the axis to molecular risk
+Finally, we tested whether the CoMMpass survival association persisted after basic adjustment. The prespecified Cox model included age, sex, ISS stage, and 1q21 status. In 660 complete cases, the plasma-secretory score remained associated with overall survival, with hazard ratio 1.460 per standard deviation, 95% CI 1.069-1.993, p=0.0173, and FDR=0.0445 (Fig. 5D).
 
-We joined public NG2024 CoMMpass molecular annotations to local CoMMpass scores [1]. Table 1 matched 762 of 762 baseline samples. Table 7 RNA-subtype predictions matched 707 samples.
-
-The plasma-secretory score correlated with PR RNA-subtype probability. The Spearman rho was 0.340. The FDR was 5.43e-19. The score was also higher in samples with 1q21 gain or amplification. The median difference was 0.268. The FDR was 1.24e-05.
-
-TXNDC5 expression was associated with 1q21 gain or amplification. The median difference was 0.231. The FDR was 0.00843. POU2AF1 was associated with 17p13 deletion. The median difference was 0.337. The FDR was 0.00533.
-
-### Adjusted models supported an independent OS association
-
-We tested whether the CoMMpass survival association persisted after basic adjustment. The prespecified Cox model included age, sex, ISS, and 1q21 status.
-
-The plasma-secretory score remained associated with overall survival. The hazard ratio was 1.460 per standard deviation. The 95% confidence interval was 1.069-1.993. The p value was 0.0173. The FDR was 0.0445.
-
-The POU2AF1/XBP1/JCHAIN module also remained associated with survival. The hazard ratio was 1.434. The 95% confidence interval was 1.090-1.886. The FDR was 0.0299.
-
-These models support covariate-adjusted association. They do not establish clinical utility.
+The POU2AF1/XBP1/JCHAIN clinical module showed a similar adjusted association, with hazard ratio 1.434, 95% CI 1.090-1.886, and FDR=0.0299. A logistic model also linked the plasma-secretory score to 1q21 status after adjustment for age, sex, and ISS, with odds ratio 1.873 per standard deviation and FDR=0.000213. These models support covariate-adjusted association. They do not establish clinical utility or prospective risk-prediction performance.
 
 ## Discussion
 

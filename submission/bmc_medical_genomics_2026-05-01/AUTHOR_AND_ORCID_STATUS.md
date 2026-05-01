@@ -16,9 +16,9 @@ Affiliation for manuscript:
 
 - Guangdong University of Petrochemical Technology (GDUPT), 139 Guandu 2nd Road, Maoming 525000, Guangdong, China
 
-Corresponding author email:
+Corresponding author status:
 
-- 1627626277@qq.com
+- To be finalized before submission.
 
 ORCID:
 

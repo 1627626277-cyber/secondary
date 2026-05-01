@@ -2506,3 +2506,58 @@ Next writing focus:
 - Methods tightening for reproducibility.
 - Discussion limitation discipline.
 - Final figure/table packaging and reviewer-style critique before final integrity verification.
+
+### 2026-05-01 Stage 2 Results-First Rewrite
+
+The project moved from writing planning into academic-pipeline Stage 2 WRITE execution.
+
+Completed:
+
+- Rewrote the Results section in `reports\manuscript\MANUSCRIPT_BMC_MEDICAL_GENOMICS_TARGET_DRAFT.md`.
+- Added a Results opening subsection linked to Fig. 1 and Table 1.
+- Added Table 1 as a separate editable submission-package draft after the embedded table rendered poorly in DOCX.
+- Reorganized results so each subsection maps to Fig. 2, Fig. 6, Fig. 3, Fig. 4, or Fig. 5.
+- Preserved manuscript boundaries: no clinical biomarker claim, no prospective classifier claim, no treatment-selection claim, no completed R-ISS/PFS/treatment-response validation claim, and no direct GSE299193 TXNDC5/JCHAIN/SDC1 validation claim.
+- Updated the title-page word count estimate to 3,033 words excluding references.
+- Reset corresponding author details to "to be finalized before submission" per user instruction.
+
+Stage 2 rewrite report:
+
+- `reports\manuscript\STAGE2_RESULTS_FIRST_REWRITE_REPORT.md`
+
+Next:
+
+- Regenerate and render-check the DOCX.
+- Confirm Table 1 layout.
+- Proceed to Stage 2.5 integrity verification after the writing pass.
+
+### 2026-05-01 Stage 2.5 Integrity Verification And Reviewer-Style Critique
+
+Completed:
+
+- Re-rendered the submission DOCX after clearing stale QA render pages.
+- Confirmed current main manuscript render: 21 pages.
+- Confirmed cover letter render: 1 page.
+- Inspected title page, Results pages, cover letter, and full contact sheet.
+- Completed Stage 2.5 integrity verification.
+- Completed reviewer-style critique after the Results-first rewrite.
+- Verified `D:\二区` paths in the submission package index and added the separate Table 1 draft to the index.
+
+Reports created:
+
+- `reports\manuscript\STAGE2_5_INTEGRITY_VERIFICATION_2026-05-01.md`
+- `reports\review\STAGE2_RESULTS_FIRST_REVIEWER_CRITIQUE_2026-05-01.md`
+
+Current conclusion:
+
+- The Results-first manuscript structure passes internal integrity checks.
+- The project remains scientifically feasible for a Q2-style bioinformatics/translational oncology submission after revision.
+- It is not yet ready for formal journal upload.
+
+Main blockers before upload:
+
+- Decide final Table 1 format and placement.
+- Confirm Word/WPS line numbers.
+- Complete DOI/URL live-link verification.
+- Finalize corresponding author and author contributions.
+- Complete public GitHub/code availability.

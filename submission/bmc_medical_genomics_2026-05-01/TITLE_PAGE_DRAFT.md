@@ -16,11 +16,11 @@ Zhuang Jiang
 
 ## Corresponding Author
 
-Zhuang Jiang
+[To be finalized before submission]
 
-Email: 1627626277@qq.com
+Email: [to be finalized before submission]
 
-Address: Guangdong University of Petrochemical Technology (GDUPT), 139 Guandu 2nd Road, Maoming 525000, Guangdong, China
+Address: [to be finalized before submission]
 
 ## ORCID
 
@@ -28,7 +28,7 @@ Zhuang Jiang: https://orcid.org/0009-0007-4388-5901
 
 ## Word Count
 
-Approximate manuscript word count excluding references: 2,819.
+Approximate manuscript word count excluding references: 3,033.
 
 ## Figures And Tables
 

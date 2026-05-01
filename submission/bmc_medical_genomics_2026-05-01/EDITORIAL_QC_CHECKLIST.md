@@ -26,8 +26,8 @@ Date started: 2026-05-01
 - [x] Main-text order aligned to Background, Methods, Results, Discussion, Conclusions
 - [x] Author list
 - [x] Affiliations
-- [x] Corresponding author name and email
-- [x] Institutional/correspondence address added
+- [ ] Corresponding author name and email
+- [ ] Corresponding author postal address
 - [x] ORCID iD inserted
 - [x] Editable DOCX manuscript generated
 - [x] Cover letter DOCX generated

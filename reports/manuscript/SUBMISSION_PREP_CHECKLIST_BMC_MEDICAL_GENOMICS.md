@@ -91,8 +91,7 @@ References:
    - author name: Zhuang Jiang
    - Chinese name source: 蒋壮
    - affiliation/address: Guangdong University of Petrochemical Technology (GDUPT), 139 Guandu 2nd Road, Maoming 525000, Guangdong, China
-   - corresponding author email: 1627626277@qq.com
-   - detailed correspondence address added from the official GDUPT Guandu campus address
+   - corresponding author details: to be finalized before submission
    - ORCID: https://orcid.org/0009-0007-4388-5901
 3. Finalize declarations:
    - ethics approval and consent to participate

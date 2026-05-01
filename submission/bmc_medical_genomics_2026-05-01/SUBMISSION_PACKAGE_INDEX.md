@@ -6,6 +6,10 @@ Date started: 2026-05-01
 
 Current status: pre-submission preparation in progress.
 
+Latest internal gate:
+
+- Stage 2.5 integrity verification passed with pre-submission action items on 2026-05-01.
+
 ## Primary Files
 
 Main manuscript draft:
@@ -62,6 +66,7 @@ Current figure/table decision:
 - `EDITORIAL_QC_CHECKLIST.md`
 - `CITATION_AUDIT_STAGE1.md`
 - `CITATION_AUDIT_STAGE2_FINAL.md`
+- `TABLE1_CROSS_COHORT_EVIDENCE_DRAFT.md`
 
 ## Reproducible Submission Formatting Script
 

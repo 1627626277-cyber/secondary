@@ -12,8 +12,8 @@ This manuscript has not been published and is not under consideration elsewhere.
 
 Sincerely,
 
-Zhuang Jiang
+[Corresponding author to be finalized before submission]
 
 Guangdong University of Petrochemical Technology (GDUPT)
 
-1627626277@qq.com
+[corresponding author email to be finalized before submission]
