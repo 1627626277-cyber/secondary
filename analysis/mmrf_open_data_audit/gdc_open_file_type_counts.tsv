@@ -1,0 +1,4 @@
+n_files	data_category	data_type	experimental_strategy	data_format
+1091	Simple Nucleotide Variation	Masked Somatic Mutation	WXS	MAF
+1010	Copy Number Variation	Copy Number Segment	WGS	TXT
+859	Transcriptome Profiling	Gene Expression Quantification	RNA-Seq	TSV

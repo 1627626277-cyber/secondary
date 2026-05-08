@@ -2,7 +2,7 @@
 
 Manuscript title:
 
-Spatial validation and clinical association of a plasma-secretory bone marrow program in multiple myeloma
+A spatially reproducible plasma-secretory bone marrow program linked to molecular risk in multiple myeloma
 
 Target journal:
 
@@ -23,11 +23,11 @@ The appendix is designed to support reproducibility. It does not add new claims 
 | Resource | Role | Data type | Main inclusion rule | Main output directory |
 |---|---|---|---|---|
 | GSE269875 | Spatial discovery | Human bone marrow spatial transcriptomics | Processed human spatial matrices passing sample-level QC | `analysis/spatial_candidate_signatures` |
-| GSE299193 | Second spatial validation | Human bone marrow Xenium spatial transcriptomics | Cell-feature matrices from Ctrl, MGUS, SM, MM, and RM samples | `analysis/gse299193_xenium_validation` |
+| GSE299193 | Second spatial reproducibility | Human bone marrow Xenium spatial transcriptomics | Cell-feature matrices from Ctrl, MGUS, SM, MM, and RM samples | `analysis/gse299193_xenium_validation` |
 | GSE271107 | Single-cell localization | Single-cell RNA-seq | Public single-cell expression data summarized by marker-inferred categories | `analysis/scrna_gse271107_validation` |
 | GSE2658 | External bulk support | Bulk expression microarray | Samples with expression and available FISH 1q21 annotation | `analysis/plasma_secretory_subtype_refinement` |
 | GSE24080 | External bulk support | Bulk expression microarray | Samples with expression and available milestone OS annotation | `analysis/bulk_clinical_validation` |
-| MMRF-COMMPASS/GDC | Clinical bulk validation | Baseline CD138+ RNA-seq | Baseline visit-1 bone marrow CD138+ samples | `analysis/commppass_gdc_validation` |
+| MMRF-COMMPASS/GDC | Retrospective clinical association | Baseline CD138+ RNA-seq | Baseline visit-1 bone marrow CD138+ samples | `analysis/commppass_gdc_validation` |
 | Skerget NG2024 public CoMMpass supplements | Molecular annotation | Public CoMMpass molecular annotation | Patient identifiers matched to local CoMMpass/GDC sample scores | `analysis/skerget_ng2024_public_supplement` |
 
 ## Script Order
@@ -46,8 +46,12 @@ The appendix is designed to support reproducibility. It does not add new claims 
 | 10 | `scripts/20_skerget_ng2024_molecular_annotation_validation.py` | Join NG2024 annotations to local CoMMpass scores and test molecular-risk associations. |
 | 11 | `scripts/21_commppass_ng2024_adjusted_models.py` | Fit adjusted OS, subtype, and molecular-risk models. |
 | 12 | `scripts/22_commppass_cox_ph_assumption_check.py` | Screen Cox proportional hazards assumptions with Schoenfeld residuals. |
-| 13 | `scripts/15_build_manuscript_figures.py` | Generate Fig. 1-6 and the cross-cohort evidence table. |
-| 14 | `scripts/24_prepare_bmc_submission_package.py` | Generate the editable manuscript DOCX and cover-letter DOCX. |
+| 13 | `scripts/28_spatial_autocorrelation_niche_analysis.py` | Quantify spot-level Moran's I and local neighbor enrichment in GSE269875. |
+| 14 | `scripts/29_commppass_sensitivity_models.py` | Fit CoMMpass OS and 1q21 sensitivity models with PR, proliferation, cytogenetic, and purity/tumor-burden covariates. |
+| 15 | `scripts/30_module_coverage_and_testing_inventory.py` | Generate module-gene coverage and all-tested-association inventory tables. |
+| 16 | `scripts/31_build_review_hardening_figure.py` | Build Fig. 7 from the spatial organization and CoMMpass sensitivity outputs. |
+| 17 | `scripts/15_build_manuscript_figures.py` | Generate Fig. 1-6 and the cross-cohort evidence table. |
+| 18 | `scripts/24_prepare_bmc_submission_package.py` | Generate the editable manuscript DOCX and cover-letter DOCX. |
 
 ## Score Construction
 
@@ -67,7 +71,7 @@ Primary biological scores:
 |---|---|---|
 | Plasma-secretory score | Plasma-cell and secretory-pathway program genes available per platform | Main spatial, bulk, and CoMMpass axis |
 | Clinical subtype module | POU2AF1, XBP1, JCHAIN where available | Clinical subtype and risk association support |
-| Xenium panel-covered module | POU2AF1 and XBP1 | GSE299193 panel-compatible validation |
+| Xenium panel-covered module | POU2AF1 and XBP1 | GSE299193 panel-compatible reproducibility |
 | TXNDC5 expression | TXNDC5 | Spatial/single-cell localization candidate |
 
 ## Dataset-Specific Notes
@@ -82,9 +86,19 @@ Main statistics reported:
 - Cohen's d.
 - Mann-Whitney p value.
 
+Spatial organization add-on:
+
+- Moran's I was calculated within each sample using 6-nearest-neighbor graph weights.
+- Permutation p values used 199 within-sample label permutations.
+- Plasma-secretory-high spots were defined as the within-sample top quartile.
+- Neighbor enrichment compared nearest-neighbor scores around plasma-secretory-high spots with neighbor scores around all other spots.
+- The focal spot was excluded from each nearest-neighbor set.
+- Primary neighbor summaries excluded plasma-cell marker scores and used non-overlapping niche programs to reduce circularity.
+- MM samples had higher Moran's I than controls in this small cohort (median 0.571 versus 0.144; Mann-Whitney p=0.0238), but control marrow also showed non-zero autocorrelation.
+
 ### GSE299193
 
-The raw Xenium archive was not fully extracted. The validation script extracted only cell-feature matrices and lightweight metadata needed for gene-panel scoring. This avoided unnecessary expansion of imaging and transcript-position files.
+The raw Xenium archive was not fully extracted. The reproducibility script extracted only cell-feature matrices and lightweight metadata needed for gene-panel scoring. This avoided unnecessary expansion of imaging and transcript-position files.
 
 Disease grouping:
 
@@ -93,17 +107,18 @@ Disease grouping:
 
 Interpretation boundary:
 
-- GSE299193 validates the program-level spatial signal.
+- GSE299193 supports program-level spatial reproducibility.
 - It does not directly validate TXNDC5, JCHAIN, or SDC1 because these genes were absent from the extracted Xenium matrices.
 
 ### GSE271107
 
-Single-cell RNA-seq data were summarized by marker-inferred cell categories. The primary endpoint was whether candidate genes and module scores localized to plasma-cell compartments. Detection fraction was calculated as the fraction of observations with expression above zero.
+Single-cell RNA-seq data were filtered using minimum 200 detected genes, minimum 500 total counts, and maximum 25% mitochondrial reads. The analysis retained 127,528 post-QC cells from 19 samples. Cells were summarized by marker-inferred cell categories. The primary endpoint was whether candidate genes and module scores localized to plasma-cell compartments. Detection fraction was calculated as the fraction of observations with expression above zero. TXNDC5 detection was summarized across 8,007 marker-inferred plasma cells from 19 sample-level plasma-cell strata: HD 1,463 cells, MGUS 1,016 cells, SMM 649 cells, and MM 4,879 cells. The cell-weighted detection fraction was 96.44%; the unweighted mean across plasma-cell sample strata was 94.86%.
 
 Interpretation boundary:
 
 - This supports localization.
 - It does not establish TXNDC5 as a standalone prognostic biomarker.
+- It does not establish malignant-plasma-cell-specific localization because malignant and normal plasma cells were not separated.
 
 ### GSE2658 And GSE24080
 
@@ -121,7 +136,7 @@ Interpretation boundary:
 
 ### CoMMpass/GDC
 
-MMRF-COMMPASS/GDC RNA-seq files were filtered to baseline visit-1 bone marrow CD138+ samples. The final validation table contained 762 baseline samples. Gene-level TPM values were log-transformed and z-scored before module scoring.
+MMRF-COMMPASS/GDC RNA-seq files were filtered to baseline visit-1 bone marrow CD138+ samples. The final association table contained 762 baseline samples. Gene-level TPM values were log-transformed and z-scored before module scoring.
 
 Endpoints:
 
@@ -136,7 +151,7 @@ Interpretation boundary:
 
 ### NG2024 Public CoMMpass Annotation
 
-Public Skerget et al. NG2024 supplementary tables were joined to local CoMMpass/GDC scores by patient identifier. Supplementary Table 1 matched all 762 local baseline samples. RNA-subtype probability analyses used complete cases; the PR subtype analysis contained 707 complete samples.
+Public Skerget et al. NG2024 supplementary tables were joined to local CoMMpass/GDC scores by patient identifier. The public patient-feature table matched all 762 local baseline samples. RNA-subtype probability analyses used complete cases; the PR subtype analysis contained 707 complete samples.
 
 Molecular annotations tested:
 
@@ -170,13 +185,14 @@ Benjamini-Hochberg FDR correction was applied within analysis families rather th
 Analysis families:
 
 1. Spatial discovery program comparisons.
-2. GSE299193 Xenium program and panel-covered gene comparisons.
-3. Single-cell localization summaries.
-4. External GEO bulk associations.
-5. CoMMpass/GDC clinical associations.
-6. NG2024 molecular annotation associations.
-7. Adjusted CoMMpass/NG2024 model families.
-8. Cox PH diagnostic screen.
+2. Spatial organization and neighbor-enrichment analyses.
+3. GSE299193 Xenium program and panel-covered gene comparisons.
+4. Single-cell localization summaries.
+5. External GEO bulk associations.
+6. CoMMpass/GDC clinical associations.
+7. NG2024 molecular annotation associations.
+8. Adjusted CoMMpass/NG2024 model families.
+9. Cox PH diagnostic screen.
 
 ## Cox Proportional Hazards Diagnostic
 
@@ -189,16 +205,30 @@ Primary score terms:
 
 The 1q21 covariate showed time-related residual structure in adjusted models. Therefore, Cox results are reported as retrospective adjusted association models, not prospective risk-prediction models.
 
+## Sensitivity Models And Platform-Coverage Tables
+
+CoMMpass sensitivity models tested whether the plasma-secretory OS association persisted beyond known molecular-risk context. The basic model adjusted for age, sex, ISS, and 1q21. Additional models added PR subtype probability, proliferation score, del17p and high-risk cytogenetics, low-purity probability, and CMMC tumor-burden proxy where available.
+
+Main interpretation:
+
+- The basic model showed an OS association for the plasma-secretory score.
+- The association was attenuated after adding PR subtype probability and proliferation score.
+- Low-purity probability and CMMC are public annotation proxies and do not replace direct tumor-purity measurement.
+
+Formal supplementary tables are provided for submission: Supplementary Table S1, cohort-by-module gene coverage; Supplementary Table S2, all tested associations; and Supplementary Table S3, Cox sensitivity models.
+
 ## Figure Traceability
 
 | Figure | Primary script | Primary output files |
 |---|---|---|
 | Fig. 1 | `scripts/15_build_manuscript_figures.py` | `analysis/manuscript_figures/fig1_study_design_evidence_chain.*` |
 | Fig. 2 | `scripts/10_sample_aware_spatial_signatures.py`; `scripts/15_build_manuscript_figures.py` | `analysis/manuscript_figures/fig2_spatial_plasma_secretory_discovery.*` |
-| Fig. 3 | `scripts/11_gse271107_scrna_validation.py`; `scripts/15_build_manuscript_figures.py` | `analysis/manuscript_figures/fig3_scrna_plasma_secretory_localization.*` |
-| Fig. 4 | `scripts/12_bulk_clinical_validation.py`; `scripts/13_plasma_secretory_subtype_refinement.py`; `scripts/15_build_manuscript_figures.py` | `analysis/manuscript_figures/fig4_geo_bulk_clinical_support.*` |
-| Fig. 5 | `scripts/14_commppass_gdc_validation.py`; `scripts/20_skerget_ng2024_molecular_annotation_validation.py`; `scripts/21_commppass_ng2024_adjusted_models.py`; `scripts/15_build_manuscript_figures.py` | `analysis/manuscript_figures/fig5_commppass_os_iss_validation.*` |
-| Fig. 6 | `scripts/18_gse299193_xenium_validation.py`; `scripts/15_build_manuscript_figures.py` | `analysis/manuscript_figures/fig6_gse299193_xenium_spatial_validation.*` |
+| Fig. 3 | `scripts/28_spatial_autocorrelation_niche_analysis.py`; `scripts/31_build_review_hardening_figure.py` | `analysis/manuscript_figures/fig3_spatial_organization.*` |
+| Fig. 4 | `scripts/18_gse299193_xenium_validation.py`; `scripts/15_build_manuscript_figures.py` | `analysis/manuscript_figures/fig4_gse299193_xenium_spatial_reproducibility.*` |
+| Fig. 5 | `scripts/11_gse271107_scrna_validation.py`; `scripts/15_build_manuscript_figures.py` | `analysis/manuscript_figures/fig5_scrna_plasma_secretory_localization.*` |
+| Fig. 6 | `scripts/12_bulk_clinical_validation.py`; `scripts/13_plasma_secretory_subtype_refinement.py`; `scripts/15_build_manuscript_figures.py` | `analysis/manuscript_figures/fig6_external_bulk_clinical_support.*` |
+| Fig. 7 | `scripts/14_commppass_gdc_validation.py`; `scripts/20_skerget_ng2024_molecular_annotation_validation.py`; `scripts/21_commppass_ng2024_adjusted_models.py`; `scripts/15_build_manuscript_figures.py` | `analysis/manuscript_figures/fig7_commppass_ng2024_association.*` |
+| Fig. 8 | `scripts/29_commppass_sensitivity_models.py`; `scripts/31_build_review_hardening_figure.py` | `analysis/manuscript_figures/fig8_commppass_sensitivity_models.*` |
 
 Each figure is available as PNG, PDF, and SVG in `analysis/manuscript_figures`.
 
@@ -207,17 +237,20 @@ Each figure is available as PNG, PDF, and SVG in `analysis/manuscript_figures`.
 The current manuscript supports:
 
 - Spatial discovery of a plasma-secretory bone marrow program.
-- Independent program-level spatial validation in GSE299193.
+- Non-random spatial clustering and exploratory neighborhood association in GSE269875.
+- Independent program-level spatial reproducibility in GSE299193.
 - Plasma-cell localization in single-cell data.
 - External bulk support for a clinical subtype/risk axis.
 - Retrospective CoMMpass/GDC and NG2024 clinical/molecular associations.
+- Molecular-risk-context framing supported by sensitivity-model attenuation after PR/proliferation adjustment.
 
 The current manuscript does not claim:
 
 - A standalone clinical biomarker.
+- An independent prognostic biomarker.
 - A prospective classifier.
 - Treatment-selection utility.
 - Completed R-ISS validation.
 - Completed PFS validation.
 - Completed treatment-response validation.
-- Direct GSE299193 validation of TXNDC5, JCHAIN, or SDC1.
+- Direct GSE299193 reproducibility of TXNDC5, JCHAIN, or SDC1.

@@ -1,0 +1,9 @@
+Abnormality,N_Tested,N_Positive,Frequency_pct,Source
+del17p13,871,109,12.5,Skerget et al. 2024 Nat Genet
+t(4;14) NSD2/WHSC1/MMSET,851,109,12.8,Skerget et al. 2024 Nat Genet
+del13q14,871,453,52.0,Skerget et al. 2024 Nat Genet
+gain1q21,871,307,35.2,Skerget et al. 2024 Nat Genet
+del1p22,871,212,24.3,Skerget et al. 2024 Nat Genet
+t(14;16) MAF,851,31,3.6,ASH 2024 abstract IA19
+t(14;20) MAFB,851,20,2.4,ASH 2024 abstract IA19
+High-risk cytogenetics (>=1 of: del17p13/t(14;16)/t(14;20)/t(8;14)/t(4;14)),832,247,29.7,Skerget et al. 2024 Nat Genet

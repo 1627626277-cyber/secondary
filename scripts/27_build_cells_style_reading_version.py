@@ -27,10 +27,12 @@ OUT_MD = SUBMISSION_DIR / "MANUSCRIPT_CELLS_STYLE_READING_VERSION_SOURCE.md"
 FIGURES = {
     "Figure 1": FIGURE_DIR / "fig1_study_design_evidence_chain.png",
     "Figure 2": FIGURE_DIR / "fig2_spatial_plasma_secretory_discovery.png",
-    "Figure 3": FIGURE_DIR / "fig3_scrna_plasma_secretory_localization.png",
-    "Figure 4": FIGURE_DIR / "fig4_geo_bulk_clinical_support.png",
-    "Figure 5": FIGURE_DIR / "fig5_commppass_os_iss_validation.png",
-    "Figure 6": FIGURE_DIR / "fig6_gse299193_xenium_spatial_validation.png",
+    "Figure 3": FIGURE_DIR / "fig3_spatial_organization.png",
+    "Figure 4": FIGURE_DIR / "fig4_gse299193_xenium_spatial_reproducibility.png",
+    "Figure 5": FIGURE_DIR / "fig5_scrna_plasma_secretory_localization.png",
+    "Figure 6": FIGURE_DIR / "fig6_external_bulk_clinical_support.png",
+    "Figure 7": FIGURE_DIR / "fig7_commppass_ng2024_association.png",
+    "Figure 8": FIGURE_DIR / "fig8_commppass_sensitivity_models.png",
 }
 
 
@@ -147,7 +149,7 @@ def add_paragraph(doc: Document, text: str, style: str = "Body Text", space_afte
     add_run_markup(para, text, 10.2)
     para.paragraph_format.space_after = Pt(space_after)
     para.paragraph_format.line_spacing = 1.05
-    para.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+    para.alignment = WD_ALIGN_PARAGRAPH.LEFT
 
 
 def add_markdown_blocks(doc: Document, text: str, level_base: int = 2) -> None:
@@ -450,11 +452,11 @@ def add_main_text(doc: Document, manuscript: str, legends: dict[str, str]) -> No
     result_order = [
         "Cross-cohort design defined a bounded evidence chain",
         "Spatial transcriptomics identified the plasma-secretory program (Fig. 2)",
-        "Single-cell data localized the axis to plasma-cell compartments (Fig. 3)",
-        "External bulk cohorts supported a clinical subtype module (Fig. 4)",
-        "CoMMpass/GDC linked the axis to OS, ISS, and molecular risk (Fig. 5)",
-        "Adjusted models supported covariate-adjusted OS association (Fig. 5D)",
-        "Independent Xenium data reproduced the program-level spatial signal (Fig. 6)",
+        "Independent Xenium data reproduced the program-level spatial signal (Fig. 4)",
+        "Single-cell data localized the axis to plasma-cell compartments (Fig. 5)",
+        "External bulk cohorts supported a clinical subtype module (Fig. 6)",
+        "CoMMpass/GDC linked the axis to OS, ISS, and molecular risk (Fig. 7)",
+        "Adjusted models constrained the OS interpretation (Fig. 8)",
     ]
     result_idx = 1
     for title in result_order:
@@ -468,14 +470,17 @@ def add_main_text(doc: Document, manuscript: str, legends: dict[str, str]) -> No
             add_table1(doc, read(TABLE1_MD))
         elif title.startswith("Spatial transcriptomics"):
             add_figure(doc, "Figure 2", legends["Figure 2"])
-        elif title.startswith("Single-cell"):
             add_figure(doc, "Figure 3", legends["Figure 3"])
-        elif title.startswith("External bulk"):
-            add_figure(doc, "Figure 4", legends["Figure 4"])
-        elif title.startswith("Adjusted models"):
-            add_figure(doc, "Figure 5", legends["Figure 5"])
         elif title.startswith("Independent Xenium"):
+            add_figure(doc, "Figure 4", legends["Figure 4"])
+        elif title.startswith("Single-cell"):
+            add_figure(doc, "Figure 5", legends["Figure 5"])
+        elif title.startswith("External bulk"):
             add_figure(doc, "Figure 6", legends["Figure 6"])
+        elif title.startswith("CoMMpass"):
+            add_figure(doc, "Figure 7", legends["Figure 7"])
+        elif title.startswith("Adjusted models"):
+            add_figure(doc, "Figure 8", legends["Figure 8"])
         result_idx += 1
 
     add_heading(doc, "4. Discussion", 1)

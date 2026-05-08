@@ -5,7 +5,7 @@ Date started: 2026-05-01
 ## Scientific Claim Control
 
 - [x] Main claim framed as a reproducible plasma-secretory program, not a completed clinical biomarker.
-- [x] GSE299193 described as program-level validation.
+- [x] GSE299193 described as program-level spatial reproducibility.
 - [x] TXNDC5 described as a spatial/single-cell localization candidate.
 - [x] POU2AF1/XBP1/JCHAIN described as the clinical subtype module.
 - [x] R-ISS, PFS, and treatment-response validation not claimed as completed.
@@ -42,10 +42,13 @@ Date started: 2026-05-01
 - [x] Fig. 4 generated
 - [x] Fig. 5 generated
 - [x] Fig. 6 generated
+- [x] Fig. 7 generated
+- [x] Fig. 8 generated
 - [x] Cross-cohort evidence table generated
 - [x] Table 1 editable DOCX generated
 - [x] Supplementary Methods/reproducibility DOCX generated
-- [x] Keep Fig. 6 as a main figure
+- [x] Keep Fig. 4 as a main figure for second spatial reproducibility
+- [x] Keep Fig. 8 as a main figure for sensitivity models
 - [x] Keep cross-cohort evidence table as main Table 1
 - [x] Confirm final figure resolution and journal upload format
 
@@ -64,9 +67,9 @@ Date started: 2026-05-01
 - [x] Local git repository initialized
 - [x] Initial project snapshot committed
 - [x] Large raw data excluded from version control
-- [x] GitHub repository detected by connector
+- [ ] GitHub repository detected by connector
 - [x] Local project pushed to GitHub
-- [x] Final code availability URL inserted into manuscript draft
+- [x] Code availability URL inserted into manuscript draft
 
 ## Submission Portal Items
 

@@ -23,13 +23,13 @@ Research article
 Full title:
 
 ```text
-Spatial validation and clinical association of a plasma-secretory bone marrow program in multiple myeloma
+A spatially reproducible plasma-secretory bone marrow program linked to molecular risk in multiple myeloma
 ```
 
 Running title:
 
 ```text
-Plasma-secretory spatial program in multiple myeloma
+Spatial plasma-secretory program in myeloma
 ```
 
 Keywords:
@@ -49,19 +49,19 @@ Multiple myeloma develops within a spatially organized bone marrow niche. Bulk g
 Methods:
 
 ```text
-We integrated public spatial transcriptomics, Xenium spatial profiling, single-cell RNA sequencing, external bulk cohorts, MMRF-COMMPASS/GDC RNA-seq, and public CoMMpass molecular annotations. Module scores were tested across GSE269875, GSE299193, GSE271107, GSE24080, GSE2658, CoMMpass/GDC, and NG2024/Skerget public CoMMpass supplementary annotations. Survival associations were evaluated using log-rank tests and Cox proportional hazards models adjusted for age, sex, ISS stage, and 1q21 status.
+We integrated public spatial transcriptomics, Xenium spatial profiling, single-cell RNA sequencing, external bulk cohorts, MMRF-COMMPASS/GDC RNA-seq, and public CoMMpass molecular annotations. Module scores were tested across GSE269875, GSE299193, GSE271107, GSE24080, GSE2658, CoMMpass/GDC, and NG2024/Skerget public CoMMpass supplementary annotations. Spatial organization was assessed using spot-level Moran's I and nearest-neighbor enrichment. Survival associations were evaluated using log-rank tests and Cox models with sensitivity adjustment for PR subtype probability, proliferation, cytogenetic risk, and public purity or tumor-burden proxies.
 ```
 
 Results:
 
 ```text
-In GSE269875, the plasma-secretory score was higher in myeloma than control bone marrow, with sample-level median difference 0.709, Cohen's d 3.129, and Mann-Whitney p=0.0256. Independent Xenium validation in GSE299193 reproduced this program-level signal across 22 samples; active myeloma or relapsed myeloma samples had higher plasma-secretory scores than Ctrl/MGUS/SM samples, with median difference 0.766 and FDR=5.75e-04. In GSE271107 single-cell data, TXNDC5 was consistently expressed in marker-inferred plasma cells. The POU2AF1/XBP1/JCHAIN module was associated with 1q21 amplification in GSE2658, and XBP1 was associated with 24-month overall survival death in GSE24080. In 762 baseline MMRF-COMMPASS/GDC CD138+ RNA-seq samples, the plasma-secretory score was associated with overall survival event, ISS stage, and median-split survival. Public NG2024 annotations linked the score to PR RNA-subtype probability and 1q21 gain or amplification. In an adjusted Cox model, the score remained associated with overall survival, with hazard ratio 1.460 per standard deviation, 95% CI 1.069-1.993, and FDR=0.0445.
+In GSE269875, the plasma-secretory score was higher in myeloma than control bone marrow, with sample-level median difference 0.709, Cohen's d 3.129, and Mann-Whitney p=0.0256. Spot-level analysis showed non-random spatial organization of the program, with plasma-secretory Moran's I significant in 9 of 9 samples and median Moran's I 0.477. Independent Xenium analysis in GSE299193 reproduced the program-level signal across 22 samples; active myeloma or relapsed myeloma samples had higher plasma-secretory scores than Ctrl/MGUS/SM samples, with median difference 0.766 and FDR=5.75e-04. In GSE271107 single-cell data, the axis localized to marker-inferred plasma-cell compartments. In CoMMpass/GDC and public NG2024 annotations, the score was associated with OS, ISS, PR RNA-subtype probability, and 1q21 gain or amplification. The basic adjusted OS model showed HR 1.460 per standard deviation, FDR=0.0485, but the association was attenuated after additional PR and proliferation adjustment. This attenuation indicates molecular-context dependence.
 ```
 
 Conclusions:
 
 ```text
-These results support a reproducible plasma-secretory bone marrow program in multiple myeloma. TXNDC5 is best framed as a spatial and single-cell localization candidate, whereas POU2AF1, XBP1, and JCHAIN better support the clinical subtype axis. Current public data do not complete R-ISS, PFS, or treatment-response validation.
+These results support a spatially reproducible plasma-secretory bone marrow program linked to a PR/proliferation/1q21 molecular-risk context in multiple myeloma. TXNDC5 is best framed as a spatial and single-cell localization candidate, whereas POU2AF1, XBP1, and JCHAIN better support the subtype-axis interpretation. Current public data do not complete R-ISS, PFS, or treatment-response validation, and the program should not be presented as an independent clinical biomarker.
 ```
 
 ## Author And Affiliation
@@ -163,13 +163,13 @@ Not applicable.
 Availability of data and materials:
 
 ```text
-The datasets supporting the conclusions of this article are available in public repositories. Spatial discovery used GEO accession GSE269875. Xenium spatial validation used GEO accession GSE299193. Single-cell validation used GEO accession GSE271107. Bulk validation used GEO accessions GSE24080 and GSE2658. CoMMpass/GDC RNA-seq and open clinical data were obtained from the NCI Genomic Data Commons MMRF-COMMPASS project. Public CoMMpass molecular annotations were obtained from the supplementary tables of Skerget et al. Nature Genetics 2024. Dataset accessions and primary source links are listed in the References.
+The datasets supporting the conclusions of this article are available in public repositories. Spatial discovery used GEO accession GSE269875. Xenium spatial reproducibility used GEO accession GSE299193. Single-cell localization used GEO accession GSE271107. Bulk association used GEO accessions GSE24080 and GSE2658. CoMMpass/GDC RNA-seq and open clinical data were obtained from the NCI Genomic Data Commons MMRF-COMMPASS project. Public CoMMpass molecular annotations were obtained from the supplementary tables of Skerget et al. Nature Genetics 2024. Dataset accessions and primary source links are listed in the References.
 ```
 
 Code availability:
 
 ```text
-Analysis scripts, compact result tables, manuscript figures, and validation reports are publicly available at https://github.com/1627626277-cyber/secondary.
+The public code and compact-result repository is https://github.com/1627626277-cyber/secondary.
 ```
 
 Competing interests:
@@ -236,10 +236,18 @@ Supplementary Methods:
 D:\二区\submission\bmc_medical_genomics_2026-05-01\SUPPLEMENTARY_METHODS_REPRODUCIBILITY_DRAFT.docx
 ```
 
+Supplementary Tables:
+
+```text
+D:\二区\submission\bmc_medical_genomics_2026-05-01\SUPPLEMENTARY_TABLE_S1_MODULE_GENE_COVERAGE.tsv
+D:\二区\submission\bmc_medical_genomics_2026-05-01\SUPPLEMENTARY_TABLE_S2_ALL_TESTED_ASSOCIATIONS.tsv
+D:\二区\submission\bmc_medical_genomics_2026-05-01\SUPPLEMENTARY_TABLE_S3_COX_SENSITIVITY_MODELS.tsv
+```
+
 Author-review reading version, not primary upload unless requested:
 
 ```text
-D:\二区\submission\bmc_medical_genomics_2026-05-01\MANUSCRIPT_CELLS_STYLE_READING_VERSION.pdf
+D:\二区\submission\bmc_medical_genomics_2026-05-01\MM_spatial_plasma.pdf
 ```
 
 Preferred figure upload files:
@@ -247,10 +255,12 @@ Preferred figure upload files:
 ```text
 D:\二区\analysis\manuscript_figures\fig1_study_design_evidence_chain.pdf
 D:\二区\analysis\manuscript_figures\fig2_spatial_plasma_secretory_discovery.pdf
-D:\二区\analysis\manuscript_figures\fig3_scrna_plasma_secretory_localization.pdf
-D:\二区\analysis\manuscript_figures\fig4_geo_bulk_clinical_support.pdf
-D:\二区\analysis\manuscript_figures\fig5_commppass_os_iss_validation.pdf
-D:\二区\analysis\manuscript_figures\fig6_gse299193_xenium_spatial_validation.pdf
+D:\二区\analysis\manuscript_figures\fig3_spatial_organization.pdf
+D:\二区\analysis\manuscript_figures\fig4_gse299193_xenium_spatial_reproducibility.pdf
+D:\二区\analysis\manuscript_figures\fig5_scrna_plasma_secretory_localization.pdf
+D:\二区\analysis\manuscript_figures\fig6_external_bulk_clinical_support.pdf
+D:\二区\analysis\manuscript_figures\fig7_commppass_ng2024_association.pdf
+D:\二区\analysis\manuscript_figures\fig8_commppass_sensitivity_models.pdf
 ```
 
 Fallback figure upload files if portal requests raster image files:
@@ -258,10 +268,12 @@ Fallback figure upload files if portal requests raster image files:
 ```text
 D:\二区\analysis\manuscript_figures\fig1_study_design_evidence_chain.png
 D:\二区\analysis\manuscript_figures\fig2_spatial_plasma_secretory_discovery.png
-D:\二区\analysis\manuscript_figures\fig3_scrna_plasma_secretory_localization.png
-D:\二区\analysis\manuscript_figures\fig4_geo_bulk_clinical_support.png
-D:\二区\analysis\manuscript_figures\fig5_commppass_os_iss_validation.png
-D:\二区\analysis\manuscript_figures\fig6_gse299193_xenium_spatial_validation.png
+D:\二区\analysis\manuscript_figures\fig3_spatial_organization.png
+D:\二区\analysis\manuscript_figures\fig4_gse299193_xenium_spatial_reproducibility.png
+D:\二区\analysis\manuscript_figures\fig5_scrna_plasma_secretory_localization.png
+D:\二区\analysis\manuscript_figures\fig6_external_bulk_clinical_support.png
+D:\二区\analysis\manuscript_figures\fig7_commppass_ng2024_association.png
+D:\二区\analysis\manuscript_figures\fig8_commppass_sensitivity_models.png
 ```
 
 ## Suggested Reviewers

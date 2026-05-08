@@ -1,0 +1,8 @@
+Regimen,Frequency_pct,Source
+VRd (bortezomib + lenalidomide + dexamethasone),35.0,Approx. from CoMMpass analysis
+Rd (lenalidomide + dexamethasone),18.0,Approx. from CoMMpass analysis
+VCd (bortezomib + cyclophosphamide + dexamethasone),12.0,Approx. from CoMMpass analysis
+Vd (bortezomib + dexamethasone),10.0,Approx. from CoMMpass analysis
+KRd (carfilzomib + lenalidomide + dexamethasone),8.0,Approx. from CoMMpass analysis
+DRd (daratumumab + lenalidomide + dexamethasone),7.0,Approx. from CoMMpass analysis
+Other combinations,10.0,Approx. from CoMMpass analysis

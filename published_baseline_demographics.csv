@@ -1,0 +1,18 @@
+Characteristic,Value,Source
+Number of Patients,1143,Skerget et al. 2024 Nat Genet
+Median Age at Diagnosis (years),63 (range 27-93),Skerget et al. 2024 Nat Genet
+Male,690 (60.4%),Skerget et al. 2024 Nat Genet
+Female,453 (39.6%),Skerget et al. 2024 Nat Genet
+ISS Stage I,401 (35.1%),Skerget et al. 2024 Nat Genet
+ISS Stage II,401 (35.1%),Skerget et al. 2024 Nat Genet
+ISS Stage III,311 (27.2%),Skerget et al. 2024 Nat Genet
+Median OS,103.6 months,Skerget et al. 2024 Nat Genet
+Median OS (ISS III),53.9 months,Skerget et al. 2024 Nat Genet
+Hyperdiploid (HRD),57.2%,Skerget et al. 2024 Nat Genet
+Non-Hyperdiploid (NHRD),42.8%,Skerget et al. 2024 Nat Genet
+Albumin >=3.5 g/dL,~65%,PMC11078818 training set n=796
+Beta2-Microglobulin <3.5 mg/L,~37%,PMC11078818 training set n=796
+Beta2-Microglobulin 3.5-5.5 mg/L,~27%,PMC11078818 training set n=796
+Beta2-Microglobulin >=5.5 mg/L,~36%,PMC11078818 training set n=796
+LDH <=250 U/L,~84%,PMC11078818 training set n=796
+LDH >250 U/L,~16%,PMC11078818 training set n=796

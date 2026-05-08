@@ -2632,8 +2632,8 @@ Completed:
 Files created:
 
 - `scripts\27_build_cells_style_reading_version.py`
-- `submission\bmc_medical_genomics_2026-05-01\MANUSCRIPT_CELLS_STYLE_READING_VERSION.docx`
-- `submission\bmc_medical_genomics_2026-05-01\MANUSCRIPT_CELLS_STYLE_READING_VERSION.pdf`
+- `submission\bmc_medical_genomics_2026-05-01\MM_spatial_plasma.docx`
+- `submission\bmc_medical_genomics_2026-05-01\MM_spatial_plasma.pdf`
 - `submission\bmc_medical_genomics_2026-05-01\MANUSCRIPT_CELLS_STYLE_READING_VERSION_SOURCE.md`
 
 Current conclusion:
@@ -2671,7 +2671,7 @@ Must resolve before formal journal submission:
    - Use separate Fig. 1-6 files from `analysis\manuscript_figures`, preferably PDF when accepted by the portal, with PNG as fallback.
    - The integrated reading PDF is for author review and should not replace separate figure upload unless the journal portal explicitly allows a combined manuscript file.
 7. Final author approval is still needed.
-   - The user should review `MANUSCRIPT_CELLS_STYLE_READING_VERSION.pdf` for narrative flow and figure readability.
+   - The user should review `MM_spatial_plasma.pdf` for narrative flow and figure readability.
    - After any text change, regenerate the formal DOCX and reading-layout PDF and re-run visual QA.
 
 Scientific limitations to keep, not to "fix" by overclaiming:
@@ -2722,3 +2722,336 @@ Files updated:
 Current conclusion:
 
 - Portal text is now filled as far as it can be without live portal login, corresponding-author email, and APC/payment decision.
+
+### 2026-05-01 Q2 External-Review Hardening Pass
+
+Trigger:
+
+- A Q2-style external review identified major risks: insufficient spatial-depth analysis, possible plasma-cell abundance/tumor-burden confounding, weak independence of the CoMMpass OS association, incomplete cross-platform module-gene transparency, unclear FDR family boundaries, GSE2658 direction inconsistency, and over-strong clinical-validation wording.
+
+Completed analyses:
+
+- Added spot-level spatial autocorrelation and neighborhood analysis for GSE269875 with `scripts\28_spatial_autocorrelation_niche_analysis.py`.
+- Added CoMMpass OS and 1q21 sensitivity models with `scripts\29_commppass_sensitivity_models.py`.
+- Added module-gene coverage and all-tested-association inventory with `scripts\30_module_coverage_and_testing_inventory.py`.
+- Added review-hardening Fig. 7 with `scripts\31_build_review_hardening_figure.py`.
+
+Key outputs:
+
+- `reports\validation\SPATIAL_AUTOCORRELATION_NICHE_ANALYSIS.md`
+- `reports\validation\COMMPASS_SENSITIVITY_MODELS.md`
+- `reports\validation\MODULE_COVERAGE_AND_TESTING_INVENTORY.md`
+- `reports\review\Q2_REVIEW_REVISION_RESPONSE_2026-05-01.md`
+- `analysis\manuscript_figures\fig7_spatial_and_sensitivity_hardening.*`
+- `analysis\module_coverage_and_testing_inventory\module_gene_coverage_by_dataset.tsv`
+- `analysis\module_coverage_and_testing_inventory\all_tested_association_inventory.tsv`
+
+Main numeric findings:
+
+- Plasma-secretory Moran's I was FDR-significant in 9 of 9 GSE269875 samples; median Moran's I was 0.477.
+- Plasma-secretory-high spots had enriched neighboring plasma-cell marker, stromal ECM, endothelial, myeloid, and immune scores.
+- The basic CoMMpass OS model remained associated after age, sex, ISS, and 1q21 adjustment: HR 1.460 per 1-SD score, FDR=0.0485.
+- The OS association attenuated after PR subtype probability and proliferation adjustment: HR 1.150, FDR=0.444.
+- The plasma-secretory score retained adjusted 1q21 association after age, sex, ISS, PR probability, proliferation, and low-purity adjustment: OR 1.396 per 1-SD score, FDR=0.0467.
+
+Manuscript changes:
+
+- Title changed to `A spatially reproducible plasma-secretory bone marrow program linked to molecular risk in multiple myeloma`.
+- The central claim was narrowed to a spatially reproducible plasma-secretory program linked to PR/proliferation/1q21 molecular-risk context.
+- `clinical validation` wording was replaced with `retrospective clinical association` or molecular-context language where appropriate.
+- TXNDC5 remains a localization candidate, not an independent prognostic biomarker.
+- Single-cell claims were restricted to plasma-cell compartment localization because malignant and normal plasma cells were not separated.
+- GSE2658 direction inconsistency is now explicitly discussed as likely related to platform, sample composition, FISH cutoff, therapy era, normalization, and module-coverage differences.
+
+Files updated:
+
+- `reports\manuscript\MANUSCRIPT_BMC_MEDICAL_GENOMICS_TARGET_DRAFT.md`
+- `reports\manuscript\FIGURE_LEGENDS_DRAFT.md`
+- `submission\bmc_medical_genomics_2026-05-01\TITLE_PAGE_DRAFT.md`
+- `submission\bmc_medical_genomics_2026-05-01\TABLE1_CROSS_COHORT_EVIDENCE_DRAFT.md`
+- `submission\bmc_medical_genomics_2026-05-01\SUPPLEMENTARY_METHODS_REPRODUCIBILITY_DRAFT.md`
+- `submission\bmc_medical_genomics_2026-05-01\PORTAL_METADATA_COPY_PASTE.md`
+- `submission\bmc_medical_genomics_2026-05-01\SUBMISSION_PACKAGE_INDEX.md`
+- `submission\bmc_medical_genomics_2026-05-01\DATA_AND_CODE_AVAILABILITY_DRAFT.md`
+- `submission\bmc_medical_genomics_2026-05-01\DECLARATIONS_DRAFT.md`
+- `submission\bmc_medical_genomics_2026-05-01\COVER_LETTER_DRAFT.md`
+
+Current conclusion:
+
+- The manuscript is stronger and more conservative than the previous version.
+- The project still does not complete R-ISS, PFS, treatment-response validation, prospective clinical utility, or wet-lab validation.
+- The correct current positioning is Q2-oriented public-data translational bioinformatics, not an independent clinical biomarker paper.
+- Next required step is regeneration of DOCX/PDF submission files and visual QA after the hardening edits.
+
+### 2026-05-01 Figure-Order, Spatial-Circularity, And Submission-QC Revision
+
+Trigger:
+
+- A second submission-readiness critique identified figure-order errors, nested panel labels in the previous hardening figure, residual validation wording, unclear TXNDC5 single-cell denominators, a risky disease-stage single-cell panel, missing formal supplementary-table labels, and a C-index methods/result mismatch.
+
+Completed corrections:
+
+- Re-numbered figures to first-appearance order:
+  - Fig. 1 workflow.
+  - Fig. 2 spatial discovery.
+  - Fig. 3 spatial organization.
+  - Fig. 4 GSE299193 Xenium spatial reproducibility.
+  - Fig. 5 single-cell localization.
+  - Fig. 6 external bulk association.
+  - Fig. 7 CoMMpass/GDC and NG2024 association/annotation.
+  - Fig. 8 CoMMpass sensitivity models.
+- Split the previous combined hardening figure into separate Fig. 3 and Fig. 8 outputs.
+- Removed the disease-stage trend panel from the single-cell figure to avoid progression overclaiming.
+- Revised spatial neighbor analysis to exclude focal spots and omit plasma-cell marker scores from the primary neighbor-enrichment summary, reducing circularity.
+- Clarified that control marrow also has non-zero Moran's I; disease-specific spatial organization is interpreted conservatively.
+- Clarified TXNDC5 single-cell denominator: 8,007 marker-inferred plasma cells from 19 plasma-cell sample strata; cell-weighted detection 96.44%, unweighted stratum mean 94.86%.
+- Removed the concordance/C-index methods statement because C-index values are not presented.
+- Created formal supplementary tables for upload:
+  - `SUPPLEMENTARY_TABLE_S1_MODULE_GENE_COVERAGE.tsv`
+  - `SUPPLEMENTARY_TABLE_S2_ALL_TESTED_ASSOCIATIONS.tsv`
+  - `SUPPLEMENTARY_TABLE_S3_COX_SENSITIVITY_MODELS.tsv`
+- Added recent high-quality literature support for bone marrow niche context, single-cell precursor biology, outcome-linked single-cell atlas work, and prediction-reporting boundaries.
+
+Key updated outputs:
+
+- `analysis\manuscript_figures\fig3_spatial_organization.*`
+- `analysis\manuscript_figures\fig4_gse299193_xenium_spatial_reproducibility.*`
+- `analysis\manuscript_figures\fig5_scrna_plasma_secretory_localization.*`
+- `analysis\manuscript_figures\fig6_external_bulk_clinical_support.*`
+- `analysis\manuscript_figures\fig7_commppass_ng2024_association.*`
+- `analysis\manuscript_figures\fig8_commppass_sensitivity_models.*`
+- `submission\bmc_medical_genomics_2026-05-01\MANUSCRIPT_BMC_MEDICAL_GENOMICS_SUBMISSION_DRAFT.docx`
+- `submission\bmc_medical_genomics_2026-05-01\MM_spatial_plasma.docx`
+- `submission\bmc_medical_genomics_2026-05-01\MM_spatial_plasma.pdf`
+
+Visual QA:
+
+- Reading-layout DOCX rendered to `qa_render_reading_after_fig_renumber` and final refresh `qa_render_reading_after_final_renumber` with 13 pages.
+- Main BMC submission DOCX rendered to `qa_render_main_after_fig_renumber` with 26 pages.
+- Manual visual spot checks confirmed corrected figure order and removal of the old nested Fig. 7 design.
+
+Current conclusion:
+
+- The manuscript is now more consistent with a bounded Q2 submission route: spatial reproducibility plus molecular-risk-context association.
+- The main remaining non-analysis blockers are corresponding-author details, final public GitHub/release confirmation, and final portal upload choices.
+
+### 2026-05-01 Submission Remaining-Items Audit
+
+Trigger:
+
+- User requested a complete list of current unfilled or unconfirmed submission-package items, including code availability wording such as "intended public code... should be confirmed before journal upload."
+
+Audit result:
+
+- Created `submission\bmc_medical_genomics_2026-05-01\SUBMISSION_REMAINING_ITEMS_2026-05-01.md`.
+- Corrected current Markdown metadata encoding issues for Chinese name/source text and local `D:\二区` paths.
+- Updated title-page approximate word count to 4,156 words excluding references.
+
+Blocking items before final portal submit:
+
+1. Finalize corresponding author name.
+2. Finalize corresponding author email.
+3. Finalize corresponding author postal address.
+4. Confirm GitHub repository is public and contains the current code/results package.
+5. Replace "intended public code" wording with final code availability wording after repository confirmation.
+6. Decide whether to add GitHub release/commit hash or Zenodo DOI.
+7. Decide APC payment source.
+8. Check institutional waiver/discount.
+9. Confirm open-access license choice.
+10. Confirm Word/WPS line numbers and page numbers visually.
+11. Confirm figure upload mapping in the live portal.
+
+Conditional or portal-dependent items:
+
+- Suggested reviewers only if required by the portal.
+- Opposed reviewers can remain none unless the portal requires a specific entry.
+- Author contribution statement must be revised only if coauthors are added.
+- The integrated reading-layout manuscript should be uploaded only if the portal requests a combined figure-embedded file.
+
+Current conclusion:
+
+- Scientific manuscript content is assembled.
+- The project is not yet ready for final one-click portal submission because metadata and repository/payment confirmations remain open.
+
+### 2026-05-01 Reading-Version Filename Sync And Sample-Size Status
+
+Trigger:
+
+- User confirmed that the integrated author-review reading version has been renamed to `MM_spatial_plasma`.
+- User asked whether the small-sample-size problem has been resolved.
+
+File-name sync:
+
+- The author-review reading-layout files are now tracked as:
+  - `submission\bmc_medical_genomics_2026-05-01\MM_spatial_plasma.docx`
+  - `submission\bmc_medical_genomics_2026-05-01\MM_spatial_plasma.pdf`
+- Submission package index and portal copy-paste notes were synchronized to the new reading-version file name.
+- The source file remains `MANUSCRIPT_CELLS_STYLE_READING_VERSION_SOURCE.md` because it is an internal build source rather than the author-facing reading manuscript.
+
+Sample-size status:
+
+- The original single spatial-discovery cohort remains small: GSE269875 contains 9 spatial samples.
+- The main sample-size weakness has been mitigated, not completely eliminated, by adding independent and larger validation layers:
+  - GSE299193: 22 Xenium spatial samples for program-level spatial reproducibility.
+  - GSE271107: 127,528 post-QC single cells from 19 samples for plasma-cell-compartment localization.
+  - CoMMpass/GDC: 762 baseline CD138+ RNA-seq samples for retrospective clinical association.
+  - CoMMpass adjusted OS model: 660 complete cases for age, sex, ISS, and 1q21 adjustment.
+  - NG2024/Skerget public CoMMpass annotations: 707 complete cases for PR RNA-subtype probability association.
+- Current framing should therefore state that the study is no longer dependent on one small spatial dataset, but the spatial-discovery component itself is still limited by small n.
+
+Current conclusion:
+
+- For a Q2 public-data translational bioinformatics paper, the sample-size issue is reasonably controlled through cross-platform replication and large bulk/annotation cohorts.
+- For a high-impact spatial-mechanism paper, it is not fully solved because only two spatial cohorts are available and the discovery spatial cohort remains 9 samples.
+- The manuscript should keep the current conservative language: spatial reproducibility and molecular-risk-context association, not definitive spatial mechanism or clinical biomarker validation.
+
+### 2026-05-02 MMRF Fuller Clinical Data Request Checklist
+
+Trigger:
+
+- User asked what MMRF/MRFF data are needed and whether Codex can guide the user while obtaining the data through the computer screen.
+
+Clarification:
+
+- The intended resource is MMRF/CoMMpass fuller clinical and processed molecular data.
+- Codex can guide the user step by step from screenshots or pasted portal text, but cannot directly see or control the full Windows desktop screen without the user sharing the relevant screen content in chat.
+- Credentials, passwords, verification codes, and private tokens should not be shared in chat.
+
+Guide created:
+
+- `reports\planning\MMRF_DATA_REQUEST_SCREEN_GUIDE.md`
+
+Highest-priority requested data:
+
+1. Patient clinical table:
+   - demographics, diagnosis, ISS/R-ISS components, baseline labs, follow-up, OS.
+2. Outcome / survival / PFS table:
+   - PFS time/event, progression, relapse, last follow-up, death information.
+3. Treatment response table:
+   - CR/sCR/VGPR/PR/SD/PD, best overall response, refractory status, response by therapy line.
+4. Treatment / regimen / therapy-line table:
+   - first-line regimen, therapy class, specific drugs, transplant, start/end dates.
+5. Cytogenetics / FISH table:
+   - del17p, t(4;14), t(14;16), 1q gain/amplification, del13q, high-risk cytogenetics.
+6. Sample/patient mapping:
+   - patient ID, sample ID, aliquot ID, baseline flag, visit/timepoint, tissue type, CD138+ status.
+
+Secondary useful data:
+
+- Copy-number estimates, canonical variants, somatic variants, structural variants/fusions, and processed bulk tumor expression if available.
+
+Local handling plan:
+
+- Place authorized downloaded files under `external_bulk\CoMMpass_full_clinical`.
+- Then run `python scripts\16_commppass_full_clinical_validation.py`.
+- The script will rescan endpoint candidate columns and update the readiness report.
+
+### 2026-05-02 GDC Open MMRF-COMMPASS Retest
+
+Trigger:
+
+- User supplied an alternative assistant's proposed GDC downloader approach and asked Codex to continue and verify whether it helps obtain the needed MMRF/CoMMpass data.
+
+Action:
+
+- Added and ran `scripts\32_gdc_mmrf_open_data_audit.py`.
+- The script uses `curl.exe --ssl-no-revoke` because local Python/PowerShell HTTPS requests can fail with SSL EOF/TLS connection errors on this machine.
+- The script audits GDC open files and the GDC cases endpoint without downloading large expression/MAF/CNV data files.
+
+Outputs:
+
+- `reports\validation\GDC_OPEN_MMRF_COMMPASS_DATA_AUDIT.md`
+- `analysis\mmrf_open_data_audit\gdc_open_file_inventory.tsv`
+- `analysis\mmrf_open_data_audit\gdc_open_file_type_counts.tsv`
+- `analysis\mmrf_open_data_audit\gdc_open_clinical_endpoint_candidate_columns.tsv`
+- `external_bulk\CoMMpass_GDC\gdc_mmrfcases_clinical_current_20260502.tsv`
+
+Findings:
+
+- GDC API status was OK; current tested data release was Data Release 45.0, dated 2025-12-04.
+- Open GDC currently exposes 2,960 MMRF-COMMPASS open files:
+  - 1,091 masked somatic mutation MAF files.
+  - 1,010 copy-number segment files.
+  - 859 RNA-seq gene-expression quantification files.
+- The GDC files endpoint did not expose separate open clinical-supplement files for treatment response, PFS, or FISH/cytogenetics.
+- The GDC cases endpoint returned 995 cases and 401 columns when treatment fields were requested.
+- Open GDC provides treatment-exposure and therapeutic-agent metadata:
+  - treatment-or-therapy non-empty cells: 7,184.
+  - therapeutic-agent fields include dexamethasone, lenalidomide, bortezomib, cyclophosphamide, carfilzomib, melphalan, pomalidomide, daratumumab, ixazomib, thalidomide, and others.
+  - treatment-type fields mainly identify autologous/allogeneic stem-cell transplantation.
+- However, open GDC still does not provide the missing fuller clinical endpoints:
+  - `diagnoses.0.progression_or_recurrence` was uniformly `unknown` in 995 cases and is not usable for PFS.
+  - treatment-outcome fields had zero non-empty cells and are not usable for response validation.
+  - R-ISS fields were not detected.
+  - baseline laboratory fields such as LDH, albumin, beta-2 microglobulin, calcium, creatinine, and hemoglobin were not detected.
+  - FISH/cytogenetic fields such as del17p, t(4;14), t(14;16), and 1q gain/amplification were not detected.
+
+Current conclusion:
+
+- The open GDC route can improve awareness of treatment exposure and molecular file availability, but it does not solve the optional fuller-clinical gap.
+- Authorized MMRF Researcher Gateway / Virtual Lab files are still required for R-ISS, PFS, treatment-response, and detailed cytogenetic validation.
+- The current manuscript should not be changed to claim completed PFS, R-ISS, treatment-response, or full FISH validation based on open GDC alone.
+
+### 2026-05-02 MMRF Assembly And FlatFile Parser Evaluation
+
+Trigger:
+
+- User provided two newly generated scripts:
+  - `assemble_mmrf_data.py`
+  - `parse_mmrf_flatfiles.py`
+- User asked Codex to run the scripts, evaluate whether the obtained data are useful, and advance the project if useful.
+
+Actions:
+
+- Ran `assemble_mmrf_data.py` into `analysis\mmrf_assembly_20260502`.
+- Ran `parse_mmrf_flatfiles.py` against `external_bulk\CoMMpass_full_clinical`.
+- Created `reports\validation\MMRF_ASSEMBLY_SCRIPT_EVALUATION_20260502.md`.
+
+Results:
+
+- `assemble_mmrf_data.py` failed to download GDC data through Python `requests` because this Windows environment produces SSL EOF errors against `api.gdc.cancer.gov`.
+- The same GDC API remains accessible through `curl.exe --ssl-no-revoke`, as shown by the prior GDC open-data audit.
+- `assemble_mmrf_data.py` successfully generated:
+  - `published_baseline_demographics.csv` with 14 rows.
+  - `published_fish_cytogenetics.csv` with 8 rows.
+  - `published_mutation_frequencies.csv` with 6 rows.
+  - `published_treatment_response.csv` with 7 rows.
+  - `published_treatment_regimens.csv` with 7 rows.
+  - `synthetic_patient_data_prototype.csv` with 500 rows.
+  - `synthetic_sample_mapping_prototype.csv` with 500 rows.
+- `parse_mmrf_flatfiles.py` loaded 0/5 expected FlatFiles because authorized MMRF Gateway FlatFiles are not present locally.
+
+Follow-up script hardening:
+
+- Patched `assemble_mmrf_data.py` so failed Python `requests` calls fall back to `curl.exe --ssl-no-revoke`.
+- Patched GDC clinical field requests to use explicit case/demographic/diagnosis/ISS/follow-up/treatment-exposure fields.
+- Re-ran the fixed script with synthetic generation skipped:
+  - output folder: `analysis\mmrf_assembly_20260502_curl_fixed_v2`.
+
+Fixed-run useful outputs:
+
+- `mmrf_clinical_gdc.tsv`: 995 rows x 401 columns.
+- `mmrf_biospecimen_gdc.tsv`: 995 rows x 8 columns.
+- `mmrf_rnaseq_files_gdc.tsv`: 859 rows x 8 columns.
+- `mmrf_mutations_gdc.tsv`: 1,091 rows x 5 columns.
+- `mmrf_copynumber_gdc.tsv`: 2,020 rows x 5 columns.
+
+Fixed-run endpoint check:
+
+- ISS is available in open GDC: I=348, II=353, III=266, Unknown=28.
+- `diagnoses.0.progression_or_recurrence` remains uniformly `unknown` across 995 cases.
+- 64 `treatment_outcome` columns were present but had zero non-empty cells.
+- Therefore PFS and treatment-response validation remain unavailable from open GDC.
+
+Usefulness assessment:
+
+- Published summary tables are useful only for background/context or supplementary cohort-context description.
+- They cannot support patient-level association testing, Cox models, R-ISS validation, PFS validation, or treatment-response validation.
+- Synthetic prototype data must not be used in manuscript results or statistical analyses.
+- The FlatFile parser will become useful only after authorized MMRF Gateway files are downloaded.
+
+Current decision:
+
+- Do not change the manuscript's main claims based on these generated tables.
+- Keep current manuscript boundary: no completed R-ISS, PFS, treatment-response, or full FISH validation.
+- If real MMRF FlatFiles are obtained later, rerun the parser and `scripts\16_commppass_full_clinical_validation.py`.

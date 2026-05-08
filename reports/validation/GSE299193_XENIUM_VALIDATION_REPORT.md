@@ -1,6 +1,6 @@
-# GSE299193 Xenium Spatial Validation Report
+# GSE299193 Xenium Spatial Reproducibility Report
 
-Status: completed first-pass Xenium sample-level validation
+Status: completed first-pass Xenium sample-level reproducibility analysis
 
 Samples analyzed: 22
 

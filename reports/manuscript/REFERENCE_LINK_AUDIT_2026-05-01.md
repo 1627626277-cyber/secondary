@@ -6,14 +6,12 @@ Scope:
 
 - Checked DOI and URL targets in the current Vancouver reference list.
 - `access_limited` means the target responded but blocked automated access, usually with 403, 405, 429, or authentication behavior.
-- `browser_verified` means the automated Python check failed locally, but the same URL opened successfully through browser verification on 2026-05-01.
 
 ## Summary
 
 - ok: 10
-- browser_verified: 6
 - access_limited: 9
-- failed: 0
+- failed: 6
 - not_applicable: 1
 
 ## Results
@@ -34,12 +32,12 @@ Scope:
 | 12 | doi | access_limited | 403 | https://doi.org/10.1093/jnci/dji237 | HTTPError |
 | 13 | doi | access_limited | 403 | https://doi.org/10.1093/nar/gks1193 | HTTPError |
 | 14 | doi | ok | 200 | https://doi.org/10.1038/s41467-021-21254-9 |  |
-| 15 | url | browser_verified |  | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE269875 | Python urllib reported TLS EOF, but the page opened successfully in browser verification on 2026-05-01. |
-| 16 | url | browser_verified |  | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE299193 | Python urllib reported TLS EOF, but the page opened successfully in browser verification on 2026-05-01. |
-| 17 | url | browser_verified |  | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE271107 | Python urllib reported TLS EOF, but the page opened successfully in browser verification on 2026-05-01. |
-| 18 | url | browser_verified |  | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE24080 | Python urllib reported TLS EOF, but the page opened successfully in browser verification on 2026-05-01. |
-| 19 | url | browser_verified |  | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE2658 | Python urllib reported TLS EOF, but the page opened successfully in browser verification on 2026-05-01. |
-| 20 | url | browser_verified |  | https://gdc.cancer.gov/about-gdc/contributed-genomic-data-cancer-research/foundation-medicine/multiple-myeloma-research-foundation-mmrf | Python urllib reported TLS EOF, but the page opened successfully in browser verification on 2026-05-01. |
+| 15 | url | failed |  | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE269875 | URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)> |
+| 16 | url | failed |  | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE299193 | URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)> |
+| 17 | url | failed |  | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE271107 | URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)> |
+| 18 | url | failed |  | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE24080 | URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)> |
+| 19 | url | failed |  | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE2658 | URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)> |
+| 20 | url | failed |  | https://gdc.cancer.gov/about-gdc/contributed-genomic-data-cancer-research/foundation-medicine/multiple-myeloma-research-foundation-mmrf | URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)> |
 | 21 | doi | ok | 200 | https://doi.org/10.1186/s13059-017-1382-0 |  |
 | 22 | url | ok | 200 | https://www.statsmodels.org/ |  |
 | 23 | doi | ok | 200 | https://doi.org/10.1038/nbt.1665 |  |

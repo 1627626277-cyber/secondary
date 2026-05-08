@@ -249,7 +249,7 @@ def build_evidence_table(tables: dict[str, pd.DataFrame]) -> pd.DataFrame:
             row = hit.iloc[0]
             rows.append(
                 {
-                    "evidence_layer": "Second spatial validation",
+                    "evidence_layer": "Second spatial reproducibility",
                     "cohort": "GSE299193",
                     "data_type": "human bone marrow Xenium spatial transcriptomics",
                     "sample_n": int(row["n_high"] + row["n_low"]),
@@ -258,7 +258,7 @@ def build_evidence_table(tables: dict[str, pd.DataFrame]) -> pd.DataFrame:
                     "effect_summary": f"median delta={as_float(row['delta_high_minus_low']):.3f}",
                     "p_value": as_float(row["mannwhitney_p"]),
                     "fdr_or_adjusted_p": as_float(row["mannwhitney_fdr"]),
-                    "claim_level": "Independent spatial validation",
+                    "claim_level": "Independent spatial reproducibility",
                     "interpretation": interpretation,
                 }
             )
@@ -273,10 +273,10 @@ def build_evidence_table(tables: dict[str, pd.DataFrame]) -> pd.DataFrame:
             "sample_n": int(txn["n_cells"].sum()),
             "contrast_or_endpoint": "marker-inferred plasma cells",
             "primary_feature": "TXNDC5",
-            "effect_summary": f"mean log-normalized expression={txn['mean_log_norm'].mean():.3f}; detected={100 * txn['pct_detected'].mean():.2f}%",
+            "effect_summary": f"mean log-normalized expression={txn['mean_log_norm'].mean():.3f}; detected={100 * (txn['n_cells'] * txn['pct_detected']).sum() / txn['n_cells'].sum():.2f}% cell-weighted",
             "p_value": np.nan,
             "fdr_or_adjusted_p": np.nan,
-            "claim_level": "Localization validation",
+            "claim_level": "Localization support",
             "interpretation": "TXNDC5 is consistently expressed in plasma-cell annotated single cells.",
         }
     )
@@ -289,7 +289,7 @@ def build_evidence_table(tables: dict[str, pd.DataFrame]) -> pd.DataFrame:
         row = bulk[(bulk["dataset"] == dataset) & (bulk["variable"] == variable) & (bulk["outcome"] == outcome)].iloc[0]
         rows.append(
             {
-                "evidence_layer": "External bulk validation",
+                "evidence_layer": "External bulk association",
                 "cohort": dataset,
                 "data_type": "bulk expression microarray",
                 "sample_n": int(row["n"]),
@@ -318,7 +318,7 @@ def build_evidence_table(tables: dict[str, pd.DataFrame]) -> pd.DataFrame:
         p_value = first_nonmissing(row, ["mannwhitney_p", "spearman_p", "logrank_p", "median_split_fisher_p"])
         rows.append(
             {
-                "evidence_layer": "Clinical bulk validation",
+                "evidence_layer": "Clinical bulk association",
                 "cohort": "MMRF-COMMPASS/GDC",
                 "data_type": "baseline bone marrow CD138+ RNA-seq",
                 "sample_n": int(row["n"]),
@@ -327,7 +327,7 @@ def build_evidence_table(tables: dict[str, pd.DataFrame]) -> pd.DataFrame:
                 "effect_summary": f"effect={as_float(effect):.3f}",
                 "p_value": p_value,
                 "fdr_or_adjusted_p": as_float(row.get("best_fdr")),
-                "claim_level": "Clinical validation",
+                "claim_level": "Retrospective clinical association",
                 "interpretation": "The plasma-secretory axis is associated with OS event, ISS stage, and median-split OS in CoMMpass/GDC.",
             }
         )
@@ -416,8 +416,8 @@ def plot_fig1(evidence: pd.DataFrame) -> None:
     stages = [
         ("Spatial discovery", "GSE269875\nMM vs control\nplasma-secretory program", 0.6, 3.3, "#D7E6F5"),
         ("scRNA localization", "GSE271107\nplasma-cell localization\nTXNDC5 support", 3.1, 3.3, "#D8EFEA"),
-        ("Bulk validation", "GSE24080 / GSE2658\nsubtype-risk support\nPOU2AF1/XBP1/JCHAIN", 5.6, 3.3, "#F7E7AD"),
-        ("Clinical/molecular validation", "CoMMpass/GDC + NG2024\n762 baseline samples\nOS, ISS, 1q21, RNA subtype", 8.1, 3.3, "#F3D3D5"),
+        ("Bulk association", "GSE24080 / GSE2658\nsubtype-risk support\nPOU2AF1/XBP1/JCHAIN", 5.6, 3.3, "#F7E7AD"),
+        ("Clinical/molecular association", "CoMMpass/GDC + NG2024\n762 baseline samples\nOS, ISS, 1q21, RNA subtype", 8.1, 3.3, "#F3D3D5"),
     ]
     for title, body, x, y, color in stages:
         ax.add_patch(mpl.patches.FancyBboxPatch((x, y), 1.8, 1.0, boxstyle="round,pad=0.03,rounding_size=0.05", facecolor=color, edgecolor="#1F2937", linewidth=0.9))
@@ -497,14 +497,12 @@ def plot_fig2(tables: dict[str, pd.DataFrame]) -> None:
 
 def plot_fig3(tables: dict[str, pd.DataFrame]) -> None:
     cell = tables["scrna_celltype"]
-    stage = tables["scrna_stage"]
     gene = tables["scrna_gene_celltype"]
 
-    fig = plt.figure(figsize=(12.1, 4.9))
-    gs = fig.add_gridspec(1, 3, width_ratios=[1.65, 1.15, 1.1])
+    fig = plt.figure(figsize=(9.4, 4.6))
+    gs = fig.add_gridspec(1, 2, width_ratios=[1.65, 1.15])
     ax1 = fig.add_subplot(gs[0, 0])
     ax2 = fig.add_subplot(gs[0, 1])
-    ax3 = fig.add_subplot(gs[0, 2])
 
     dot = (
         gene[gene["gene"].isin(AXIS_GENES)]
@@ -552,20 +550,11 @@ def plot_fig3(tables: dict[str, pd.DataFrame]) -> None:
     ax2.set_title("Program localization")
     clean_axis(ax2)
 
-    stage_order = ["HD", "MGUS", "SMM", "MM"]
-    stage_plot = stage.set_index("stage").loc[stage_order].reset_index()
-    ax3.plot(stage_plot["stage"], stage_plot["plasma_secretory_score"], color="#C44E52", marker="o", lw=1.8)
-    ax3.bar(stage_plot["stage"], stage_plot["plasma_secretory_score"], color="#F3D3D5", edgecolor="#C44E52", linewidth=0.7, zorder=0)
-    ax3.set_ylabel("Mean plasma-secretory score")
-    ax3.set_title("Disease-stage trend")
-    clean_axis(ax3)
-
     panel_label(ax1, "A")
     panel_label(ax2, "B")
-    panel_label(ax3, "C")
 
-    fig.suptitle("Fig. 3 | Single-cell localization of the plasma-secretory axis", x=0.01, ha="left", fontweight="bold")
-    save_figure(fig, "fig3_scrna_plasma_secretory_localization")
+    fig.suptitle("Fig. 5 | Single-cell localization of the plasma-secretory axis", x=0.01, ha="left", fontweight="bold")
+    save_figure(fig, "fig5_scrna_plasma_secretory_localization")
 
 
 def plot_fig4(tables: dict[str, pd.DataFrame]) -> None:
@@ -621,8 +610,8 @@ def plot_fig4(tables: dict[str, pd.DataFrame]) -> None:
     panel_label(ax2, "B")
     panel_label(ax3, "C")
 
-    fig.suptitle("Fig. 4 | External GEO bulk support for the clinical subtype axis", x=0.01, ha="left", fontweight="bold")
-    save_figure(fig, "fig4_geo_bulk_clinical_support")
+    fig.suptitle("Fig. 6 | External GEO bulk support for the clinical subtype axis", x=0.01, ha="left", fontweight="bold")
+    save_figure(fig, "fig6_external_bulk_clinical_support")
 
 
 def plot_fig5(tables: dict[str, pd.DataFrame]) -> None:
@@ -802,13 +791,13 @@ def plot_fig5(tables: dict[str, pd.DataFrame]) -> None:
     panel_label(ax5, "E")
     panel_label(ax6, "F")
 
-    fig.suptitle("Fig. 5 | CoMMpass/GDC and NG2024 validation of the plasma-secretory axis", x=0.01, ha="left", fontweight="bold")
-    save_figure(fig, "fig5_commppass_os_iss_validation")
+    fig.suptitle("Fig. 7 | CoMMpass/GDC retrospective association and NG2024 molecular annotation", x=0.01, ha="left", fontweight="bold")
+    save_figure(fig, "fig7_commppass_ng2024_association")
 
 
 def plot_fig6() -> None:
     source_stem = GSE299193 / "gse299193_xenium_axis_validation"
-    target_stem = OUT / "fig6_gse299193_xenium_spatial_validation"
+    target_stem = OUT / "fig4_gse299193_xenium_spatial_reproducibility"
     for suffix in [".png", ".svg", ".pdf"]:
         source = source_stem.with_suffix(suffix)
         if source.exists():
@@ -821,7 +810,7 @@ def write_figure_legends(evidence: pd.DataFrame) -> None:
         "",
         "## Figure 1",
         "",
-        "Cross-cohort study design and evidence chain. The workflow starts from spatial discovery in GSE269875, adds second spatial validation in GSE299193 Xenium, proceeds through single-cell localization in GSE271107, external GEO bulk validation in GSE24080/GSE2658, and clinical/molecular validation in MMRF-COMMPASS/GDC plus NG2024 public annotations.",
+        "Cross-cohort study design and evidence chain. The workflow starts from spatial discovery in GSE269875, adds second spatial reproducibility in GSE299193 Xenium, proceeds through single-cell localization in GSE271107, external GEO bulk association in GSE24080/GSE2658, and retrospective clinical association plus molecular annotation in MMRF-COMMPASS/GDC and public NG2024 CoMMpass annotations.",
         "",
         "## Figure 2",
         "",
@@ -829,19 +818,27 @@ def write_figure_legends(evidence: pd.DataFrame) -> None:
         "",
         "## Figure 3",
         "",
-        "Single-cell localization of the plasma-secretory axis. Dot size indicates detection fraction and color indicates mean log-normalized expression across marker-inferred cell types. The plasma-cell compartment shows the strongest plasma-secretory program localization, with TXNDC5 retained as a localization candidate.",
+        "Spatial organization of the plasma-secretory program in GSE269875. Moran's I was calculated within each sample using 6-nearest-neighbor graph weights and 199 within-sample label permutations. Neighbor enrichment compares nearest-neighbor niche-program scores around plasma-secretory-high spots with those around other spots; focal spots are excluded and plasma-cell marker scores are omitted from this primary neighbor analysis to reduce circularity.",
         "",
         "## Figure 4",
         "",
-        "External GEO bulk support for the clinical subtype axis. Ranked association statistics summarize subtype and risk links in GSE24080 and GSE2658. Boxplots show representative associations with 1q21 amplification and 24-month OS milestone status.",
+        "Independent GSE299193 Xenium spatial reproducibility. Sample-level Xenium matrices show higher plasma-secretory and POU2AF1/XBP1 module scores in active MM/RM samples compared with Ctrl/MGUS/SM samples. The heatmap displays axis genes covered by the Xenium panel. TXNDC5, JCHAIN and SDC1 are absent from this Xenium panel and are therefore not claimed as directly reproduced in this cohort.",
         "",
         "## Figure 5",
         "",
-        "CoMMpass/GDC and public NG2024 validation. The plasma-secretory score and related subtype module show association with OS event, ISS stage, median-split overall survival, public NG2024 RNA subtype probability, and 1q21 copy-number annotation. Adjusted Cox/logistic models summarize associations after age, sex, ISS and 1q21 or molecular-risk covariate adjustment where applicable.",
+        "Single-cell localization of the plasma-secretory axis. Dot size indicates detection fraction and color indicates mean log-normalized expression across marker-inferred cell types. The plasma-cell compartment shows the strongest plasma-secretory program localization, with TXNDC5 retained as a localization candidate.",
         "",
         "## Figure 6",
         "",
-        "Independent GSE299193 Xenium spatial validation. Sample-level Xenium matrices show higher plasma-secretory and POU2AF1/XBP1 module scores in active MM/RM samples compared with Ctrl/MGUS/SM samples. The heatmap displays axis genes covered by the Xenium panel. TXNDC5, JCHAIN and SDC1 are absent from this Xenium panel and are therefore not claimed as directly validated in this cohort.",
+        "External GEO bulk support for the clinical subtype axis. Ranked association statistics summarize subtype and risk links in GSE24080 and GSE2658. Boxplots show representative associations with 1q21 amplification and 24-month OS milestone status.",
+        "",
+        "## Figure 7",
+        "",
+        "CoMMpass/GDC retrospective clinical association and public NG2024 molecular annotation. The plasma-secretory score and related subtype module show association with OS event, ISS stage, median-split overall survival, public NG2024 RNA subtype probability, and 1q21 copy-number annotation. Basic adjusted Cox/logistic models summarize associations after age, sex, ISS and 1q21 adjustment where applicable.",
+        "",
+        "## Figure 8",
+        "",
+        "CoMMpass OS sensitivity models. Hazard ratios are reported per 1-SD plasma-secretory score increase. Models sequentially add PR subtype probability, proliferation, high-risk cytogenetic features, low-purity probability, or CMMC tumor-burden proxy to the base age, sex, ISS, and 1q21 model. Attenuation after PR/proliferation adjustment supports molecular-context dependence rather than independent clinical biomarker evidence.",
         "",
     ]
     (REPORTS / "FIGURE_LEGENDS_DRAFT.md").write_text("\n".join(lines), encoding="utf-8")
@@ -850,7 +847,7 @@ def write_figure_legends(evidence: pd.DataFrame) -> None:
 def write_results_skeleton(evidence: pd.DataFrame) -> None:
     spatial = evidence[evidence["evidence_layer"] == "Spatial discovery"].iloc[0]
     second_spatial = evidence[
-        (evidence["evidence_layer"] == "Second spatial validation")
+        (evidence["evidence_layer"] == "Second spatial reproducibility")
         & (evidence["primary_feature"] == "plasma-secretory score")
     ].iloc[0]
     scrna = evidence[evidence["evidence_layer"] == "Single-cell localization"].iloc[0]
@@ -874,12 +871,12 @@ def write_results_skeleton(evidence: pd.DataFrame) -> None:
         "## Result 1. Spatial transcriptomics identifies a plasma-secretory program enriched in MM bone marrow",
         "",
         f"- In GSE269875, the plasma-secretory score was higher in MM than control bone marrow samples ({spatial['effect_summary']}; Mann-Whitney p={format_p(spatial['p_value'])}).",
-        "- This establishes the spatial discovery layer and motivates downstream single-cell and bulk clinical validation.",
+        "- This establishes the spatial discovery layer and motivates downstream single-cell localization and bulk association analyses.",
         "- Claim boundary: this is a spatial program-level finding, not a standalone single-gene biomarker claim.",
         f"- In the independent GSE299193 Xenium cohort, the same plasma-secretory program was higher in MM/RM than Ctrl/MGUS/SM samples ({second_spatial['effect_summary']}; FDR={format_p(second_spatial['fdr_or_adjusted_p'])}).",
-        "- GSE299193 validates the program-level spatial signal, but its Xenium panel does not contain TXNDC5, JCHAIN, or SDC1, so it should not be used as direct TXNDC5 validation.",
+        "- GSE299193 supports program-level spatial reproducibility, but its Xenium panel does not contain TXNDC5, JCHAIN, or SDC1, so it should not be used as direct TXNDC5 reproducibility evidence.",
         "",
-        "## Result 2. Single-cell validation localizes the axis to plasma-cell annotated compartments",
+        "## Result 2. Single-cell localization places the axis in plasma-cell annotated compartments",
         "",
         f"- In GSE271107, TXNDC5 showed plasma-cell expression support ({scrna['effect_summary']}).",
         "- The plasma-secretory program was highest in marker-inferred plasma cells compared with other broad cell-type bins.",
@@ -891,7 +888,7 @@ def write_results_skeleton(evidence: pd.DataFrame) -> None:
         "- In GSE24080, XBP1 showed FDR-supported association with 24-month OS death.",
         "- These results justify shifting the clinical framing from a single TXNDC5 marker to a broader plasma-secretory subtype axis.",
         "",
-        "## Result 4. CoMMpass/GDC validates OS and ISS association of the plasma-secretory axis",
+        "## Result 4. CoMMpass/GDC supports OS and ISS association of the plasma-secretory axis",
         "",
         f"- In 762 baseline MMRF-COMMPASS/GDC bone marrow CD138+ RNA-seq samples, the plasma-secretory score was associated with OS event ({comp_os['effect_summary']}; FDR={format_p(comp_os['fdr_or_adjusted_p'])}).",
         f"- The same score was associated with ISS ordinal stage ({comp_iss['effect_summary']}; FDR={format_p(comp_iss['fdr_or_adjusted_p'])}).",
@@ -901,7 +898,7 @@ def write_results_skeleton(evidence: pd.DataFrame) -> None:
         "",
         "## Current Claim Boundary",
         "",
-        "- The current manuscript can claim spatial discovery, independent second spatial validation, single-cell localization, OS/ISS association in CoMMpass/GDC, and public NG2024 molecular-annotation support including 1q21 and RNA-subtype probability.",
+        "- The current manuscript can claim spatial discovery, independent second spatial reproducibility, single-cell localization, OS/ISS association in CoMMpass/GDC, and public NG2024 molecular-annotation support including 1q21 and RNA-subtype probability.",
         "- It should not claim completed R-ISS, PFS, detailed cytogenetic high-risk, or treatment-response validation.",
         "- Those endpoints require fuller MMRF/CoMMpass clinical files outside the currently used GDC open clinical slice.",
         "",

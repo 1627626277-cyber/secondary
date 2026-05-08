@@ -1,0 +1,9 @@
+Abnormality,N_Tested,N_Positive,Frequency_pct,Source
+del17p13,871,109,12.5,"Skerget et al. 2024, Nat Genet"
+t4_14,851,109,12.8,"Skerget et al. 2024, Nat Genet"
+del13q14,871,453,52.0,"Skerget et al. 2024, Nat Genet"
+gain1q21,871,307,35.2,"Skerget et al. 2024, Nat Genet"
+del1p22,871,212,24.3,"Skerget et al. 2024, Nat Genet"
+t14_16,851,31,3.6,ASH 2024 abstract (IA19)
+t14_20,851,20,2.4,ASH 2024 abstract (IA19)
+high_risk,832,247,29.7,"Skerget et al. 2024, Nat Genet"

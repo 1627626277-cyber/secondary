@@ -10,11 +10,11 @@ Not applicable.
 
 ## Availability Of Data And Materials
 
-The datasets supporting the conclusions of this article are available in public repositories. Spatial discovery used GEO accession GSE269875. Xenium spatial validation used GEO accession GSE299193. Single-cell validation used GEO accession GSE271107. Bulk validation used GEO accessions GSE24080 and GSE2658. CoMMpass/GDC RNA-seq and open clinical data were obtained from the NCI Genomic Data Commons MMRF-COMMPASS project. Public CoMMpass molecular annotations were obtained from the supplementary tables of Skerget et al. Nature Genetics 2024.
+The datasets supporting the conclusions of this article are available in public repositories. Spatial discovery used GEO accession GSE269875. Xenium spatial reproducibility used GEO accession GSE299193. Single-cell localization used GEO accession GSE271107. Bulk association used GEO accessions GSE24080 and GSE2658. CoMMpass/GDC RNA-seq and open clinical data were obtained from the NCI Genomic Data Commons MMRF-COMMPASS project. Public CoMMpass molecular annotations were obtained from the supplementary tables of Skerget et al. Nature Genetics 2024.
 
 ## Code Availability
 
-Analysis scripts, compact result tables, manuscript figures, and validation reports are publicly available at:
+The public code and compact-result repository is:
 
 - `https://github.com/1627626277-cyber/secondary`
 
@@ -36,4 +36,4 @@ Z.J. is the sole author. Z.J. conceived the study, designed and performed the an
 
 ## Acknowledgements
 
-The author(s) acknowledge the investigators and participants associated with the public GEO, GDC, and CoMMpass resources used in this study.
+The author acknowledges the investigators and participants associated with the public GEO, GDC, and CoMMpass resources used in this study.

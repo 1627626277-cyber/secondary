@@ -2,68 +2,32 @@
 
 ## Figure 1
 
-Cross-cohort study design and evidence chain.
-
-The workflow starts with spatial discovery in GSE269875. It then tests independent spatial reproducibility in GSE299193 Xenium data. Single-cell localization is evaluated in GSE271107. External bulk support is evaluated in GSE24080 and GSE2658. Clinical and molecular validation uses MMRF-COMMPASS/GDC RNA-seq and public NG2024 CoMMpass annotations. The lower annotation summarizes the current claim boundary. The study supports a spatially reproducible and clinically associated program. It does not establish a prospective treatment-selection biomarker.
+Cross-cohort study design and evidence chain. The workflow starts from spatial discovery in GSE269875, adds second spatial reproducibility in GSE299193 Xenium, proceeds through single-cell localization in GSE271107, external GEO bulk association in GSE24080/GSE2658, and retrospective clinical association plus molecular annotation in MMRF-COMMPASS/GDC and public NG2024 CoMMpass annotations.
 
 ## Figure 2
 
-Spatial discovery of the plasma-secretory program in GSE269875.
-
-**A**, Sample-level plasma-secretory scores in MM and control bone marrow spatial samples. The comparison uses median difference, Cohen's d, and a Mann-Whitney test.
-
-**B**, Effect-size ranking of curated spatial programs. Programs include plasma-secretory, myeloid-inflammatory, T/NK cytotoxic, stromal, endothelial, erythroid, and cycling signatures.
-
-**C**, Candidate gene ranking within the spatial discovery analysis. Plasma-cell and secretory genes include XBP1, TXNDC5, POU2AF1, SDC1, MZB1, and JCHAIN.
+Spatial discovery of the plasma-secretory program. Sample-level MM versus control differences are shown for the plasma-secretory score, followed by effect-size ranking across spatial programs and selected axis-associated candidate genes.
 
 ## Figure 3
 
-Single-cell localization of the plasma-secretory axis in GSE271107.
-
-**A**, Candidate gene expression across marker-inferred cell types. Dot size represents detection fraction. Color represents mean log-normalized expression.
-
-**B**, Plasma-secretory program localization across broad cell categories. Plasma-cell compartments show the strongest program enrichment.
-
-**C**, Disease-stage trend summary for the axis. The plot provides localization support rather than a survival endpoint.
-
-TXNDC5 is interpreted as a plasma-cell localization candidate. It is not treated as a standalone prognostic biomarker.
+Spatial organization of the plasma-secretory program in GSE269875. Moran's I was calculated within each sample using 6-nearest-neighbor graph weights and 199 within-sample label permutations. Plasma-secretory Moran's I was FDR-significant in all 9 samples and was higher in MM than control samples in this small cohort (median 0.571 versus 0.144; Mann-Whitney p=0.0238), although control marrow also showed non-zero autocorrelation. Neighbor enrichment compares nearest-neighbor niche-program scores around plasma-secretory-high spots with those around other spots; focal spots are excluded and plasma-cell marker scores are omitted from this primary neighbor analysis to reduce circularity.
 
 ## Figure 4
 
-External GEO bulk support for the clinical subtype axis.
-
-**A**, Ranked association statistics from GSE24080 and GSE2658. The panel summarizes tested gene, module, cytogenetic, and outcome associations.
-
-**B**, GSE2658 association between the POU2AF1/XBP1/JCHAIN clinical subtype module and FISH 1q21 amplification. The result is interpreted as an association, not as directional replication across every platform.
-
-**C**, GSE24080 association between XBP1 and 24-month OS death. The analysis uses public milestone outcome annotation.
+Independent GSE299193 Xenium spatial reproducibility. Sample-level Xenium matrices show higher plasma-secretory and POU2AF1/XBP1 module scores in active MM/RM samples compared with Ctrl/MGUS/SM samples. The heatmap displays axis genes covered by the Xenium panel. TXNDC5, JCHAIN and SDC1 are absent from this Xenium panel and are therefore not claimed as directly reproduced in this cohort.
 
 ## Figure 5
 
-CoMMpass/GDC clinical validation and public NG2024 molecular annotation.
-
-**A**, CoMMpass/GDC association ranking for plasma-secretory and related gene scores. The cohort contains baseline visit-1 bone marrow CD138+ RNA-seq samples.
-
-**B**, Plasma-secretory score distribution by OS event status. The comparison uses a Mann-Whitney test with FDR correction.
-
-**C**, Median-split overall survival analysis. The survival comparison uses a log-rank test.
-
-**D**, Adjusted CoMMpass/NG2024 models. Cox models estimate OS association after adjustment for age, sex, ISS, and 1q21.
-
-**E**, NG2024 1q21 copy-number annotation association. Public CoMMpass molecular annotations are joined to local RNA-seq scores by patient identifier.
-
-**F**, Public NG2024 molecular annotation summary. The panel links the axis to PR RNA subtype probability and molecular-risk features.
-
-These analyses support adjusted association. They do not prove clinical utility.
+Single-cell localization of the plasma-secretory axis. Dot size indicates detection fraction and color indicates mean log-normalized expression across marker-inferred cell types. The plasma-cell compartment shows the strongest plasma-secretory program localization. TXNDC5 detection is reported across 8,007 marker-inferred plasma cells from 19 sample-level strata: 96.44% cell-weighted detection and 94.86% unweighted mean detection across strata. TXNDC5 is retained as a localization candidate rather than a standalone prognostic biomarker.
 
 ## Figure 6
 
-Independent GSE299193 Xenium spatial validation.
+External GEO bulk support for the clinical subtype axis. Ranked association statistics summarize subtype and risk links in GSE24080 and GSE2658. Boxplots show representative associations with 1q21 amplification and 24-month OS milestone status.
 
-Left panel, sample-level plasma-secretory scores across Ctrl, MGUS, SM, MM, and RM groups. Active disease is defined as MM or RM.
+## Figure 7
 
-Middle panel, panel-covered POU2AF1/XBP1 module scores across disease groups. The module is calculated only from genes present in the Xenium feature matrices.
+CoMMpass/GDC retrospective clinical association and public NG2024 molecular annotation. The plasma-secretory score and related subtype module show association with OS event, ISS stage, median-split overall survival, public NG2024 RNA subtype probability, and 1q21 copy-number annotation. Basic adjusted Cox/logistic models summarize associations after age, sex, ISS and 1q21 adjustment where applicable.
 
-Right panel, heatmap of axis genes covered by the Xenium panel. Covered genes include MZB1, TNFRSF17, SLAMF7, IRF4, PIM2, POU2AF1, and XBP1.
+## Figure 8
 
-TXNDC5, JCHAIN, and SDC1 are absent from the extracted Xenium matrices. GSE299193 therefore validates the program-level spatial signal. It does not directly validate those absent genes.
+CoMMpass OS sensitivity models. Hazard ratios are reported per 1-SD plasma-secretory score increase. Models sequentially add PR subtype probability, proliferation, high-risk cytogenetic features, low-purity probability, or CMMC tumor-burden proxy to the base age, sex, ISS, and 1q21 model. Attenuation after PR/proliferation adjustment supports molecular-context dependence rather than independent clinical biomarker evidence.

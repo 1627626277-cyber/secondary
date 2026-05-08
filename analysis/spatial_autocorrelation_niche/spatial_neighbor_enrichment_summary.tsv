@@ -1,0 +1,9 @@
+neighbor_feature	neighbor_feature_label	n_samples	median_of_sample_median_differences	samples_positive	samples_negative	min_nominal_p	min_fdr
+stromal_ecm_score	Stromal ECM	7	0.25982714043546185	7	0	2.0205399025835294e-138	1.1315023454467766e-136
+endothelial_score	Endothelial marker	7	0.12707179254558862	7	0	2.601922129359369e-97	7.285381962206234e-96
+myeloid_score	Myeloid marker	7	0.10691255405784705	6	1	2.226649527605139e-47	1.1335670322353437e-46
+immune_pan_score	Immune pan	7	0.09820250209752272	6	0	2.8213484428317273e-83	3.1599102559715346e-82
+endothelial_angiogenic_score	Endothelial angiogenic	7	0.0970047818165707	7	0	2.4513635940541015e-85	4.575878708900989e-84
+myeloid_inflammatory_score	Myeloid inflammatory	7	0.08265992443080539	6	1	1.6917661017550638e-62	1.0526544633142619e-61
+cycling_proliferation_score	Cycling	7	0.054691048614246916	7	0	8.659174760194988e-38	3.4636699040779953e-37
+t_nk_cytotoxic_exhaustion_score	T/NK cytotoxic	7	0.037349267612883	5	1	2.0557368847295864e-27	6.771839149697462e-27

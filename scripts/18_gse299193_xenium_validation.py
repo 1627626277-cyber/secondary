@@ -277,13 +277,13 @@ def plot_scores(scores: pd.DataFrame, assoc: pd.DataFrame) -> None:
         spine.set_visible(False)
     cbar = fig.colorbar(im, ax=axes[2], fraction=0.046, pad=0.04)
     cbar.set_label("Mean log1p count")
-    fig.suptitle("GSE299193 Xenium validation of the plasma-secretory program", x=0.01, ha="left", fontweight="bold")
+    fig.suptitle("Fig. 4 | GSE299193 Xenium spatial reproducibility of the plasma-secretory program", x=0.01, ha="left", fontweight="bold")
     save_figure(fig, "gse299193_xenium_axis_validation")
 
 
 def write_report(scores: pd.DataFrame | None, assoc: pd.DataFrame | None, status: str) -> None:
     lines = [
-        "# GSE299193 Xenium Spatial Validation Report",
+        "# GSE299193 Xenium Spatial Reproducibility Report",
         "",
         f"Status: {status}",
         "",
@@ -383,7 +383,7 @@ def main() -> None:
 
     assoc = compare_groups(scores)
     plot_scores(scores, assoc)
-    write_report(scores, assoc, "completed first-pass Xenium sample-level validation")
+    write_report(scores, assoc, "completed first-pass Xenium sample-level reproducibility analysis")
     print(f"Analyzed {len(scores)} H5 files.")
     print(f"Wrote outputs to {OUT}")
 
